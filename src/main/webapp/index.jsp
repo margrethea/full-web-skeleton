@@ -11,7 +11,7 @@
 <div class="topnav">
     <a class="active" href="#hjem">Hjem</a>
     <a href="#registrer-resultat">Registrer resultat</a>
-    <a href="#toppscore">Toppscore</a>
+    <a href="toppscore.jsp">Toppscore</a>
     <div class="topnav-right">
         <a href="#min-side">Min side</a>
         <a href="#resultatsøk">Resultatsøk</a>
