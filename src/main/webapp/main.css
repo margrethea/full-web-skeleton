@@ -1,0 +1,57 @@
+/* Colors, fonts and text */
+body {
+    background-color: lightcyan;
+    font-family: Arial;
+}
+h1 {
+    color: darkblue;
+    text-align: center;
+    font-size: 40px;
+}
+p {
+    color: darkblue;
+    text-align: center;
+}
+
+/* Navigation bar */
+.topnav a {
+    float: left;
+    color: darkblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+.topnav a.active {
+    color: darkblue;
+    text-decoration: underline;
+}
+.topnav-right {
+    float: right;
+}
+
+/* Center logo */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Adjust logo size */
+img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+/* Toppscore: Display "Nasjonalt" and "Klubb" side by side */
+.nasjonalt, .klubb {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}
