@@ -10,13 +10,13 @@
 
 <body>
 <div class="topnav">
-    <a href="#hjem">Hjem</a>
-    <a href="#registrer-resultat">Registrer resultat</a>
-    <a class="active" href="#toppscore">Toppscore</a>
+    <a href="index.jsp">Hjem</a>
+    <a href="registrer-resultat.jsp">Registrer resultat</a>
+    <a class="active" href="toppscore.jsp">Toppscore</a>
     <div class="topnav-right">
-        <a href="#min-side">Min side</a>
-        <a href="#resultatsøk">Resultatsøk</a>
-        <a href="#innstillinger">Innstillinger</a>
+        <a href="min-side.jsp">Min side</a>
+        <a href="resultatsøk.jsp">Resultatsøk</a>
+        <a href="innstillinger.jsp">Innstillinger</a>
     </div>
 </div>
 
