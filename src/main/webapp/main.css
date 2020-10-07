@@ -56,3 +56,15 @@ img {
     font-size: 20px;
     padding: 10px;
 }
+
+.SeniorM, .JuniorAG, .JuniorBG {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.SeniorK, .JuniorAJ, .JuniorBJ {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}

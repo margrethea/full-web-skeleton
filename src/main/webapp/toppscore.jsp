@@ -35,9 +35,9 @@
             <p class="JuniorBG">Junior B Gutt</p>
         </div></div>
         <div style="text-align: center;"><div>
-            <p class="SeniorM">Senior Kvinne</p>
-            <p class="JuniorAG">Junior A Jente</p>
-            <p class="JuniorBG">Junior B Jente</p>
+            <p class="SeniorK">Senior Kvinne</p>
+            <p class="JuniorAJ">Junior A Jente</p>
+            <p class="JuniorBJ">Junior B Jente</p>
         </div></div>
     </body>
 
