@@ -25,50 +25,57 @@
 
 <h1>Registrer resultat</h1>
 
-<h3>Bevegelighet</h3>
-    <input type="text" name="Bevegelighet" placeholder="Skriv resultat her">
+<div style="text-align: center;"><div>
+    <h3 class="bevegelighet">Bevegelighet</h3>
+        <input type="text" name="Bevegelighet" placeholder="Skriv resultat her">
 
-<h3>Liggende roing</h3>
-    <input type="text" name="Liggende roing" placeholder="Skriv resultat her">
+    <h3 class="liggendeRoing">Liggende roing</h3>
+        <input type="text" name="Liggenderoing" placeholder="Skriv resultat her">
 
-<h3>Knebøy</h3>
-    <input type="text" name="Knebøy" placeholder="Skriv resultat her">
+    <h3 class="knebøy">Knebøy</h3>
+        <input type="text" name="Knebøy" placeholder="Skriv resultat her">
+</div></div>
 
-<h3>Klasse</h3>
-    <select name="Klasser" id="klasser">
-        <option value="Velg Klasse">Velg klasse...</option>
-        <option value="Senior Menn">Senior Menn</option>
-        <option value="Senior Kvinne">Senior Kvinner</option>
-        <option value="Junior A Gutt">Junior A Gutt</option>
-        <option value="Junior A Jente">Junior A Jenter</option>
-        <option value="Junior B Gutt">Junior B Gutt</option>
-        <option value="Junior B Jente">Junior B Jente</option>
-        <option value="Junior C Gutt">Junior C Gutt</option>
-        <option value="Junior C Jenter">Junior C Jenter</option>
-    </select>
+<div style="text-align: center;"><div>
+    <h3 class="klasse">Klasse</h3>
+        <select name="Klasser" id="klasser">
+            <option value="Velg Klasse">Velg klasse...</option>
+            <option value="SeniorMenn">Senior Menn</option>
+            <option value="SeniorKvinne">Senior Kvinner</option>
+            <option value="JuniorAGutt">Junior A Gutt</option>
+            <option value="JuniorAJente">Junior A Jenter</option>
+            <option value="JuniorBGutt">Junior B Gutt</option>
+            <option value="JuniorBJente">Junior B Jente</option>
+            <option value="JuniorCGutt">Junior C Gutt</option>
+            <option value="JuniorCJenter">Junior C Jenter</option>
+        </select>
 
-<h3>Test Periode</h3>
-<select name="Test periode" id="testperiode">
-    <option value="velgperiode">Velg periode...</option>
-    <option value="periode1">Periode 1</option>
-    <option value="periode2">Periode 2</option>
-    <option value="periode3">Periode 3</option>
-</select>
+    <h3 class="testPeriode">Test Periode</h3>
+        <select name="Test periode" id="testperiode">
+            <option value="velgperiode">Velg periode...</option>
+            <option value="periode1">Periode 1</option>
+            <option value="periode2">Periode 2</option>
+            <option value="periode3">Periode 3</option>
+        </select>
 
-<h3>Utøver</h3>
-<select name="Test periode" id="velgutøver">
-    <option value="velgutøver">Velg Utøver...</option>
-</select>
+    <h3 class="utøver">Utøver</h3>
+        <select name="Test periode" id="velgutøver">
+            <option value="velgutøver">Velg Utøver...</option>
+        </select>
+</div></div>
 
-<h3>Høyde</h3>
-<input type="text" name="Høyde" placeholder="Skriv resultat her">
+<div style="text-align: center;"><div>
+    <h3 class="høyde">Høyde</h3>
+        <input type="text" name="Høyde" placeholder="Skriv resultat her">
 
-<h3>Vekt</h3>
-<input type="text" name="Vekt" placeholder="Skriv resultat her">
+    <h3 class="vekt">Vekt</h3>
+        <input type="text" name="Vekt" placeholder="Skriv resultat her">
 
-<h3>Toppscore</h3>
-<input type="text" name="Toppscore" placeholder="Skriv resultat her">
-    <br><br><input type="submit" value="Registrer">
+    <h3 class="toppscore">Toppscore</h3>
+        <input type="text" name="Toppscore" placeholder="Skriv resultat her">
+
+    <br><input type="submit" value="Registrer">
+</div></div>
 
 </body>
 
