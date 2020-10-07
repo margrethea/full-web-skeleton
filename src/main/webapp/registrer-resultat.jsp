@@ -24,6 +24,16 @@
                          alt="logo" class="center" ></a>
 
 <h1>Registrer resultat</h1>
+
+<h3>Bevegelighet</h3>
+    <input type="text" name="Bevegelighet" placeholder="Skriv resultat her"><br>
+<h3>Liggende roing</h3>
+    <input type="text" name="Liggende roing" placeholder="Skriv resultat her"><br>
+<h3>Knebøy</h3>
+    <input type="text" name="Knebøy" placeholder="Skriv resultat her"><br>
+
+    <input type="submit" value="Registrer">
+
 </body>
 
 </html>
