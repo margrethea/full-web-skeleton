@@ -5,30 +5,30 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 h1 {
-    color: darkblue;
+    color: #21418f;
     text-align: center;
     font-size: 40px;
 }
 p {
-    color: darkblue;
+    color: #21418f;
     text-align: center;
 }
 
 /* Navigation bar */
 .topnav a {
     float: left;
-    color: darkblue;
+    color: #21418f;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
 .topnav a:hover {
-    color: darkblue;
+    color: #21418f;
     text-decoration: underline;
 }
 .topnav a.active {
-    color: darkblue;
+    color: #21418f;
     text-decoration: underline;
 }
 .topnav-right {
