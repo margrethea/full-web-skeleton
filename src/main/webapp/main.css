@@ -71,18 +71,18 @@ img {
 
 .bevegelighet, .liggendeRoing, .knebøy {
     display: inline-block;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 25px;
+    padding: 30px;
 }
 
 .klasse, .testPeriode, .utøver {
     display: inline-block;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 25px;
+    padding: 30px;
 }
 
 .høyde, .vekt, .toppscore {
     display: inline-block;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 25px;
+    padding: 30px;
 }
