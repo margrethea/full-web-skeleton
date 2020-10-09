@@ -5,12 +5,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 h1 {
-    color: darkblue;
+    color: #21418f;
     text-align: center;
     font-size: 40px;
 }
 p {
-    color: darkblue;
+    color: #21418f;
     text-align: center;
 }
 
@@ -28,18 +28,18 @@ th, td {
 /* Navigation bar */
 .topnav a {
     float: left;
-    color: darkblue;
+    color: #21418f;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
 }
 .topnav a:hover {
-    color: darkblue;
+    color: #21418f;
     text-decoration: underline;
 }
 .topnav a.active {
-    color: darkblue;
+    color: #21418f;
     text-decoration: underline;
 }
 .topnav-right {
@@ -98,21 +98,36 @@ img {
 
 .bevegelighet, .liggendeRoing, .knebøy {
     display: inline-block;
+<<<<<<< HEAD
     font-size: 20px;
     padding: 10px;
     color: #21418f;
+=======
+    font-size: 25px;
+    padding: 30px;
+>>>>>>> 217dba38ae1f7af1075359660ff35c3b8428f0bf
 }
 
 .klasse, .testPeriode, .utøver {
     display: inline-block;
+<<<<<<< HEAD
     font-size: 20px;
     padding: 10px;
     color: #21418f;
+=======
+    font-size: 25px;
+    padding: 30px;
+>>>>>>> 217dba38ae1f7af1075359660ff35c3b8428f0bf
 }
 
 .høyde, .vekt, .toppscore {
     display: inline-block;
+<<<<<<< HEAD
     font-size: 20px;
     padding: 10px;
     color: #21418f;
+=======
+    font-size: 25px;
+    padding: 30px;
+>>>>>>> 217dba38ae1f7af1075359660ff35c3b8428f0bf
 }
