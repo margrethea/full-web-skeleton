@@ -25,6 +25,9 @@
 
 <h1>Registrer resultat</h1>
 
+
+
+
 <div style="text-align: center;"><div>
     <h3 class="bevegelighet">Bevegelighet</h3>
         <input type="text" name="Bevegelighet" placeholder="Skriv resultat her">
@@ -75,7 +78,7 @@
         <input type="text" name="Toppscore" placeholder="Skriv resultat her">
 
     <br><input type="submit" value="Registrer">
-</div></div>
+</div></div> -->
 
 </body>
 
