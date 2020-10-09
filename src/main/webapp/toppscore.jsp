@@ -34,11 +34,167 @@
             <p class="JuniorAG">Junior A Gutt</p>
             <p class="JuniorBG">Junior B Gutt</p>
         </div></div>
+        <table style="" class="table1">
+            <tr>
+                <th>Plassering</th>
+                <th>Toppscore</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+            </tr>
+        </table>
+        <table style="" class="table2">
+            <tr>
+                <th>Plassering</th>
+                <th>Toppscore</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+            </tr>
+        </table>
+        <table style="" class="table3">
+            <tr>
+                <th>Plassering</th>
+                <th>Toppscore</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+            </tr>
+        </table><br><br><br>
         <div style="text-align: center;"><div>
             <p class="SeniorK">Senior Kvinne</p>
             <p class="JuniorAJ">Junior A Jente</p>
             <p class="JuniorBJ">Junior B Jente</p>
         </div></div>
+        <table style="" class="table4">
+            <tr>
+                <th>Plassering</th>
+                <th>Toppscore</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+            </tr>
+        </table>
+        <table style="" class="table5">
+            <tr>
+                <th>Plassering</th>
+                <th>Toppscore</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+            </tr>
+        </table>
+        <table style="" class="table6">
+            <tr>
+                <th>Plassering</th>
+                <th>Toppscore</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+            </tr>
+        </table>
     </body>
 
 </html>

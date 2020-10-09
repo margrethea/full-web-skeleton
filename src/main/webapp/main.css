@@ -14,6 +14,17 @@ p {
     text-align: center;
 }
 
+table, th, td {
+    color: #21418f;
+    text-align: center;
+    border: 1px #21418f;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
 /* Navigation bar */
 .topnav a {
     float: left;
@@ -61,28 +72,47 @@ img {
     display: inline-block;
     font-size: 20px;
     padding: 10px;
+    color: #21418f;
+}
+
+.table1, .table2, .table3 {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    color: #21418f;
 }
 
 .SeniorK, .JuniorAJ, .JuniorBJ {
     display: inline-block;
     font-size: 20px;
     padding: 10px;
+    color: #21418f;
+}
+
+.table4, .table5, .table6 {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    color: #21418f;
 }
 
 .bevegelighet, .liggendeRoing, .knebøy {
     display: inline-block;
     font-size: 20px;
     padding: 10px;
+    color: #21418f;
 }
 
 .klasse, .testPeriode, .utøver {
     display: inline-block;
     font-size: 20px;
     padding: 10px;
+    color: #21418f;
 }
 
 .høyde, .vekt, .toppscore {
     display: inline-block;
     font-size: 20px;
     padding: 10px;
+    color: #21418f;
 }
