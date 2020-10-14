@@ -28,6 +28,12 @@
         <label for="fornavn"><b>Fornavn</b></label><br>
         <input type="text" placeholder="søk fornavn" name="fornavn" id="fornavn">
 
+
+        <form action="Hentbruker" method="post">
+            navn <input type="text" name="bruker">
+            <input type="submit">
+        </form>
+
     </body>
 
 </html>
