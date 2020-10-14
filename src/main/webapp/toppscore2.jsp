@@ -25,7 +25,7 @@
 
         <h1>Toppscore</h1>
 
-        <div class="nasjklubb" style="text-align: center"><div>
+        <div class="nasjklubb" style="text-align: center;"><div>
             <a href="toppscore.jsp">Nasjonalt</a>
             <a href="toppscore2.jsp">Klubb</a>
             <!--<p class="nasjonalt">Nasjonalt</p>
@@ -36,18 +36,21 @@
             <p class="JuniorAG">Junior A Gutt</p>
             <p class="JuniorBG">Junior B Gutt</p>
         </div></div>
-        <div style="text-align: center" class="t1">
+        <div style="text-align: center">
             <table style="" class="table1">
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
+                    <th>Navn</th>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -57,9 +60,11 @@
                 <tr>
                     <td>4</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>5</td>
+                    <td></td>
                     <td></td>
                 </tr>
             </table>
@@ -67,25 +72,31 @@
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
+                    <th>Navn</th>
                 </tr>
                 <tr>
                     <td>1</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>5</td>
+                    <td></td>
                     <td></td>
                 </tr>
             </table>
@@ -93,58 +104,71 @@
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
+                    <th>Navn</th>
                 </tr>
                 <tr>
                     <td>1</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td></td>
+                    <td></td>
                 </tr>
             </table><br><br><br>
         </div>
+
         <div style="text-align: center;"><div>
             <p class="SeniorK">Senior Kvinne</p>
             <p class="JuniorAJ">Junior A Jente</p>
             <p class="JuniorBJ">Junior B Jente</p>
         </div></div>
-        <div style="text-align: center" class="t2">/div>
+        <div style="text-align: center">
             <table style="" class="table4">
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
+                    <th>Navn</th>
                 </tr>
                 <tr>
                     <td>1</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>5</td>
+                    <td></td>
                     <td></td>
                 </tr>
             </table>
@@ -152,25 +176,31 @@
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
+                    <th>Navn</th>
                 </tr>
                 <tr>
                     <td>1</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>5</td>
+                    <td></td>
                     <td></td>
                 </tr>
             </table>
@@ -178,25 +208,31 @@
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
+                    <th>Navn</th>
                 </tr>
                 <tr>
                     <td>1</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
+                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>5</td>
+                    <td></td>
                     <td></td>
                 </tr>
             </table>

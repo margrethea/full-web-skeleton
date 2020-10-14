@@ -46,6 +46,27 @@ th, td {
     float: right;
 }
 
+.nasjklubb a:hover {
+    text-align: center;
+    color: #21418f;
+    text-decoration: underline;
+}
+
+.nasjklubb a:active {
+    text-align: center;
+    color: #21418f;
+    text-decoration: underline;
+}
+
+/* Toppscore: Display "Nasjonalt" and "Klubb" side by side */
+.nasjklubb a{
+    text-align: center;
+    display: inline-block;
+    float: none;
+    font-size: 15px;
+    padding: 10px;
+}
+
 /* Center logo */
 .center {
     display: block;
@@ -61,17 +82,11 @@ img {
     object-fit: contain;
 }
 
-/* Toppscore: Display "Nasjonalt" and "Klubb" side by side */
-.nasjonalt, .klubb {
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px;
-}
-
 .SeniorM, .JuniorAG, .JuniorBG {
     display: inline-block;
     font-size: 20px;
-    padding: 10px;
+    padding: 30px;
+    margin: 30px;
     color: #21418f;
 }
 
@@ -85,49 +100,63 @@ img {
 .SeniorK, .JuniorAJ, .JuniorBJ {
     display: inline-block;
     font-size: 20px;
-    padding: 10px;
+    padding: 30px;
+    margin: 30px;
     color: #21418f;
 }
 
 .table4, .table5, .table6 {
     display: inline-block;
+    border: 1px;
+    border-color: #21418f;
     font-size: 20px;
     padding: 10px;
     color: #21418f;
+}
+.t1, t2 {
+    border: 1px;
+    border-color: #21418f;
 }
 
 .bevegelighet, .liggendeRoing, .knebøy {
     display: inline-block;
-<<<<<<< HEAD
     font-size: 20px;
     padding: 10px;
     color: #21418f;
-=======
-    font-size: 25px;
-    padding: 30px;
->>>>>>> 217dba38ae1f7af1075359660ff35c3b8428f0bf
 }
 
 .klasse, .testPeriode, .utøver {
     display: inline-block;
-<<<<<<< HEAD
     font-size: 20px;
     padding: 10px;
     color: #21418f;
-=======
-    font-size: 25px;
-    padding: 30px;
->>>>>>> 217dba38ae1f7af1075359660ff35c3b8428f0bf
 }
 
 .høyde, .vekt, .toppscore {
     display: inline-block;
-<<<<<<< HEAD
     font-size: 20px;
     padding: 10px;
     color: #21418f;
-=======
-    font-size: 25px;
-    padding: 30px;
->>>>>>> 217dba38ae1f7af1075359660ff35c3b8428f0bf
+}
+
+.fornavn, .etternavn {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    color: #21418f;
+
+}
+
+.klasse, .øvelse {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    color: #21418f;
+}
+
+.årstall, .testperiode {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    color: #21418f;
 }
