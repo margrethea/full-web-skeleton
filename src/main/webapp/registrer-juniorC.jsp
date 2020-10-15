@@ -23,6 +23,8 @@
     <a href="index.jsp"><img src="https://assets.website-files.com/5b3335ab4ca8551124a2ba8f/5cbf778b0cdebda6ec56b4a6_norges-roforbund-logo-p-500.png"
                              alt="logo" class="center" ></a>
 
+    <h1>Registrer resultat</h1>
+
     <div class="registrer-resultat" style="text-align: center"><div>
         <a href="registrer-senior.jsp">Senior</a>
         <a href="registrer-juniorA.jsp">Junior A</a>
@@ -30,7 +32,6 @@
         <a class="active" href="registrer-juniorC.jsp">Junior C</a>
     </div></div>
 
-    <h1>Registrer resultat</h1>
     <form>
         <div class="registrer_resultat">
             <label for="kjønn">Kjønn</label>
@@ -41,7 +42,8 @@
         </div><br>
 
         <div class="registrer_resultat">
-            <input type="text" name="fornavn" placeholder="Skriv fornavn her...">
+            <label for="fornavn">Fornavn</label>
+            <input type="text" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
         </div><br>
 
 
