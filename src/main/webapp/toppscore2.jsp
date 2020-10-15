@@ -27,7 +27,7 @@
 
         <div class="nasjklubb" style="text-align: center;"><div>
             <a href="toppscore.jsp">Nasjonalt</a>
-            <a href="toppscore2.jsp">Klubb</a>
+            <a class="active" href="toppscore2.jsp">Klubb</a>
             <!--<p class="nasjonalt">Nasjonalt</p>
             <p class="klubb">Klubb</p> -->
         </div></div>

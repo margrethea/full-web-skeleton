@@ -26,7 +26,7 @@
         <h1>Toppscore</h1>
 
         <div class="nasjklubb" style="text-align: center"><div>
-            <a href="toppscore.jsp">Nasjonalt</a>
+            <a class="active" href="toppscore.jsp">Nasjonalt</a>
             <a href="toppscore2.jsp">Klubb</a>
             <!--<p class="nasjonalt">Nasjonalt</p>
             <p class="klubb">Klubb</p> -->
@@ -121,7 +121,7 @@
             <p class="JuniorAJ">Junior A Jente</p>
             <p class="JuniorBJ">Junior B Jente</p>
         </div></div>
-        <div style="text-align: center" class="t2">/div>
+        <div style="text-align: center" class="t2">
             <table style="" class="table4">
                 <tr>
                     <th>Plassering</th>
