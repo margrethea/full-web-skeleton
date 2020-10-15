@@ -41,8 +41,7 @@
             </div><br>
 
             <div class="registrer_resultat">
-                    <label for="fnavn">Fornavn</label>
-                    <input type="text" class="registrer_resultat" id="fnavn" placeholder="Skriv fornavn her...">
+                    <input type="text" name="fornavn" placeholder="Skriv fornavn her...">
             </div><br>
 
 
@@ -50,7 +49,7 @@
                     <label for="enavn">Etternavn</label>
                     <input type="text" class="registrer_resultat" id="enavn" placeholder="Skriv etternavn her...">
             </div><br>
-
+  
             <div class="registrer_resultat">
                 <label for="testperiode">Testperiode</label>
                 <select class="registrer_resultat" id="testperiode">
@@ -89,6 +88,11 @@
                 <label for="2000m_t">2000m (tid)</label>
                 <input type="text" class="registrer_resultat" id="2000m_t" placeholder="Skriv resultat her...">
             </div><br>
+
+            </div><br>
+
+            <input type="submit" name="action" value="Registrer">
+
         </form>
     </body>
 

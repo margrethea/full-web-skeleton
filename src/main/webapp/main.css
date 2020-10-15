@@ -120,20 +120,36 @@ img {
 
 .bevegelighet, .liggendeRoing, .knebøy {
     display: inline-block;
+
+    font-size: 25px;
+    padding: 30px;
+=======
     font-size: 20px;
     padding: 10px;
+>>>>>>> 93126f50a0f33f4a453bdf921c12d0fddf76036e
     color: #21418f;
 }
 
 .klasse, .testPeriode, .utøver {
     display: inline-block;
+
+    font-size: 25px;
+    padding: 30px;
+=======
     font-size: 20px;
     padding: 10px;
+>>>>>>> 93126f50a0f33f4a453bdf921c12d0fddf76036e
     color: #21418f;
 }
 
 .høyde, .vekt, .toppscore {
     display: inline-block;
+
+    font-size: 25px;
+    padding: 30px;
+    color: #21418f;
+
+=======
     font-size: 20px;
     padding: 10px;
     color: #21418f;
@@ -159,4 +175,5 @@ img {
     font-size: 20px;
     padding: 10px;
     color: #21418f;
+>>>>>>> 93126f50a0f33f4a453bdf921c12d0fddf76036e
 }
