@@ -42,6 +42,18 @@ th, td {
     color: #21418f;
     text-decoration: underline;
 }
+
+/* Registrer resultat links */
+.registrer-resultat a:hover {
+    color: #21418f;
+    text-decoration: underline;
+}
+.registrer-resultat a.active {
+    color: #21418f;
+    text-decoration: underline;
+}
+
+
 .topnav-right {
     float: right;
 }

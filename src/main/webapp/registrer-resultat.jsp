@@ -3,10 +3,9 @@
 <html lang="en">
 
     <head>
-
-     <link rel="stylesheet" href="main.css">
-      <meta charset="UTF-8">
-     <title>Registrer resultat - Roforbundet</title>
+        <link rel="stylesheet" href="main.css">
+        <meta charset="UTF-8">
+        <title>Registrer resultat - Roforbundet</title>
     </head>
 
     <body>
@@ -25,75 +24,14 @@
                          alt="logo" class="center" ></a>
 
     <h1>Registrer resultat</h1>
-        <form>
-            <div class="registrer_resultat">
-                <label for="klasse">Klasse</label>
-                <select class="registrer_resultat" id="klasse">
-                    <option>Senior Menn</option>
-                    <option>Senior Kvinner</option>
-                    <option>Junior A Gutter</option>
-                    <option>Junior A Jenter</option>
-                    <option>Junior B Gutter</option>
-                    <option>Junior B Jenter</option>
-                    <option>Junior C Gutter</option>
-                    <option>Junior C Jenter</option>
-                </select>
-            </div><br>
 
-            <div class="registrer_resultat">
-                    <input type="text" name="fornavn" placeholder="Skriv fornavn her...">
-            </div><br>
+    <div class="registrer-resultat" style="text-align: center"><div>
+        <a href="registrer-senior.jsp">Senior</a>
+        <a href="registrer-juniorA.jsp">Junior A</a>
+        <a href="registrer-juniorB.jsp">Junior B</a>
+        <a href="registrer-juniorC.jsp">Junior C</a>
+    </div></div>
 
-
-            <div class="registrer_resultat">
-                    <label for="enavn">Etternavn</label>
-                    <input type="text" class="registrer_resultat" id="enavn" placeholder="Skriv etternavn her...">
-            </div><br>
-  
-            <div class="registrer_resultat">
-                <label for="testperiode">Testperiode</label>
-                <select class="registrer_resultat" id="testperiode">
-                    <option>Testperiode 1</option>
-                    <option>Testperiode 2</option>
-                    <option>Testperiode 3</option>
-                </select>
-            </div><br>
-
-            <div class="registrer_resultat">
-                <label for="5000m_w">5000m (watt)</label>
-                <input type="text" class="registrer_resultat" id="5000m_w" placeholder="Skriv resultat her...">
-            </div><br>
-
-            <div class="registrer_resultat">
-                <label for="5000m_t">5000m (tid)</label>
-                <input type="text" class="registrer_resultat" id="5000m_t" placeholder="Skriv resultat her...">
-            </div><br>
-
-            <div class="registrer_resultat">
-                <label for="3000m_w">3000m (watt)</label>
-                <input type="text" class="registrer_resultat" id="3000m_w" placeholder="Skriv resultat her...">
-            </div><br>
-
-            <div class="registrer_resultat">
-                <label for="3000m_t">3000m (tid)</label>
-                <input type="text" class="registrer_resultat" id="3000m_t" placeholder="Skriv resultat her...">
-            </div><br>
-
-            <div class="registrer_resultat">
-                <label for="2000m_w">2000m (watt)</label>
-                <input type="text" class="registrer_resultat" id="2000m_w" placeholder="Skriv resultat her...">
-            </div><br>
-
-            <div class="registrer_resultat">
-                <label for="2000m_t">2000m (tid)</label>
-                <input type="text" class="registrer_resultat" id="2000m_t" placeholder="Skriv resultat her...">
-            </div><br>
-
-            </div><br>
-
-            <input type="submit" name="action" value="Registrer">
-
-        </form>
     </body>
 
 </html>
