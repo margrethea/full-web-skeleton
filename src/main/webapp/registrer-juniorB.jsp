@@ -90,7 +90,7 @@
     </div><br>
 
     <div class="registrer_resultat">
-        <label for="kroppshev">Kroppshevinger</label>
+        <label for="kroppshev">Kroppshev</label>
         <input type="text" class="registrer_resultat" id="kroppshev" placeholder="Skriv resultat her...">
     </div><br>
 

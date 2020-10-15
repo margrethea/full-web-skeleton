@@ -84,8 +84,8 @@
         </div><br>
 
         <div class="registrer_resultat">
-            <label for="sergante">Sergante</label>
-            <input type="text" class="registrer_resultat" id="sergante" placeholder="Skriv resultat her...">
+            <label for="sargeant">Sargeant</label>
+            <input type="text" class="registrer_resultat" id="sargeant" placeholder="Skriv resultat her...">
         </div><br>
 
 
