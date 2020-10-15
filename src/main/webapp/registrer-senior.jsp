@@ -57,6 +57,7 @@
             <div class="registrer_resultat">
                 <label for="testperiode">Testperiode</label>
                 <select class="registrer_resultat" id="testperiode">
+                    <option> Velg testperiode... </option>
                     <option>Testperiode 1</option>
                     <option>Testperiode 2</option>
                     <option>Testperiode 3</option>
