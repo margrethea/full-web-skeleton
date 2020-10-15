@@ -30,7 +30,7 @@
         <a href="registrer-juniorA.jsp">Junior A</a>
         <a href="registrer-juniorB.jsp">Junior B</a>
         <a class="active" href="registrer-juniorC.jsp">Junior C</a>
-    </div></div>
+    </div></div><br>
 
     <form>
         <div class="registrer_resultat">

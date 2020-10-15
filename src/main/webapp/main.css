@@ -34,6 +34,9 @@ th, td {
     text-decoration: none;
     font-size: 17px;
 }
+.topnav-right {
+    float: right;
+}
 .topnav a:hover {
     color: #21418f;
     text-decoration: underline;
@@ -44,6 +47,13 @@ th, td {
 }
 
 /* Registrer resultat links */
+.registrer-resultat a {
+    color: #21418f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
 .registrer-resultat a:hover {
     color: #21418f;
     text-decoration: underline;
@@ -53,10 +63,6 @@ th, td {
     text-decoration: underline;
 }
 
-
-.topnav-right {
-    float: right;
-}
 
 .nasjklubb a:hover {
     text-align: center;
