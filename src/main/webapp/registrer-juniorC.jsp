@@ -32,7 +32,7 @@
         <a class="active" href="registrer-juniorC.jsp">Junior C</a>
     </div></div><br>
 
-    <form action="servlets.JuniorC" method="get">
+    <form action="JuniorC" method="post">
         <div class="registrer_resultat">
             <label for="kjønn">Kjønn</label>
             <select class="registrer_resultat" id="kjønn">
@@ -90,7 +90,7 @@
 
 
         <input type="submit" name="action" value="Registrer">
-
+        <p>trololol</p>
     </form>
 
     </body>
