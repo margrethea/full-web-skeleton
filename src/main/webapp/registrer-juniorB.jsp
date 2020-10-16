@@ -34,7 +34,7 @@
     <a href="registrer-juniorC.jsp">Junior C</a>
 </div></div><br>
 
-<form>
+<form action="servlets.JuniorB" method="get">
     <div class="registrer_resultat">
         <label for="kjønn">Kjønn</label>
         <select class="registrer_resultat" id="kjønn">
