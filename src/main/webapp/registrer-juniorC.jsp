@@ -44,13 +44,13 @@
 
         <div class="registrer_resultat">
             <label for="fornavn">Fornavn</label>
-            <input type="text" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
+            <input type="text" name="fornavn" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
         </div><br>
 
 
         <div class="registrer_resultat">
-            <label for="enavn">Etternavn</label>
-            <input type="text" class="registrer_resultat" id="enavn" placeholder="Skriv etternavn her...">
+            <label for="etternavn">Etternavn</label>
+            <input type="text" name="etternavn" class="registrer_resultat" id="etternavn" placeholder="Skriv etternavn her...">
         </div><br>
 
         <div class="registrer_resultat">
@@ -65,27 +65,27 @@
 
         <div class="registrer_resultat">
             <label for="60">60"</label>
-            <input type="text" class="registrer_resultat" id="60" placeholder="Skriv resultat her...">
+            <input type="text" name="60" class="registrer_resultat" id="60" placeholder="Skriv resultat her...">
         </div><br>
 
         <div class="registrer_resultat">
             <label for="bevegelighet">Bevegelighet</label>
-            <input type="text" class="registrer_resultat" id="bevegelighet" placeholder="Skriv resultat her...">
+            <input type="text" name="bevegelighet" class="registrer_resultat" id="bevegelighet" placeholder="Skriv resultat her...">
         </div><br>
 
         <div class="registrer_resultat">
-            <label for="3000m">3000m </label>
-            <input type="text" class="registrer_resultat" id="3000m" placeholder="Skriv resultat her...">
+            <label for="3000m">3000m</label>
+            <input type="text" name="3000m" class="registrer_resultat" id="3000m" placeholder="Skriv resultat her...">
         </div><br>
 
         <div class="registrer_resultat">
             <label for="kroppshev">Kroppshev</label>
-            <input type="text" class="registrer_resultat" id="kroppshev" placeholder="Skriv resultat her...">
+            <input type="text" name="kroppshev" class="registrer_resultat" id="kroppshev" placeholder="Skriv resultat her...">
         </div><br>
 
         <div class="registrer_resultat">
             <label for="sargeant">Sargeant</label>
-            <input type="text" class="registrer_resultat" id="sargeant" placeholder="Skriv resultat her...">
+            <input type="text" name="sargeant" class="registrer_resultat" id="sargeant" placeholder="Skriv resultat her...">
         </div><br>
 
 
