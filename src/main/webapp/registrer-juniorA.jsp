@@ -44,18 +44,18 @@
 
     <div class="registrer_resultat">
         <label for="fornavn">Fornavn</label>
-        <input type="text" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
+        <input type="text" name="fornavn" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
     </div><br>
 
 
     <div class="registrer_resultat">
-        <label for="enavn">Etternavn</label>
-        <input type="text" class="registrer_resultat" id="enavn" placeholder="Skriv etternavn her...">
+        <label for="etternavn">Etternavn</label>
+        <input type="text" name="etternavn" class="registrer_resultat" id="etternavn" placeholder="Skriv etternavn her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="testperiode">Testperiode</label>
-        <select class="registrer_resultat" id="testperiode">
+        <select name="" class="registrer_resultat" id="testperiode">
             <option> Velg testperiode... </option>
             <option>Testperiode 1</option>
             <option>Testperiode 2</option>
@@ -65,47 +65,47 @@
 
     <div class="registrer_resultat">
         <label for="60">60"</label>
-        <input type="text" class="registrer_resultat" id="60" placeholder="Skriv resultat her...">
+        <input type="text" name="60" class="registrer_resultat" id="60" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="bevegelighet">Bevegelighet</label>
-        <input type="text" class="registrer_resultat" id="bevegelighet" placeholder="Skriv resultat her...">
+        <input type="text" name="bevegelighet" class="registrer_resultat" id="bevegelighet" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="5000m_w">5000m (watt)</label>
-        <input type="text" class="registrer_resultat" id="5000m_w" placeholder="Skriv resultat her...">
+        <input type="text" name="5000m_w" class="registrer_resultat" id="5000m_w" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="5000m_t">5000m (tid)</label>
-        <input type="text" class="registrer_resultat" id="5000m_t" placeholder="Skriv resultat her...">
+        <input type="text" name="5000m_t" class="registrer_resultat" id="5000m_t" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="2000m_w">2000m (watt)</label>
-        <input type="text" class="registrer_resultat" id="2000m_w" placeholder="Skriv resultat her...">
+        <input type="text" name="2000m_w" class="registrer_resultat" id="2000m_w" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="2000m_t">2000m (tid)</label>
-        <input type="text" class="registrer_resultat" id="2000m_t" placeholder="Skriv resultat her...">
+        <input type="text" name="2000m_t" class="registrer_resultat" id="2000m_t" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="ligg_ro_p">Liggende roing (prosent)</label>
-        <input type="text" class="registrer_resultat" id="ligg_ro_p" placeholder="Skriv resultat her...">
+        <input type="text" name="ligg_ro_p" class="registrer_resultat" id="ligg_ro_p" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="ligg_ro_kg">Liggende roing (Kg)</label>
-        <input type="text" class="registrer_resultat" id="ligg_ro_kg" placeholder="Skriv resultat her...">
+        <input type="text" name="ligg_ro_kg" class="registrer_resultat" id="ligg_ro_kg" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
         <label for="sargeant">Sargeant</label>
-        <input type="text" class="registrer_resultat" id="sargeant" placeholder="Skriv resultat her...">
+        <input type="text" name="sargeant" class="registrer_resultat" id="sargeant" placeholder="Skriv resultat her...">
     </div><br>
 
 
