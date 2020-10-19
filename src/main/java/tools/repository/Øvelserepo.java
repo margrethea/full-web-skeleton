@@ -1,6 +1,7 @@
 package tools.repository;
 
 import models.ØvelseCModell;
+import models.ØvelseSmodell;
 import tools.DbTool;
 
 import java.io.PrintWriter;
