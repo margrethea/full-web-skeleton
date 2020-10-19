@@ -105,13 +105,13 @@
             </div><br>
 
             <div class="registrer_resultat">
-                <label for="knebøy_p">Knebøy (prosent)</label>
-                <input type="text" name="kneboy_p" class="registrer_resultat" id="knebøy_p" placeholder="Skriv resultat her...">
+                <label for="kneboy_p">Knebøy (prosent)</label>
+                <input type="text" name="kneboy_p" class="registrer_resultat" id="kneboy_p" placeholder="Skriv resultat her...">
             </div><br>
 
             <div class="registrer_resultat">
-                <label for="knebøy_kg">Knebøy (Kg)</label>
-                <input type="text" name="kneboy_kg" class="registrer_resultat" id="knebøy_kg" placeholder="Skriv resultat her...">
+                <label for="kneboy_kg">Knebøy (Kg)</label>
+                <input type="text" name="kneboy_kg" class="registrer_resultat" id="kneboy_kg" placeholder="Skriv resultat her...">
             </div><br>
 
             <input type="submit" name="action" value="Registrer">
