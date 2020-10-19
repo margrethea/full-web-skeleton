@@ -128,8 +128,8 @@ public class Øvelserepo {
             regNyttResultatA.setString(5, resultat.getTotusenW());
             regNyttResultatA.setString(6, resultat.getTotusenT());
             regNyttResultatA.setString(7, resultat.getLiggendeRoingP());
-            regNyttResultatA.setString(7, resultat.getLiggendeRoingKG());
-            regNyttResultatA.setString(7, resultat.getSargeant());
+            regNyttResultatA.setString(8, resultat.getLiggendeRoingKG());
+            regNyttResultatA.setString(9, resultat.getSargeant());
             regNyttResultatA.execute();
 
         } catch (SQLException throwables) {
