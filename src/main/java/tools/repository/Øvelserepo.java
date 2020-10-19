@@ -1,5 +1,6 @@
 package tools.repository;
 
+import models.ØvelseBModell;
 import models.ØvelseCModell;
 import models.ØvelseSmodell;
 import tools.DbTool;
@@ -18,7 +19,7 @@ public class Øvelserepo {
      * @param resultat bruker objekt som inneholder all informasjon om personen.
      *                 Tips: Objektet må instansieres i en servlet før man kaller på addUser().
      * @param p        printwriter for å skrive ut html i servlet. F.eks SQL feilmeldinger eller annen info.
-    **/
+     **/
 
     public static void regResultatJC(ØvelseCModell resultat, PrintWriter p) {
         Connection db = null;
@@ -47,6 +48,7 @@ public class Øvelserepo {
         }
 
     }
+
     public static void regResultatS(ØvelseSmodell resultat, PrintWriter p) {
         Connection db = null;
         PreparedStatement regNyttResultatS = null;
@@ -78,6 +80,35 @@ public class Øvelserepo {
             }
         }
 
+    }
+
+    public static void regResultatB(ØvelseBModell resultat, PrintWriter p) {
+        Connection db = null;
+        PreparedStatement regNyttResultatB = null;
+        try {
+            db = DbTool.getINSTANCE().dbLoggIn(p);
+            String query =
+                    "INSERT INTO ro.resultat (60w, bevegelighet, 3000m, 2000w, 2000t, kroppshev, sargeant) values (?,?,?,?,?,?,?)";
+
+            regNyttResultatB = db.prepareStatement(query);
+            regNyttResultatB.setString(1, resultat.getSeksti());
+            regNyttResultatB.setString(2, resultat.getBeveglighet());
+            regNyttResultatB.setString(3, resultat.getTretusen());
+            regNyttResultatB.setString(4, resultat.getTotusenW());
+            regNyttResultatB.setString(5, resultat.getTotusenT());
+            regNyttResultatB.setString(6, resultat.getKroppshev());
+            regNyttResultatB.setString(7, resultat.getSargeant());
+            regNyttResultatB.execute();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                db.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
     }
 }
 

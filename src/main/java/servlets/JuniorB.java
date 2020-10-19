@@ -25,7 +25,7 @@ public class JuniorB extends AbstractAppServlet {
         String sargeant = req.getParameter("sargeant");
 
         ØvelseBModell regResultat = new ØvelseBModell(seksti, beveglighet, tretusen, totusenW, totusenT, kroppshev, sargeant);
-          Øvelserepo.regResultatJB(regResultat, out);
+          Øvelserepo.regResultatB(regResultat, out);
 
           out.format("<h1> The result %s Has been added to the database with id: %s <h1>", seksti);
 
