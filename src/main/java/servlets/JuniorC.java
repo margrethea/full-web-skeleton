@@ -28,7 +28,7 @@ public class JuniorC extends AbstractAppServlet {
       ØvelseCModell regResultat = new ØvelseCModell(seksti,beveglighet,kroppshev,sargeant,tretusen);
         Øvelserepo.regResultatJC(regResultat, out);
 
-        out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti);
+        out.format("<h1> The result %s Has been added to the database with id: %s</h1>", seksti);
 
     }
 
