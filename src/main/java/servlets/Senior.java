@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "Senior", urlPatterns = {"/Senior"})
+@WebServlet(name = "Senior", urlPatterns = {"/servlets.Senior"})
 public class Senior extends AbstractAppServlet {
 
 
@@ -27,6 +27,7 @@ public class Senior extends AbstractAppServlet {
         String ligg_ro_kg = req.getParameter("ligg_ro_kg");
         String kneboy_p = req.getParameter("kneboy_p");
         String kneboy_kg = req.getParameter("kneboy_kg");
+        System.out.println(seksti + beveglighet);
 
         ØvelseSmodell regResultat = new ØvelseSmodell(seksti,beveglighet,femtusenw,femtusent,totusenw,totusent,ligg_ro_p,ligg_ro_kg,kneboy_p,kneboy_kg);
         Øvelserepo.regResultatS(regResultat, out);
