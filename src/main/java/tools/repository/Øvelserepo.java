@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class Øvelserepo {
     /**
-     * legger til bruker til databasen.
+     * legger til resultater til databasen.
      * Denne er ikke implementert. Her må dere gjerne prøve å lage en egen servlet som kan kommunisere med
      * denne metoden.
      *
@@ -99,6 +99,37 @@ public class Øvelserepo {
             regNyttResultatB.setString(6, resultat.getKroppshev());
             regNyttResultatB.setString(7, resultat.getSargeant());
             regNyttResultatB.execute();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                db.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+    }
+
+    public static void regResultatA(ØvelseAModell resultat, PrintWriter p) {
+        Connection db = null;
+        PreparedStatement regNyttResultatA = null;
+        try {
+            db = DbTool.getINSTANCE().dbLoggIn(p);
+            String query =
+                    "INSERT INTO ro.resultat (60w, bevegelighet, 5000w, 5000t, 2000w, 2000t, ligg_ro_p, ligg_ro_kg, sargeant) values (?,?,?,?,?,?,?,?,?)";
+
+            regNyttResultatA = db.prepareStatement(query);
+            regNyttResultatA.setString(1, resultat.getSeksti());
+            regNyttResultatA.setString(2, resultat.getBeveglighet());
+            regNyttResultatA.setString(3, resultat.getFemtusenW());
+            regNyttResultatA.setString(4, resultat.getFemtusenT());
+            regNyttResultatA.setString(5, resultat.getTotusenW());
+            regNyttResultatA.setString(6, resultat.getTotusenT());
+            regNyttResultatA.setString(7, resultat.getLiggendeRoingW());
+            regNyttResultatA.setString(7, resultat.getLiggendeRoingKG());
+            regNyttResultatA.setString(7, resultat.getSargeant());
+            regNyttResultatA.execute();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
