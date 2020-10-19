@@ -33,45 +33,81 @@ public class ØvelseSmodell {
         return seksti;
     }
 
+    public void setSeksti(String seksti) {
+        this.seksti = seksti;
+    }
+
     public String getBeveglighet() {
         return beveglighet;
     }
 
-    public String getFemtusenT() {
+    public void setBeveglighet(String beveglighet) {
+        this.beveglighet = beveglighet;
+    }
 
+    public String getFemtusenT() {
         return femtusenT;
+    }
+
+    public void setFemtusenT(String femtusenT) {
+        this.femtusenT = femtusenT;
     }
 
     public String getFemtusenW() {
         return femtusenW;
     }
 
-    public String gettotusenW() {
 
+    public void setFemtusenW(String femtusenW) {
+        this.femtusenW = femtusenW;
+    }
+
+    public String gettotusenW() {
         return totusenW;
     }
 
-    public String gettotusenT() {
+    public void setTotusenW(String totusenW) {
+        this.totusenW = totusenW;
+    }
 
+    public String gettotusenT() {
         return totusenT;
     }
 
-    public String getLiggendeRoingW() {
+    public void setTotusenT(String totusenT) {
+        this.totusenT = totusenT;
+    }
 
+    public String getLiggendeRoingW() {
         return liggendeRoingW;
     }
 
-    public String getLiggendeRoingKG() {
+    public void setLiggendeRoingW(String liggendeRoingW) {
+        this.liggendeRoingW = liggendeRoingW;
+    }
 
+    public String getLiggendeRoingKG() {
         return liggendeRoingKG;
+    }
+
+    public void setLiggendeRoingKG(String liggendeRoingKG) {
+        this.liggendeRoingKG = liggendeRoingKG;
     }
 
     public String getKnebøyKG() {
         return knebøyKG;
     }
 
+    public void setKnebøyKG(String knebøyKG) {
+        this.knebøyKG = knebøyKG;
+    }
+
     public String getKnebøyP() {
         return knebøyP;
+    }
+
+    public void setKnebøyP(String knebøyP) {
+        this.knebøyP = knebøyP;
     }
 }
 
