@@ -31,13 +31,13 @@ public class JuniorA extends AbstractAppServlet {
                 totusenW,totusenT,liggendeRoingW,liggendeRoingKG,sargeant);
             Øvelserepo.reqResultatJA(reqResultat, out);
 
-            out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti");
+            out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti);
     }
 
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(reques, response, "Hello!");
+        writeResponse(request, response, "Hello!");
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
