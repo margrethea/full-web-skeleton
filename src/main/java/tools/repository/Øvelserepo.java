@@ -1,5 +1,6 @@
 package tools.repository;
 
+import models.ØvelseAModell;
 import models.ØvelseBModell;
 import models.ØvelseCModell;
 import models.ØvelseSmodell;
@@ -126,7 +127,7 @@ public class Øvelserepo {
             regNyttResultatA.setString(4, resultat.getFemtusenT());
             regNyttResultatA.setString(5, resultat.getTotusenW());
             regNyttResultatA.setString(6, resultat.getTotusenT());
-            regNyttResultatA.setString(7, resultat.getLiggendeRoingW());
+            regNyttResultatA.setString(7, resultat.getLiggendeRoingP());
             regNyttResultatA.setString(7, resultat.getLiggendeRoingKG());
             regNyttResultatA.setString(7, resultat.getSargeant());
             regNyttResultatA.execute();
