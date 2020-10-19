@@ -1,7 +1,7 @@
 package servlets;
 
-import models.ØvelseCModell;
 import tools.repository.Øvelserepo;
+import models.ØvelseSmodell;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,6 @@ public class Senior extends AbstractAppServlet {
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         String seksti = req.getParameter("60");
         String beveglighet = req.getParameter("bevegelighet");
-        String kroppshev = req.getParameter("kroppshev");
         String femtusenw = req.getParameter("5000m_w");
         String femtusent = req.getParameter("5000m_t");
         String totusenw = req.getParameter("2000m_w");
@@ -29,7 +28,7 @@ public class Senior extends AbstractAppServlet {
         String kneboy_p = req.getParameter("kneboy_p");
         String kneboy_kg = req.getParameter("kneboy_kg");
 
-        ØvelseSmodell regResultat = new ØvelseSmodell(seksti,beveglighet,kroppshev,femtusenw,femtusent,totusenw,totusent,ligg_ro_p,ligg_ro_kg,kneboy_p,kneboy_kg);
+        ØvelseSmodell regResultat = new ØvelseSmodell(seksti,beveglighet,femtusenw,femtusent,totusenw,totusent,ligg_ro_p,ligg_ro_kg,kneboy_p,kneboy_kg);
         Øvelserepo.regResultatS(regResultat, out);
 
         out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti);

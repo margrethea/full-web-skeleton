@@ -14,7 +14,7 @@ public class ØvelseSmodell {
     private String knebøyKG;
     private String knebøyP;
 
-    public ØvelseSmodell(String seksti, String beveglighet, String femtusenW, String femtusenT, String totusenW, String totusenT, String liggendeRoingW, String liggendeRoingKg, String knebøyKG, String knebøyP) {
+    public ØvelseSmodell(String seksti, String beveglighet, String femtusenW, String femtusenT, String totusenW, String totusenT, String liggendeRoingP, String liggendeRoingKg, String knebøyKG, String knebøyP) {
         this.forNavn = forNavn;
         this.etterNavn = etterNavn;
         this.seksti = seksti;
