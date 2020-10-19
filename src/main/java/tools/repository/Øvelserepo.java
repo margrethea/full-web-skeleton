@@ -46,5 +46,37 @@ public class Øvelserepo {
         }
 
     }
+    public static void regResultatS(ØvelseSmodell resultat, PrintWriter p) {
+        Connection db = null;
+        PreparedStatement regNyttResultatS = null;
+        try {
+            db = DbTool.getINSTANCE().dbLoggIn(p);
+            String query =
+                    "INSERT INTO ro.resultat (60w, bevegelighet, 5000t, 5000w, 2000t, 2000w, ligg_ro_p, ligg_ro_kg, knebøy_kg, knebøy_p) values (?,?,?,?,?,?,?,?,?,?)";
+
+            regNyttResultatS = db.prepareStatement(query);
+            regNyttResultatS.setString(1, resultat.getSeksti());
+            regNyttResultatS.setString(2, resultat.getBeveglighet());
+            regNyttResultatS.setString(3, resultat.getFemtusenT());
+            regNyttResultatS.setString(4, resultat.getFemtusenW());
+            regNyttResultatS.setString(5, resultat.gettotusenW());
+            regNyttResultatS.setString(6, resultat.gettotusenT());
+            regNyttResultatS.setString(7, resultat.getLiggendeRoingW());
+            regNyttResultatS.setString(8, resultat.getLiggendeRoingKG());
+            regNyttResultatS.setString(9, resultat.getKnebøyKG());
+            regNyttResultatS.setString(10, resultat.getKnebøyP());
+            regNyttResultatS.execute();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                db.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+
+    }
 }
 
