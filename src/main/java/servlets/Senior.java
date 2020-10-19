@@ -1,35 +1,59 @@
 package servlets;
 
+import models.ØvelseCModell;
+import tools.repository.Øvelserepo;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "Senior", urlPatterns = "/servlets.Senior")
-public class Senior extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+@WebServlet(name = "Senior", urlPatterns = {"/Senior"})
+public class Senior extends AbstractAppServlet {
+
+
+
+    @Override
+    protected void writeBody(HttpServletRequest req, PrintWriter out) {
+        String seksti = req.getParameter("60");
+        String beveglighet = req.getParameter("bevegelighet");
+        String kroppshev = req.getParameter("kroppshev");
+        String femtusenw = req.getParameter("5000m_w");
+        String femtusent = req.getParameter("5000m_t");
+        String totusenw = req.getParameter("2000m_w");
+        String totusent = req.getParameter("2000m_t");
+        String ligg_ro_p = req.getParameter("ligg_ro_p");
+        String ligg_ro_kg = req.getParameter("ligg_ro_kg");
+        String kneboy_p = req.getParameter("kneboy_p");
+        String kneboy_kg = req.getParameter("kneboy_kg");
+
+        ØvelseSmodell regResultat = new ØvelseSmodell(seksti,beveglighet,kroppshev,femtusenw,femtusent,totusenw,totusent,ligg_ro_p,ligg_ro_kg,kneboy_p,kneboy_kg);
+        Øvelserepo.regResultatS(regResultat, out);
+
+        out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti);
 
     }
+
+
+    @Override
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        writeResponse(request, response, "Hello!");
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        writeResponse(request, response, "HEIHEI");
+    }
+
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
 
-        String fnavn = request.getParameter("fornavn");
-        String enavn = request.getParameter("etternavn");
-        String options = request.getParameter("option");
-        String gender = null;
-        if(options.equals("Kvinne")){
-            gender = "Kvinne";
-            out.println("<h1> Hello Big Tiddy Ma </h1>");
-            System.out.println("Kvinne");
-        } else{
-            gender = "Mann";
-            System.out.println("Mann");
-        }
-        System.out.println(fnavn + enavn);
-        out.println(fnavn);
     }
+
+
 }
+
