@@ -32,7 +32,7 @@
             <a href="registrer-juniorC.jsp">Junior C</a>
         </div></div><br>
 
-        <form action="servlets.Senior" method="get">
+        <form action="servlets.Senior" method="post">
             <div class="registrer_resultat">
                 <label for="kjønn">Kjønn</label>
                 <select class="registrer_resultat" id="kjønn">
