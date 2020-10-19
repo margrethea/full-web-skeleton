@@ -1,6 +1,6 @@
 package models;
 
-public class ØvelseJBmodell {
+public class ØvelseBModell {
     private String forNavn;
     private String etterNavn;
     private String seksti;
@@ -11,7 +11,7 @@ public class ØvelseJBmodell {
     private String kroppshev;
     private String sargeant;
 
-    public ØvelseJBmodell(String seksti, String beveglighet, String tretusen, String totusenW, String totusenT, String kroppshev, String sargeant) {
+    public ØvelseBModell(String seksti, String beveglighet, String tretusen, String totusenW, String totusenT, String kroppshev, String sargeant) {
         this.forNavn = forNavn;
         this.etterNavn = etterNavn;
         this.seksti = seksti;
