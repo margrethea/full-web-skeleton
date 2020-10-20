@@ -76,7 +76,7 @@
 
     <div class="registrer_resultat">
         <label for="3000m_t">3000m (tid)</label>
-        <input type="text" name="3000m_t" class="registrer_resultat" id="3000m_t" placeholder="Skriv resultat her...">
+        <input type="text" name="3000m" class="registrer_resultat" id="3000m_t" placeholder="Skriv resultat her...">
     </div><br>
 
     <div class="registrer_resultat">
