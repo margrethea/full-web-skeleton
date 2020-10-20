@@ -17,12 +17,12 @@ public class JuniorA extends AbstractAppServlet {
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         String seksti = req.getParameter("60");
         String bevegelighet = req.getParameter("bevegelighet");
-        String femtusenW = req.getParameter("femtusenW");
-        String femtusenT = req.getParameter("femtusenT");
-        String totusenW = req.getParameter("totusenW");
-        String totusenT = req.getParameter("totusenT");
-        String liggendeRoingP = req.getParameter ("liggendeRoingP");
-        String liggendeRoingKG = req.getParameter("liggendeRoingKG");
+        String femtusenW = req.getParameter("5000m_w");
+        String femtusenT = req.getParameter("50000m_t");
+        String totusenW = req.getParameter("2000m_w");
+        String totusenT = req.getParameter("20000m_t");
+        String liggendeRoingP = req.getParameter ("ligg_ro_p");
+        String liggendeRoingKG = req.getParameter("ligg_ro_kgu");
         String sargeant = req.getParameter("sargeant");
         System.out.println(seksti + bevegelighet + femtusenW + femtusenT +
                 totusenW + totusenT + liggendeRoingP + liggendeRoingKG + sargeant);
