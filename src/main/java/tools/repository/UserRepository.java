@@ -43,28 +43,37 @@ public class UserRepository {
     }
 
 
-    public static String getBruker(String fornavn, PrintWriter p) {
+   /* public static String getBruker(PrintWriter p) {
         Connection db = null;
-        PreparedStatement prepareStatement = null;
-
-        String toReturn = null;
+        //PreparedStatement prepareStatement = null;
+        String query = null;
+       // String toReturn = null;
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
-            ResultSet rs = null;
-            String query = "SELECT * FROM roklubb.bruker WHERE fornavn = ?";
+
+            PreparedStatement st = db.prepareStatement("select epost, fornavn, etternavn from ro.bruker");
+            ResultSet r1 = st.executeQuery();
+            int count = 0;
+            while(r1.next()) {
+                System.out.println(count);
+                query = r1.getString("fornavn") + " " + r1.getString("etternavn") + " " + r1.getString("epost");
+                count = count + 1;
+
+
+            }
+           /* ResultSet rs = null;
+            String query = "SELECT * FROM ro.bruker WHERE fornavn = ?";
             prepareStatement = db.prepareStatement(query);
             prepareStatement.setString(1, fornavn);
             rs = prepareStatement.executeQuery();
             while (rs.next()) {
-                toReturn = rs.getString("fornavn");
+                toReturn = rs.getString("epost");
             }
             rs.close();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
-        return toReturn;
-
-    }
+        return query;
+    }*/
 }
