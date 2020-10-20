@@ -33,30 +33,34 @@ public class Hentbruker extends AbstractAppServlet {
             try {
                 db = DbTool.getINSTANCE().dbLoggIn(out);
 
-                PreparedStatement st = db.prepareStatement("select epost, fornavn, etternavn from ro.bruker");
+               // SELECT salesman.name AS "Salesman",//customer.cust_name, customer.city
+                //FROM salesman,customer
+               // WHERE salesman.city=customer.city;
+
+                PreparedStatement st = db.prepareStatement("select bruker.fornavn, resultat.60w, resultat.bevegelighet FROM ro.bruker, ro.resultat WHERE resultat.bruker_id=bruker.bruker_id;");
                 ResultSet r1 = st.executeQuery();
 
                 out.println("<html><body><h2>The Select query has following results : </h2>");
                 out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
                 out.println("<tr>");
-                out.println("<td><b>First Name</b></td>");
-                out.println("<td><b>Last Name</b></td>");
-                out.println("<td><b>Email</b></td>");
+                out.println("<td><b>Fornavn</b></td>");
+                out.println("<td><b>60w</b></td>");
+                out.println("<td><b>Bevegelighet</b></td>");
                 out.println("</tr>");
 
                 int count = 0;
                 while(r1.next()) {
                     System.out.println(count);
-                   // query = r1.getString("fornavn") + " " + r1.getString("etternavn") + " " + r1.getString("epost");
+                  //  query = r1.getString("fornavn") + " " + r1.getString("etternavn") + " " + r1.getString("epost") + " " + r1.getString("60w");
                     count = count + 1;
                     out.println("<tr>");
-                    out.println("<td>"+r1.getString(2) + "</td>");
-                    out.println("<td>"+r1.getString(3) + "</td>");
-                    out.println("<td>"+r1.getString(1) + "</td>");
+                    out.println("<td>"+r1.getString("fornavn") + "</td>");
+                    out.println("<td>"+r1.getString("60w") + "</td>");
+                    out.println("<td>"+r1.getString("bevegelighet") + "</td>");
                     out.println("</tr>");
 
-                    //out.format(query);
-                }
+                   // out.format(query);
+                } r1.close();
            /* ResultSet rs = null;
             String query = "SELECT * FROM ro.bruker WHERE fornavn = ?";
             prepareStatement = db.prepareStatement(query);
@@ -65,7 +69,7 @@ public class Hentbruker extends AbstractAppServlet {
             while (rs.next()) {
                 toReturn = rs.getString("epost");
             }
-            rs.close();*/
+            r1.close() */
 
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
