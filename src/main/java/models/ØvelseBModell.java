@@ -19,11 +19,11 @@ public class ØvelseBModell {
         this.kroppshev = kroppshev;
         this.sargeant = sargeant;
         this.tretusen = tretusen;
-        this.totusenT = totusenT;
         this.totusenW = totusenW;
+        this.totusenT = totusenT;
     }
 
-    public String getForNavn() { return seksti;}
+    public String getForNavn() { return forNavn;}
 
     public void setForNavn(String forNavn) {
         this.forNavn = forNavn;
@@ -75,20 +75,20 @@ public class ØvelseBModell {
         this.tretusen = tretusen;
     }
 
-    public String getTotusenT() {
-        return totusenT;
-    }
-
-    public void setTotusenT(String totusenT) {
-        this.totusenT = totusenT;
-    }
-
     public String getTotusenW() {
         return totusenW;
     }
 
     public void setTotusenW(String totusenW) {
         this.totusenW = totusenW;
+    }
+
+    public String getTotusenT() {
+        return totusenT;
+    }
+
+    public void setTotusenT(String totusenT) {
+        this. totusenT = totusenT;
     }
 }
 

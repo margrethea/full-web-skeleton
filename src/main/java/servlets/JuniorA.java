@@ -42,7 +42,7 @@ public class JuniorA extends AbstractAppServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "HEIHEI");
+        writeResponse(request, response, "Added to database");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
