@@ -16,11 +16,11 @@ public class ØvelseBModell {
         this.etterNavn = etterNavn;
         this.seksti = seksti;
         this.beveglighet = beveglighet;
-        this.kroppshev = kroppshev;
-        this.sargeant = sargeant;
         this.tretusen = tretusen;
         this.totusenW = totusenW;
         this.totusenT = totusenT;
+        this.kroppshev = kroppshev;
+        this.sargeant = sargeant;
     }
 
     public String getForNavn() { return forNavn;}
