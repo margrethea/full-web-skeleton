@@ -9,7 +9,7 @@ public class ØvelseSmodell {
     private String femtusenT;
     private String totusenW;
     private String totusenT;
-    private String liggendeRoingW;
+    private String liggendeRoingP;
     private String liggendeRoingKG;
     private String knebøyKG;
     private String knebøyP;
@@ -23,7 +23,7 @@ public class ØvelseSmodell {
         this.femtusenW = femtusenT;
         this.totusenW = totusenW;
         this.totusenT = totusenT;
-        this.liggendeRoingW = liggendeRoingW;
+        this.liggendeRoingP = liggendeRoingP;
         this.liggendeRoingKG = liggendeRoingKg;
         this.knebøyKG = knebøyKG;
         this.knebøyP = knebøyP;
@@ -78,12 +78,12 @@ public class ØvelseSmodell {
         this.totusenT = totusenT;
     }
 
-    public String getLiggendeRoingW() {
-        return liggendeRoingW;
+    public String getLiggendeRoingP() {
+        return liggendeRoingP;
     }
 
-    public void setLiggendeRoingW(String liggendeRoingW) {
-        this.liggendeRoingW = liggendeRoingW;
+    public void setLiggendeRoingP(String liggendeRoingP) {
+        this.liggendeRoingP = liggendeRoingP;
     }
 
     public String getLiggendeRoingKG() {
