@@ -65,7 +65,7 @@ public class Øvelserepo {
             regNyttResultatS.setString(4, resultat.getFemtusenW());
             regNyttResultatS.setString(5, resultat.gettotusenW());
             regNyttResultatS.setString(6, resultat.gettotusenT());
-            regNyttResultatS.setString(7, resultat.getLiggendeRoingW());
+            regNyttResultatS.setString(7, resultat.getLiggendeRoingP());
             regNyttResultatS.setString(8, resultat.getLiggendeRoingKG());
             regNyttResultatS.setString(9, resultat.getKnebøyKG());
             regNyttResultatS.setString(10, resultat.getKnebøyP());
