@@ -23,32 +23,72 @@ public class ØvelseBModell {
         this.totusenW = totusenW;
     }
 
+    public String getForNavn() { return seksti;}
+
+    public void setForNavn(String forNavn) {
+        this.forNavn = forNavn;
+    }
+
+    public String getEtterNavn() { return etterNavn;}
+
+    public void setEtterNavn(String etterNavn) {
+        this.etterNavn = etterNavn;
+    }
+
     public String getSeksti() {
         return seksti;
+    }
+
+    public void setSeksti(String seksti) {
+        this.seksti = seksti;
     }
 
     public String getBeveglighet() {
         return beveglighet;
     }
 
+    public void setBeveglighet(String beveglighet) {
+        this.beveglighet = beveglighet;
+    }
+
     public String getKroppshev() {
         return kroppshev;
+    }
+
+    public void setKroppshev(String kroppshev) {
+        this.kroppshev = kroppshev;
     }
 
     public String getSargeant() {
         return sargeant;
     }
 
+    public void setSargeant(String sargeant) {
+        this.sargeant = sargeant;
+    }
+
     public String getTretusen() {
         return tretusen;
+    }
+
+    public void setTretusen(String tretusen) {
+        this.tretusen = tretusen;
     }
 
     public String getTotusenT() {
         return totusenT;
     }
 
+    public void setTotusenT(String totusenT) {
+        this.totusenT = totusenT;
+    }
+
     public String getTotusenW() {
         return totusenW;
+    }
+
+    public void setTotusenW(String totusenW) {
+        this.totusenW = totusenW;
     }
 }
 
