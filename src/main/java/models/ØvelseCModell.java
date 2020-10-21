@@ -1,8 +1,6 @@
 package models;
 
 public class ØvelseCModell {
-    private String forNavn;
-    private String etterNavn;
     private String seksti;
     private String beveglighet;
     private String tretusen;
@@ -10,8 +8,6 @@ public class ØvelseCModell {
     private String sargeant;
 
     public ØvelseCModell(String seksti, String beveglighet, String kroppshev, String sargeant, String tretusen){
-        this.forNavn = forNavn;
-        this.etterNavn = etterNavn;
         this.seksti = seksti;
         this.beveglighet = beveglighet;
         this.kroppshev = kroppshev;
@@ -20,22 +16,6 @@ public class ØvelseCModell {
     }
 
     /** GETTERS OG SETTERS*/
-
-    public String getForNavn() {
-        return forNavn;
-    }
-
-    public void setForNavn(String forNavn) {
-        this.forNavn = forNavn;
-    }
-
-    public String getEtterNavn() {
-        return etterNavn;
-    }
-
-    public void setEtterNavn(String etterNavn) {
-        this.etterNavn = etterNavn;
-    }
 
     public String getSeksti() {
         return seksti;
