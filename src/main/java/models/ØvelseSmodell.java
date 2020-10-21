@@ -1,8 +1,6 @@
 package models;
 
 public class ØvelseSmodell {
-    private String forNavn;
-    private String etterNavn;
     private String seksti;
     private String beveglighet;
     private String femtusenW;
@@ -15,8 +13,6 @@ public class ØvelseSmodell {
     private String knebøyP;
 
     public ØvelseSmodell(String seksti, String beveglighet, String femtusenW, String femtusenT, String totusenW, String totusenT, String liggendeRoingP, String liggendeRoingKg, String knebøyKG, String knebøyP) {
-        this.forNavn = forNavn;
-        this.etterNavn = etterNavn;
         this.seksti = seksti;
         this.beveglighet = beveglighet;
         this.femtusenT = femtusenW;
