@@ -28,7 +28,7 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.resultat (60w, bevegelighet, 3000t, kroppshev, sargeant ) values (?,?,?,?,?)";
+                    "INSERT INTO ro.c_resultat (60w, bevegelighet, 3000t, kroppshev, sargeant ) values (?,?,?,?,?)";
 
             regNyttResultat = db.prepareStatement(query);
             regNyttResultat.setString(1, resultat.getSeksti());
@@ -56,7 +56,7 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.resultat (60w, bevegelighet, 5000t, 5000w, 2000t, 2000w, ligg_ro_p, ligg_ro_kg, knebøy_kg, knebøy_p) values (?,?,?,?,?,?,?,?,?,?)";
+                    "INSERT INTO ro.s_resultat (60w, bevegelighet, 5000t, 5000w, 2000t, 2000w, ligg_ro_p, ligg_ro_kg, knebøy_kg, knebøy_p) values (?,?,?,?,?,?,?,?,?,?)";
 
             regNyttResultatS = db.prepareStatement(query);
             regNyttResultatS.setString(1, resultat.getSeksti());
@@ -89,7 +89,7 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.resultat (60w, bevegelighet, 3000m, 2000w, 2000t, kroppshev, sargeant) values (?,?,?,?,?,?,?)";
+                    "INSERT INTO ro.b_resultat (60w, bevegelighet, 3000m, 2000w, 2000t, kroppshev, sargeant) values (?,?,?,?,?,?,?)";
 
             regNyttResultatB = db.prepareStatement(query);
             regNyttResultatB.setString(1, resultat.getSeksti());
@@ -118,7 +118,7 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.resultat (60w, bevegelighet, 5000w, 5000t, 2000w, 2000t, ligg_ro_p, ligg_ro_kg, sargeant) values (?,?,?,?,?,?,?,?,?)";
+                    "INSERT INTO ro.a_resultat (60w, bevegelighet, 5000w, 5000t, 2000w, 2000t, ligg_ro_p, ligg_ro_kg, sargeant) values (?,?,?,?,?,?,?,?,?)";
 
             regNyttResultatA = db.prepareStatement(query);
             regNyttResultatA.setString(1, resultat.getSeksti());
