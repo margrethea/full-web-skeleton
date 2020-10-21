@@ -28,7 +28,7 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.c_resultat (60w, bevegelighet, 3000t, kroppshev, sargeant ) values (?,?,?,?,?)";
+                    "INSERT INTO ro.c_resultat (60w, bevegelighet, 3000m, kroppshev, sargeant ) values (?,?,?,?,?)";
 
             regNyttResultat = db.prepareStatement(query);
             regNyttResultat.setString(1, resultat.getSeksti());
@@ -89,7 +89,7 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.b_resultat (60w, bevegelighet, 3000m, 2000w, 2000t, kroppshev, sargeant) values (?,?,?,?,?,?,?)";
+                    "INSERT INTO ro.b_resultat (60w, bevegelighet, 3000t, 2000w, 2000t, kroppshev, sargeant) values (?,?,?,?,?,?,?)";
 
             regNyttResultatB = db.prepareStatement(query);
             regNyttResultatB.setString(1, resultat.getSeksti());
