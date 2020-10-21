@@ -25,7 +25,7 @@
 
         <h1>Resultatsøk</h1>
 
-        <form action="" method="post">
+        <form action="HentBrukerC" method="post">
             <div class="resultat_søk">
                 <label for="fornavn">Fornavn</label>
                 <input type="text" name="fornavn" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
