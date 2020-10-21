@@ -37,7 +37,7 @@ public class Hentbruker extends AbstractAppServlet {
                 //FROM salesman,customer
                // WHERE salesman.city=customer.city;
 
-                PreparedStatement st = db.prepareStatement("select bruker.fornavn, resultat.60w, resultat.bevegelighet FROM ro.bruker, ro.resultat WHERE resultat.bruker_id=bruker.bruker_id;");
+                PreparedStatement st = db.prepareStatement("select bruker.fornavn, c_resultat.60w, c_resultat.bevegelighet, c_resultat.kroppshev FROM ro.bruker, ro.c_resultat WHERE c_resultat.bruker_id=bruker.bruker_id;");
                 ResultSet r1 = st.executeQuery();
 
                 out.println("<html><body><h2>The Select query has following results : </h2>");
@@ -46,6 +46,7 @@ public class Hentbruker extends AbstractAppServlet {
                 out.println("<td><b>Fornavn</b></td>");
                 out.println("<td><b>60w</b></td>");
                 out.println("<td><b>Bevegelighet</b></td>");
+                out.println("<td><b>Kroppshev</b></td>");
                 out.println("</tr>");
 
                 int count = 0;
@@ -57,6 +58,7 @@ public class Hentbruker extends AbstractAppServlet {
                     out.println("<td>"+r1.getString("fornavn") + "</td>");
                     out.println("<td>"+r1.getString("60w") + "</td>");
                     out.println("<td>"+r1.getString("bevegelighet") + "</td>");
+                    out.println("<td>"+r1.getString("kroppshev") + "</td>");
                     out.println("</tr>");
 
                    // out.format(query);
