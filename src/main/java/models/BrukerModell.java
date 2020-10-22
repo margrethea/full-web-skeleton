@@ -1,62 +1,69 @@
 package models;
 
 public class BrukerModell {
-    private String firstName;
-    private String lastName;
-    private String userName;
-    private String password;
+    private String fornavn;
+    private String etternavn;
+    private String epost;
+    private String fødselsår;
+    private String kjønn;
+    private String roklubb;
 
-    /**
-     *
-     * @param firstName the users firstname
-     * @param lastName the users lastname
-     * @param userName the users email .e.g., example@example.com
-     * @param password the users password: we usually encrypt it in the database but thats for you to figure out :)
-     */
-    public BrukerModell(String firstName, String lastName, String userName, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.password = password;
+    public BrukerModell(String fornavn, String etternavn, String epost, String fødselsår, String kjønn, String roklubb) {
+        this.fornavn = fornavn;
+        this.etternavn = etternavn;
+        this.epost = epost;
+        this.fødselsår = fødselsår;
+        this.kjønn = kjønn;
+        this.roklubb = roklubb;
     }
 
-    /**
-     *
-     * GETTERS AND SETTERS!
-     */
+    /** Getters og setters*/
 
-    public String getFirstName() {
-        return firstName;
+    public String getFornavn() {
+        return fornavn;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFornavn(String fornavn) {
+        this.fornavn = fornavn;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getEtternavn() {
+        return etternavn;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setEtternavn(String etternavn) {
+        this.etternavn = etternavn;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getEpost() {
+        return epost;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setEpost(String epost) {
+        this.epost = epost;
     }
 
-
-
-    public String getPassword() {
-        return password;
+    public String getFødselsår() {
+        return fødselsår;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setFødselsår(String fødselsår) {
+        this.fødselsår = fødselsår;
+    }
+
+    public String getKjønn() {
+        return kjønn;
+    }
+
+    public void setKjønn(String kjønn) {
+        this.kjønn = kjønn;
+    }
+
+    public String getRoklubb() {
+        return roklubb;
+    }
+
+    public void setRoklubb(String roklubb) {
+        this.roklubb = roklubb;
     }
 }
-
