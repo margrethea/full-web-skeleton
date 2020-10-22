@@ -5,7 +5,7 @@
     <head>
         <link rel="stylesheet" href="main.css">
         <meta charset="UTF-8">
-        <title>Min side - Roforbundet</title>
+        <title>Registrer resultat - Roforbundet</title>
     </head>
 
     <body>
