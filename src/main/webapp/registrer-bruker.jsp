@@ -25,7 +25,7 @@
 
 <h1>Registrer bruker</h1>
 
-<form action="" method="post">
+<form action="RegistrerBruker" method="post">
     <div class="registrer-bruker">
         <label for="fornavn">Fornavn</label>
         <input type="text" name="fornavn" class="registrer-bruker" id="fornavn" placeholder="Skriv fornavn her...">
