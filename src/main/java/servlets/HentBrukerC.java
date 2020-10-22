@@ -1,6 +1,7 @@
 package servlets;
 
 
+import models.QuerysC;
 import tools.DbTool;
 
 import javax.servlet.ServletException;
@@ -30,7 +31,7 @@ public class HentBrukerC extends AbstractAppServlet {
         //FROM salesman,customer
         // WHERE salesman.city=customer.city;
 
-        PreparedStatement st = db.prepareStatement("select bruker.fornavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.c_resultat WHERE c_resultat.bruker_id=bruker.bruker_id;");
+        PreparedStatement st = db.prepareStatement(QuerysC.alleResultat(query));
         ResultSet r1 = st.executeQuery();
 
         out.println("<html><body><h2>The Select query has following results : </h2>");
