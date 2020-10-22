@@ -32,6 +32,8 @@
     <a href="registrer-juniorC.jsp">Junior C</a>
 </div></div><br>
 
+<a href='registrer-bruker.jsp'><button>Registrer bruker</button></a><br>
+
 <form action="JuniorA" method="post">
     <div class="registrer_resultat">
         <label for="kjønn">Kjønn</label>
