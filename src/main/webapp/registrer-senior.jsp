@@ -32,7 +32,7 @@
             <a href="registrer-juniorC.jsp">Junior C</a>
         </div></div><br>
 
-        <a href='registrer-bruker.jsp'><button>Registrer bruker</button></a>
+        <a href='registrer-bruker.jsp'><button>Registrer bruker</button></a><br>
 
         <form action="servlets.Senior" method="post">
             <div class="registrer_resultat">
