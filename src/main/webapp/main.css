@@ -63,6 +63,23 @@ th, td {
     text-decoration: underline;
 }
 
+/* Resultatsøk links */
+.resultatsøk_linker a {
+    color: #21418f;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.rsultatsøk_linker a:hover {
+    color: #21418f;
+    text-decoration: underline;
+}
+.resultatsøk_linker a.active {
+    color: #21418f;
+    text-decoration: underline;
+}
+
 
 .nasjklubb a:hover {
     text-align: center;
