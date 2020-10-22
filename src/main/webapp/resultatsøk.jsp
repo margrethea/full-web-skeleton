@@ -26,7 +26,7 @@
         <h1>Resultatsøk</h1>
 
         <div class="resultatsøk_linker" style="text-align: center"><div>
-            <a href="resultatsøk-senior.jsp.jsp">Senior</a>
+            <a href="resultatsøk-senior.jsp">Senior</a>
             <a href="resultatsøk-juniorA.jsp">Junior A</a>
             <a href="resultatsøk-juniorB.jsp">Junior B</a>
             <a href="resultatsøk-juniorC.jsp">Junior C</a>
