@@ -31,9 +31,11 @@ public class BrukerRepository {
             regNyttResultatBruker.setString(1, resultat.getFornavn());
             regNyttResultatBruker.setString(2, resultat.getEtternavn());
             regNyttResultatBruker.setString(3, resultat.getEpost());
+            /**
             regNyttResultatBruker.setString(4, resultat.getFødselsår());
             regNyttResultatBruker.setString(5, resultat.getKjønn());
             regNyttResultatBruker.setString(6, resultat.getRoklubb());
+            **/
             regNyttResultatBruker.execute();
 
         } catch (SQLException throwables) {
