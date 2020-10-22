@@ -25,18 +25,25 @@
 
         <h1>Resultatsøk</h1>
 
+        <div class="resultatsøk_linker" style="text-align: center"><div>
+            <a href="resultatsøk-senior.jsp.jsp">Senior</a>
+            <a href="resultatsøk-juniorA.jsp">Junior A</a>
+            <a href="resultatsøk-juniorB.jsp">Junior B</a>
+            <a href="resultatsøk-juniorC.jsp">Junior C</a>
+        </div></div>
+
         <form action="HentBrukerC" method="post">
-            <div class="resultat_søk">
+            <div class="resultatsøk">
                 <label for="fornavn">Fornavn</label>
                 <input type="text" name="fornavn" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
             </div><br>
 
-            <div class="resultat_søk">
+            <div class="resultatsøk">
                 <label for="etternavn">Etternavn</label>
                 <input type="text" name="etternavn" class="registrer_resultat" id="etternavn" placeholder="Skriv etternavn her...">
             </div><br>
 
-            <div class="resultat_søk">
+            <div class="resultatsøk">
                 <label for="testperiode">Testperiode</label>
                 <select class="registrer_resultat" id="testperiode">
                     <option> Velg testperiode... </option>
@@ -46,7 +53,7 @@
                 </select>
             </div><br>
 
-            <div class="resultat_søk">
+            <div class="resultatsøk">
                <label for="klasse">Klasse</label>
                 <select name="Klasse" id="klasse">
                     <option value="Velg_klasse">Velg klasse...</option>
@@ -82,7 +89,7 @@
                 </select>
             </div><br>
 
-           <div class="resultat_søk">
+           <div class="resultatsøk">
                 <label for="årstall">Årstall</label>
                 <select name="Årstall" id="årstall">
                     <option value="Velg_årstall">Velg årstall...</option>
