@@ -92,6 +92,4 @@ public class HentBrukerB extends AbstractAppServlet {
         writeResponse(request, response, "Hello!");
     }
 
-
-
 }
