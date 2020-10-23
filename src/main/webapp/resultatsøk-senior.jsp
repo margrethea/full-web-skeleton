@@ -24,7 +24,7 @@
                          alt="logo" class="center" ></a>
 
 <h1>Resultatsøk</h1>
-
+<form action="HentBrukerS" method="post">
 <div class="resultatsøk_linker" style="text-align: center"><div>
     <a class="active" href="resultatsøk-senior.jsp">Senior</a>
     <a href="resultatsøk-juniorA.jsp">Junior A</a>
