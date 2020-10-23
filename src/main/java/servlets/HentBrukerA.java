@@ -1,7 +1,6 @@
 package servlets;
 
-import models.QuerysC;
-import models.QuerysS;
+import models.QuerysA;
 import tools.DbTool;
 
 import javax.servlet.ServletException;
@@ -15,11 +14,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet(name = "HentBrukerS", urlPatterns = "/HentBrukerS")
-public class HentBrukerS extends AbstractAppServlet {
+@WebServlet(name = "HentBrukerA", urlPatterns = "/HentBrukerA")
+public class HentBrukerA extends AbstractAppServlet {
 
     @Override
-    protected void writeBody(HttpServletRequest req, PrintWriter out){
+    protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Connection db = null;
         //PreparedStatement prepareStatement = null;
         String query = null;
@@ -31,10 +30,10 @@ public class HentBrukerS extends AbstractAppServlet {
             //FROM salesman,customer
             // WHERE salesman.city=customer.city;
 
-            PreparedStatement st = db.prepareStatement(QuerysS.alleResultat(query));
+            PreparedStatement st = db.prepareStatement(QuerysA.alleResultat(query));
             ResultSet r1 = st.executeQuery();
 
-            out.println("<html><body><h2> Resultat av søk i senior : </h2>");
+            out.println("<html><body><h2> Resultat av søk i Junior A: </h2>");
             out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
             out.println("<tr>");
             out.println("<td><b>Fornavn</b></td>");
@@ -48,34 +47,33 @@ public class HentBrukerS extends AbstractAppServlet {
             out.println("<td><b>2000 watt</b></td>");
             out.println("<td><b>2000 tid</b></td>");
             out.println("<td><b>Liggende Roing kg</b></td>");
-            out.println("<td><b>Liggende Roing p</b></td>");
-            out.println("<td><b>knebøy kg</b></td>");
-            out.println("<td><b>knebøy p</b></td>");
+            out.println("<td><b>Liggende Roing prosent</b></td>");
+            out.println("<td><b>Sargeant </b></td>");
             out.println("</tr>");
 
             out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
 
-            while(r1.next()) {
+            while (r1.next()) {
                 //  query = r1.getString("fornavn") + " " + r1.getString("etternavn") + " " + r1.getString("epost") + " " + r1.getString("60w");
                 out.println("<tr>");
-                out.println("<td>"+r1.getString("fornavn") + "</td>");
-                out.println("<td>"+r1.getString("toppscore") + "</td>");
-                out.println("<td>"+r1.getString("år") + "</td>");
-                out.println("<td>"+r1.getString("periode") + "</td>");
-                out.println("<td>"+r1.getString("60w") + "</td>");
-                out.println("<td>"+r1.getString("bevegelighet") + "</td>");
-                out.println("<td>"+r1.getString("5000w") + "</td>");
-                out.println("<td>"+r1.getString("5000t") + "</td>");
-                out.println("<td>"+r1.getString("2000w") + "</td>");
-                out.println("<td>"+r1.getString("2000t") + "</td>");
-                out.println("<td>"+r1.getString("ligg_ro_kg") + "</td>");
-                out.println("<td>"+r1.getString("ligg_ro_p") + "</td>");
-                out.println("<td>"+r1.getString("knebøy_kg") + "</td>");
-                out.println("<td>"+r1.getString("knebøy_p") + "</td>");
+                out.println("<td>" + r1.getString("fornavn") + "</td>");
+                out.println("<td>" + r1.getString("toppscore") + "</td>");
+                out.println("<td>" + r1.getString("år") + "</td>");
+                out.println("<td>" + r1.getString("periode") + "</td>");
+                out.println("<td>" + r1.getString("60w") + "</td>");
+                out.println("<td>" + r1.getString("bevegelighet") + "</td>");
+                out.println("<td>" + r1.getString("5000w") + "</td>");
+                out.println("<td>" + r1.getString("5000t") + "</td>");
+                out.println("<td>" + r1.getString("2000w") + "</td>");
+                out.println("<td>" + r1.getString("2000t") + "</td>");
+                out.println("<td>" + r1.getString("ligg_ro_kg") + "</td>");
+                out.println("<td>" + r1.getString("ligg_ro_p") + "</td>");
+                out.println("<td>" + r1.getString("sargeant") + "</td>");
                 out.println("</tr>");
 
                 // out.format(query);
-            } r1.close();
+            }
+            r1.close();
            /* ResultSet rs = null;
             String query = "SELECT * FROM ro.bruker WHERE fornavn = ?";
             prepareStatement = db.prepareStatement(query);
@@ -93,17 +91,12 @@ public class HentBrukerS extends AbstractAppServlet {
     }
 
 
-
     // String fornavn = req.getParameter("bruker");
     //String skrivUt = UserRepository.getBruker(out);
     //out.format("<h1> Here is your request: %s</h1", skrivUt);
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
+        writeResponse(request, response, "Hent bruker A");
     }
-
-
-
 }
-

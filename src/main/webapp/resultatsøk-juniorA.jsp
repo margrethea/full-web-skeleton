@@ -23,9 +23,10 @@
 <a href="index.jsp"><img src="https://assets.website-files.com/5b3335ab4ca8551124a2ba8f/5cbf778b0cdebda6ec56b4a6_norges-roforbund-logo-p-500.png"
                          alt="logo" class="center" ></a>
 
-<h1>Resultatsøk</h1>
 
-<div class="resultatsøk_linker" style="text-align: center"><div>
+<h1>Resultatsøk</h1>
+    <form action="HentBrukerA" method="post">
+    <div class="resultatsøk_linker" style="text-align: center"><div>
     <a href="resultatsøk-senior.jsp">Senior</a>
     <a class="active" href="resultatsøk-juniorA.jsp">Junior A</a>
     <a href="resultatsøk-juniorB.jsp">Junior B</a>

@@ -34,7 +34,7 @@ public class HentBrukerC extends AbstractAppServlet {
         PreparedStatement st = db.prepareStatement(QuerysC.alleResultat(query));
         ResultSet r1 = st.executeQuery();
 
-        out.println("<html><body><h2>The Select query has following results : </h2>");
+        out.println("<html><body><h2> Resultat av søk i Junior C : </h2>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");
