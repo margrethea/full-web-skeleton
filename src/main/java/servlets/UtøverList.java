@@ -2,6 +2,7 @@ package servlets;
 
 import jdk.jfr.Category;
 import models.DAOUtøver;
+import models.DropdownBruker;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,6 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "UtøverList", urlPatterns = {"/UtøverList"})
 public class UtøverList extends HttpServlet {
+    // er det httpservlet vi skal extrende til eller abstract?
     private static final long serialVersionUID = 1L;
 
 
@@ -33,7 +35,7 @@ public class UtøverList extends HttpServlet {
         DAOUtøver dao = new DAOUtøver();
 
         try {
-            List<Category> listUtøver = dao.list();
+            List<DropdownBruker> listUtøver = dao.list();
             request.setAttribute("listUtøver", listUtøver);
 
             RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorC.jsp");
@@ -52,6 +54,5 @@ public class UtøverList extends HttpServlet {
         request.setAttribute("SelectedBrukerId", brukerId);
 
     }
-
-
-}
+         // Hva betyr dette ? O_O
+    }

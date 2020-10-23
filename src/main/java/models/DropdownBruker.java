@@ -16,21 +16,27 @@ public class DropdownBruker {
     }
 
     public int getBruker_id() {
+
         return bruker_id;
     }
 
     public void setBruker_id(int bruker_id) {
+
         this.bruker_id = bruker_id;
     }
 
     public String getForNavn() {
+
         return forNavn;
     }
 
     public void setForNavn(String forNavn) {
+
         this.forNavn = forNavn;
     }
+
     public String getEtterNavn() {
+
         return etterNavn;
     }
 

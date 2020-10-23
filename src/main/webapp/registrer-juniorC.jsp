@@ -41,7 +41,7 @@
                 <option>Jente</option>
             </select>
         </div><br>
-
+<!--
         <div class="registrer_resultat">
             <label for="fornavn">Fornavn</label>
             <input type="text" name="fornavn" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
@@ -52,7 +52,7 @@
             <label for="etternavn">Etternavn</label>
             <input type="text" name="etternavn" class="registrer_resultat" id="etternavn" placeholder="Skriv etternavn her...">
         </div><br>
-
+--!>
         <div class="registrer_resultat">
             <label for="testperiode">Testperiode</label>
             <select class="registrer_resultat" id="testperiode">
