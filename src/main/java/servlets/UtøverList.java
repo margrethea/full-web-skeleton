@@ -27,25 +27,25 @@ public class UtøverList extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UtøverList(request, response);
-
-    }
-    private void UtøverList (HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
         DAOUtøver dao = new DAOUtøver();
+        PrintWriter out = response.getWriter();
 
         try {
-            List<DropdownBruker> listUtøver = dao.list();
-            request.setAttribute("listUtøver", listUtøver);
+            List<DropdownBruker> listUtøver = dao.list(out);
+           listUtøver.add((new DropdownBruker("1","2","3")));
+           request.setAttribute("listUtøver", listUtøver);
+            System.out.println(listUtøver);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorC.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("RegistrerDAO.jsp");
             dispatcher.forward(request, response);
 
         } catch (SQLException e) {
             e.printStackTrace();
             throw new ServletException(e);
         }
+
     }
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

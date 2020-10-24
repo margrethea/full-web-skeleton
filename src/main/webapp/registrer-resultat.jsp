@@ -26,7 +26,7 @@
     <h1>Registrer resultat</h1>
 
     <div class="registrer-resultat" style="text-align: center"><div>
-        <a href="registrer-senior.jsp">Senior</a>
+        <a href="UtøverList">Senior</a>
         <a href="registrer-juniorA.jsp">Junior A</a>
         <a href="registrer-juniorB.jsp">Junior B</a>
         <a href="registrer-juniorC.jsp">Junior C</a>

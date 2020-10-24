@@ -15,17 +15,19 @@ public class DAOUtøver {
     String user = "root";
     String password = "12345";
 
-    public List<DropdownBruker> list() throws SQLException {
+    public List<DropdownBruker> list(PrintWriter out) throws SQLException {
         List<DropdownBruker> listUtøver = new ArrayList<>();
+        Connection db = null;
 
-        try (Connection connection = DriverManager.getConnection(databaseURL, user, password)) {
+        try  {
             // over, skal vi bruke "db=null" greiene isteden for det som står?
-            String sql = "SELECT bruker.fornavn, bruker.etternavn FROM ro.bruker ORDER BY bruker.fornavn";
-            Statement statement = connection.createStatement();
+            db  = DbTool.getINSTANCE().dbLoggIn(out);
+            String sql = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn FROM ro.bruker ORDER BY bruker.fornavn";
+            Statement statement = db.createStatement();
             ResultSet result = statement.executeQuery(sql);
 
             while (result.next()) {
-                int bruker_id = result.getInt("bruker_id");
+                String bruker_id = result.getString("bruker_id");
                 String fornavn = result.getString("fornavn");
                 String etternavn = result.getString("etternavn");
                 DropdownBruker utøver = new DropdownBruker(bruker_id, fornavn, etternavn);

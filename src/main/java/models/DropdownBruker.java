@@ -2,12 +2,12 @@ package models;
 
 
 public class DropdownBruker {
-    private int bruker_id;
+    private String bruker_id;
     private String forNavn;
     private String etterNavn;
 
 
-    public DropdownBruker(int bruker_id, String forNavn, String etterNavn) {
+    public DropdownBruker(String bruker_id, String forNavn, String etterNavn) {
         super();
         this.bruker_id= bruker_id;
         this.forNavn = forNavn;
@@ -15,12 +15,12 @@ public class DropdownBruker {
 
     }
 
-    public int getBruker_id() {
+    public String getBruker_id() {
 
         return bruker_id;
     }
 
-    public void setBruker_id(int bruker_id) {
+    public void setBruker_id(String bruker_id) {
 
         this.bruker_id = bruker_id;
     }
