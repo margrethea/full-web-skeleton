@@ -36,7 +36,7 @@ public class UtøverList extends HttpServlet {
            request.setAttribute("listUtøver", listUtøver);
             System.out.println(listUtøver);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("RegistrerDAO.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-senior.jsp");
             dispatcher.forward(request, response);
 
         } catch (SQLException e) {
@@ -49,9 +49,9 @@ public class UtøverList extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int brukerId = Integer.parseInt(request.getParameter("Utøverliste"));
+        //int brukerId = Integer.parseInt(request.getParameter("Utøverliste"));
 
-        request.setAttribute("SelectedBrukerId", brukerId);
+        //request.setAttribute("SelectedBrukerId", brukerId);
 
     }
          // Hva betyr dette ? O_O
