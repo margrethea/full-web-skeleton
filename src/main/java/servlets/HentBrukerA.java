@@ -57,7 +57,6 @@ public class HentBrukerA extends AbstractAppServlet {
                 //  query = r1.getString("fornavn") + " " + r1.getString("etternavn") + " " + r1.getString("epost") + " " + r1.getString("60w");
                 out.println("<tr>");
                 out.println("<td>" + r1.getString("fornavn") + "</td>");
-                out.println("<td>" + r1.getString("toppscore") + "</td>");
                 out.println("<td>" + r1.getString("år") + "</td>");
                 out.println("<td>" + r1.getString("periode") + "</td>");
                 out.println("<td>" + r1.getString("60w") + "</td>");
@@ -69,6 +68,7 @@ public class HentBrukerA extends AbstractAppServlet {
                 out.println("<td>" + r1.getString("ligg_ro_kg") + "</td>");
                 out.println("<td>" + r1.getString("ligg_ro_p") + "</td>");
                 out.println("<td>" + r1.getString("sargeant") + "</td>");
+                out.println("<td>" + r1.getString("toppscore") + "</td>");
                 out.println("</tr>");
 
                 // out.format(query);
