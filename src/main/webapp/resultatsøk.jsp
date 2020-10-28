@@ -25,89 +25,13 @@
 
         <h1>Resultatsøk</h1>
 
-        <form action="HentBrukerC" method="post">
-            <div class="resultat_søk">
-                <label for="fornavn">Fornavn</label>
-                <input type="text" name="fornavn" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
-            </div><br>
+        <div class="resultatsøk_linker" style="text-align: center"><div>
+            <a href="resultatsøk-senior.jsp">Senior</a>
+            <a href="resultatsøk-juniorA.jsp">Junior A</a>
+            <a href="resultatsøk-juniorB.jsp">Junior B</a>
+            <a href="resultatsøk-juniorC.jsp">Junior C</a>
+        </div></div>
 
-            <div class="resultat_søk">
-                <label for="etternavn">Etternavn</label>
-                <input type="text" name="etternavn" class="registrer_resultat" id="etternavn" placeholder="Skriv etternavn her...">
-            </div><br>
-
-            <div class="resultat_søk">
-                <label for="testperiode">Testperiode</label>
-                <select class="registrer_resultat" id="testperiode">
-                    <option> Velg testperiode... </option>
-                    <option>Testperiode 1</option>
-                    <option>Testperiode 2</option>
-                    <option>Testperiode 3</option>
-                </select>
-            </div><br>
-
-            <div class="resultat_søk">
-               <label for="klasse">Klasse</label>
-                <select name="Klasse" id="klasse">
-                    <option value="Velg_klasse">Velg klasse...</option>
-                    <option value="SeniorMenn">Senior Menn</option>
-                    <option value="SeniorKvinne">Senior Kvinner</option>
-                    <option value="JuniorAGutt">Junior A Gutt</option>
-                    <option value="JuniorAJente">Junior A Jenter</option>
-                    <option value="JuniorBGutt">Junior B Gutt</option>
-                    <option value="JuniorBJente">Junior B Jente</option>
-                    <option value="JuniorCGutt">Junior C Gutt</option>
-                    <option value="JuniorCJenter">Junior C Jenter</option>
-                </select>
-            </div><br>
-
-            <div class="resultatsøk">
-                <label for="øvelse">Øvelse</label>
-                <select name="Øvelse" id="øvelse">
-                    <option value="Velg_øvelse">Velg øvelse...</option>
-                    <option value="5000m_w">5000 meter watt</option>
-                    <option value="5000m_t">5000 meter tid</option>
-                    <option value="3000m_w">3000 meter watt</option>
-                    <option value="3000m_t">3000 meter tid</option>
-                    <option value="2000m_w">2000 meter watt</option>
-                    <option value="2000m_t">2000 meter tid</option>
-                    <option value="60">60"</option>
-                    <option value="Liggende_roing_p">Liggende roing prosent</option>
-                    <option value="Liggende_roing_kg">Liggende roing kg</option>
-                    <option value="Kroppshev">Kroppshev</option>
-                    <option value="Sargeant">Sargeant</option>
-                    <option value="Bevegelighet">Bevegelighet</option>
-                    <option value="Knebøy_p">Knebøy prosent</option>
-                    <option value="Knebøy_kg">Knebøy kg</option>
-                </select>
-            </div><br>
-
-           <div class="resultat_søk">
-                <label for="årstall">Årstall</label>
-                <select name="Årstall" id="årstall">
-                    <option value="Velg_årstall">Velg årstall...</option>
-                    <option value="2004">2004</option>
-                    <option value="2005">2005</option>
-                    <option value="2006">2006</option>
-                    <option value="2007">2007</option>
-                    <option value="2008">2008</option>
-                    <option value="2009">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                </select>
-            </div><br>
-
-            <input type="submit" name="action" value="Søk">
-        </form>
     </body>
 
 </html>

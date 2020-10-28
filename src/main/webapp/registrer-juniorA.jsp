@@ -5,7 +5,7 @@
 <head>
     <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
-    <title>Min side - Roforbundet</title>
+    <title>Registrer resultat - Roforbundet</title>
 </head>
 
 <body>
@@ -31,6 +31,8 @@
     <a href="registrer-juniorB.jsp">Junior B</a>
     <a href="registrer-juniorC.jsp">Junior C</a>
 </div></div><br>
+
+<a href='registrer-bruker.jsp'><button>Registrer bruker</button></a><br>
 
 <form action="JuniorA" method="post">
     <div class="registrer_resultat">

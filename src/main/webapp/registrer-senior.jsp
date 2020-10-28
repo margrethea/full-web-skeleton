@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <title>Registrer resultat - Roforbundet</title>
-    </head>
+</head>
 
-    <body>
-    <div class="topnav">
-       <a href="index.jsp">Hjem</a>
-        <a class="active" href="registrer-resultat.jsp">Registrer resultat</a>
-       <a href="toppscore.jsp">Toppscore</a>
-       <div class="topnav-right">
+<body>
+<div class="topnav">
+    <a href="index.jsp">Hjem</a>
+    <a class="active" href="registrer-resultat.jsp">Registrer resultat</a>
+    <a href="toppscore.jsp">Toppscore</a>
+    <div class="topnav-right">
+
         <a href="min-side.jsp">Min side</a>
         <a href="resultatsøk.jsp">Resultatsøk</a>
         <a href="innstillinger.jsp">Innstillinger</a>
@@ -33,7 +34,7 @@
             <a href="registrer-juniorC.jsp">Junior C</a>
         </div></div><br>
 
-        <a href='registrer-bruker.jsp'><button>Registrer bruker</button></a>
+        <a href='registrer-bruker.jsp'><button>Registrer bruker</button></a><br>
 
     <form action="servlets.Senior" method="post">
      Velg bruker:&nbsp;
