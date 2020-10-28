@@ -23,6 +23,8 @@ public class JuniorB extends AbstractAppServlet {
         String totusenT = req.getParameter("20000m_t");
         String kroppshev = req.getParameter("kroppshev");
         String sargeant = req.getParameter("sargeant");
+        System.out.println(seksti + beveglighet + tretusen + totusenW + totusenT +
+                kroppshev + sargeant);
 
         ØvelseBModell regResultat = new ØvelseBModell(seksti, beveglighet, tretusen, totusenW, totusenT, kroppshev, sargeant);
           Øvelserepo.regResultatB(regResultat, out);
@@ -34,11 +36,11 @@ public class JuniorB extends AbstractAppServlet {
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        writeResponse(request, response, "Hello, ya dick!");
+        writeResponse(request, response, "Hello!");
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        writeResponse(request, response, "Heisann sveisann");
+        writeResponse(request, response, "Added to database");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

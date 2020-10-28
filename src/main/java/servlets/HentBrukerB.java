@@ -33,7 +33,7 @@ public class HentBrukerB extends AbstractAppServlet {
 
             PreparedStatement st = db.prepareStatement(QuerysB.alleResultat(query));
             ResultSet r1 = st.executeQuery();
-            out.println("<html><body><h2>The Select query has following results : </h2>");
+            out.println("<html><body><h2> Resultat av søk i Junior B: </h2>");
             out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
             out.println("<tr>");
             out.println("<td><b>Fornavn</b></td>");
@@ -89,7 +89,7 @@ public class HentBrukerB extends AbstractAppServlet {
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
+        writeResponse(request, response, "Hent bruker B");
     }
 
 }
