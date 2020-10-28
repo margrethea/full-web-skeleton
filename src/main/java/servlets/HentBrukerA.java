@@ -37,7 +37,6 @@ public class HentBrukerA extends AbstractAppServlet {
             out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
             out.println("<tr>");
             out.println("<td><b>Fornavn</b></td>");
-            out.println("<td><b>Toppscore</b></td>");
             out.println("<td><b>År</b></td>");
             out.println("<td><b>Testperiode</b></td>");
             out.println("<td><b>60w</b></td>");
@@ -49,6 +48,7 @@ public class HentBrukerA extends AbstractAppServlet {
             out.println("<td><b>Liggende Roing kg</b></td>");
             out.println("<td><b>Liggende Roing prosent</b></td>");
             out.println("<td><b>Sargeant </b></td>");
+            out.println("<td><b>Toppscore</b></td>");
             out.println("</tr>");
 
             out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
