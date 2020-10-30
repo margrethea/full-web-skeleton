@@ -38,19 +38,26 @@
 
     <form action="servlets.Senior" method="post">
      Velg bruker:&nbsp;
-     <select name="ListUtøver">
-        <c:forEach items="${listUtøver}" var="bruker">
-            <option value="${bruker.bruker_id}">${bruker.forNavn}</option>
-        </c:forEach>
-     </select>
+        <select name="ListUtøver">
+            <c:forEach items="${listUtøver}" var="bruker">
+                <option value="">Fornavn...</option>
+                <option value="${bruker.bruker_id}">${bruker.forNavn}</option>
+            </c:forEach>
+        </select>
+        <select name="ListUtøver">
+            <c:forEach items="${listUtøver}" var="bruker">
+                <option value="">Etternavn...</option>
+                <option value="${bruker.bruker_id}">${bruker.etterNavn}</option>
+            </c:forEach>
+        </select>
       <br/><br/>
             <div class="registrer_resultat">
                 <label for="testperiode">Testperiode</label>
-                <select class="registrer_resultat" id="testperiode">
+                <select class="registrer_resultat" id="testperiode" name="testperiode">
                     <option> Velg testperiode... </option>
-                    <option>Testperiode 1</option>
-                    <option>Testperiode 2</option>
-                    <option>Testperiode 3</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
                 </select>
             </div><br>
 
