@@ -39,14 +39,14 @@
     <form action="servlets.Senior" method="post">
      Velg bruker:&nbsp;
         <select name="ListUtøver">
+            <option value="">Fornavn...</option>
             <c:forEach items="${listUtøver}" var="bruker">
-                <option value="">Fornavn...</option>
                 <option value="${bruker.bruker_id}">${bruker.forNavn}</option>
             </c:forEach>
         </select>
         <select name="ListUtøver">
+            <option value="">Etternavn...</option>
             <c:forEach items="${listUtøver}" var="bruker">
-                <option value="">Etternavn...</option>
                 <option value="${bruker.bruker_id}">${bruker.etterNavn}</option>
             </c:forEach>
         </select>
