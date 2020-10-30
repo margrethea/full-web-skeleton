@@ -35,9 +35,40 @@ public class Senior extends AbstractAppServlet {
         ØvelseSmodell regResultat = new ØvelseSmodell(testperiode,brukerid,seksti,beveglighet,femtusenw,femtusent,totusenw,totusent,ligg_ro_p,ligg_ro_kg,kneboy_p,kneboy_kg);
         Øvelserepo.regResultatS(regResultat, out);
         System.out.println(regResultat);
+        out.println("<html><body><h2> Registrerte resultater </h2>");
+        out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
+        out.println("<tr>");
+        out.println("<td><b>BrukerID</b></td>");
+        out.println("<td><b>År</b></td>");
+        out.println("<td><b>Testperiode</b></td>");
+        out.println("<td><b>60w</b></td>");
+        out.println("<td><b>Bevegelighet</b></td>");
+        out.println("<td><b>5000 watt</b></td>");
+        out.println("<td><b>5000 tid</b></td>");
+        out.println("<td><b>2000 watt</b></td>");
+        out.println("<td><b>2000 tid</b></td>");
+        out.println("<td><b>Liggende Roing kg</b></td>");
+        out.println("<td><b>Liggende Roing p</b></td>");
+        out.println("<td><b>knebøy kg</b></td>");
+        out.println("<td><b>knebøy p</b></td>");
+        out.println("</tr>");
 
-        out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti, brukerid);
 
+        out.println("<tr>");
+        out.println("<td>"+ brukerid +"</td>");
+        out.println("<td>2020</td>");
+        out.println("<td>"+testperiode+ "</td>");
+        out.println("<td>"+seksti+ "</td>");
+        out.println("<td>"+beveglighet+ "</td>");
+        out.println("<td>"+femtusenw+ "</td>");
+        out.println("<td>"+femtusent + "</td>");
+        out.println("<td>"+totusenw+ "</td>");
+        out.println("<td>"+totusent+ "</td>");
+        out.println("<td>"+ligg_ro_kg + "</td>");
+        out.println("<td>"+ligg_ro_p+ "</td>");
+        out.println("<td>"+kneboy_kg + "</td>");
+        out.println("<td>"+kneboy_p+ "</td>");
+        out.println("</tr>");
     }
 
 
