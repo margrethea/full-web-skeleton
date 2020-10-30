@@ -1,6 +1,9 @@
 package models;
 
 public class ØvelseSmodell {
+    private int testperiode;
+   // private int år;
+    private int brukerid;
     private String seksti;
     private String beveglighet;
     private String femtusenW;
@@ -12,7 +15,7 @@ public class ØvelseSmodell {
     private String knebøyKG;
     private String knebøyP;
 
-    public ØvelseSmodell(String seksti, String beveglighet, String femtusenW, String femtusenT, String totusenW, String totusenT, String liggendeRoingP, String liggendeRoingKg, String knebøyKG, String knebøyP) {
+    public ØvelseSmodell(int testperiode, int brukerid, String seksti, String beveglighet, String femtusenW, String femtusenT, String totusenW, String totusenT, String liggendeRoingP, String liggendeRoingKg, String knebøyKG, String knebøyP) {
         this.seksti = seksti;
         this.beveglighet = beveglighet;
         this.femtusenT = femtusenW;
@@ -23,6 +26,9 @@ public class ØvelseSmodell {
         this.liggendeRoingKG = liggendeRoingKg;
         this.knebøyKG = knebøyKG;
         this.knebøyP = knebøyP;
+        this.brukerid = brukerid;
+        this.testperiode = testperiode;
+        //this.år = år;
     }
 
     public String getSeksti() {
@@ -105,5 +111,17 @@ public class ØvelseSmodell {
     public void setKnebøyP(String knebøyP) {
         this.knebøyP = knebøyP;
     }
+
+    public int getBrukerid() { return brukerid; }
+
+    public void setBrukerid(int brukerid) { this.brukerid = brukerid; }
+
+    public int getTestperiode() { return testperiode; }
+
+    public void setTestperiode(int testperiode) { this.testperiode = testperiode; }
+
+   // public int getÅr() { return år; }
+
+   // public void setÅr(int år) { this.år = år; }
 }
 

@@ -27,12 +27,16 @@ public class Senior extends AbstractAppServlet {
         String ligg_ro_kg = req.getParameter("ligg_ro_kg");
         String kneboy_p = req.getParameter("kneboy_p");
         String kneboy_kg = req.getParameter("kneboy_kg");
-        System.out.println(seksti + beveglighet);
+        int brukerid = Integer.parseInt(req.getParameter("ListUtøver"));
+        int testperiode = Integer.parseInt(req.getParameter("testperiode"));
 
-        ØvelseSmodell regResultat = new ØvelseSmodell(seksti,beveglighet,femtusenw,femtusent,totusenw,totusent,ligg_ro_p,ligg_ro_kg,kneboy_p,kneboy_kg);
+
+
+        ØvelseSmodell regResultat = new ØvelseSmodell(testperiode,brukerid,seksti,beveglighet,femtusenw,femtusent,totusenw,totusent,ligg_ro_p,ligg_ro_kg,kneboy_p,kneboy_kg);
         Øvelserepo.regResultatS(regResultat, out);
+        System.out.println(regResultat);
 
-        out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti);
+        out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti, brukerid);
 
     }
 

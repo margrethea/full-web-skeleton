@@ -56,7 +56,7 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.s_resultat (60w, bevegelighet, 5000t, 5000w, 2000t, 2000w, ligg_ro_p, ligg_ro_kg, knebøy_kg, knebøy_p) values (?,?,?,?,?,?,?,?,?,?)";
+                    "INSERT INTO ro.s_resultat (60w, bevegelighet, 5000t, 5000w, 2000t, 2000w, ligg_ro_p, ligg_ro_kg, knebøy_kg, knebøy_p, bruker_id, periode, år) values (?,?,?,?,?,?,?,?,?,?,?,?,2020)";
 
             regNyttResultatS = db.prepareStatement(query);
             regNyttResultatS.setString(1, resultat.getSeksti());
@@ -69,6 +69,8 @@ public class Øvelserepo {
             regNyttResultatS.setString(8, resultat.getLiggendeRoingKG());
             regNyttResultatS.setString(9, resultat.getKnebøyKG());
             regNyttResultatS.setString(10, resultat.getKnebøyP());
+            regNyttResultatS.setInt(11, resultat.getBrukerid());
+            regNyttResultatS.setInt(12, resultat.getTestperiode());
             regNyttResultatS.execute();
 
         } catch (SQLException throwables) {
