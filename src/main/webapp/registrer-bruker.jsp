@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@
 <body>
 <div class="topnav">
     <a href="index.jsp">Hjem</a>
-    <a class="active" href="registrer-resultat.jsp">Registrer resultat</a>
+    <a class="active" href="RoklubbList">Registrer resultat</a>
     <a href="toppscore.jsp">Toppscore</a>
     <div class="topnav-right">
         <a href="min-side.jsp">Min side</a>
@@ -25,7 +26,7 @@
 
 <h1>Registrer bruker</h1>
 
-<form action="RegistrerBruker" method="post">
+<form action="servlets.RegistrerBruker" method="post">
     <div class="registrer-bruker">
         <label for="fornavn">Fornavn</label>
         <input type="text" name="fornavn" class="registrer-bruker" id="fornavn" placeholder="Skriv fornavn her...">
@@ -55,10 +56,14 @@
         </select>
     </div><br>
 
-    <div class="registrer-bruker">
-        <label for="roklubb">Roklubb</label>
-        <input type="text" name="roklubb" class="registrer-bruker" id="roklubb" placeholder="Skriv roklubb her...">
-    </div><br>
+    Roklubb
+    <select name="ListRoklubb">
+        <option value="">Velg roklubb...</option>
+        <c:forEach items="${listRoklubb}" var="roklubb">
+            <option value="${roklubb.roklubb_id}">${roklubb.klubbnavn}</option>
+        </c:forEach>
+    </select>
+    <br>
 
     <input type="submit" name="action" value="Registrer">
 

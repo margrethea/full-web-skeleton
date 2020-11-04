@@ -34,7 +34,7 @@
             <a href="registrer-juniorC.jsp">Junior C</a>
         </div></div><br>
 
-        <a href='registrer-bruker.jsp'><button>Registrer bruker</button></a><br>
+        <a href='RoklubbList'><button>Registrer bruker</button></a><br>
 
     <form action="servlets.Senior" method="post">
      Velg bruker:&nbsp;
