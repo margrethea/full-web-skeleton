@@ -6,9 +6,9 @@ public class BrukerModell {
     private String epost;
     private String fødselsår;
     private String kjønn;
-    private String roklubb;
+    private int roklubb;
 
-    public BrukerModell(String fornavn, String etternavn, String epost, String fødselsår, String kjønn, String roklubb) {
+    public BrukerModell(String fornavn, String etternavn, String epost, String fødselsår, String kjønn, int roklubb) {
         this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.epost = epost;
@@ -59,11 +59,11 @@ public class BrukerModell {
         this.kjønn = kjønn;
     }
 
-    public String getRoklubb() {
+    public int getRoklubb() {
         return roklubb;
     }
 
-    public void setRoklubb(String roklubb) {
+     public void setRoklubb(int roklubb) {
         this.roklubb = roklubb;
     }
 }
