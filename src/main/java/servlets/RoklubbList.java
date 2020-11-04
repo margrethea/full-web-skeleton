@@ -36,7 +36,7 @@ public class RoklubbList extends HttpServlet {
             request.setAttribute("listRoklubb", listRoklubb);
             System.out.println(listRoklubb);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-senior.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-bruker.jsp");
             dispatcher.forward(request, response);
 
         } catch (SQLException e) {
