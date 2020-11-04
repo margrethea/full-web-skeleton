@@ -28,10 +28,10 @@
     <h1>Registrer resultat</h1>
 
         <div class="registrer-resultat" style="text-align: center"><div>
-            <a class="active" href="UtøverList">Senior</a>
-            <a href="registrer-juniorA.jsp">Junior A</a>
-            <a href="registrer-juniorB.jsp">Junior B</a>
-            <a href="registrer-juniorC.jsp">Junior C</a>
+            <a class="active" href="SeniorDD" >Senior</a>
+            <a href="JuniorADD">Junior A</a>
+            <a href="JuniorBDD">Junior B</a>
+            <a  href="JuniorCDD">Junior C</a>
         </div></div><br>
 
         <a href='registrer-bruker.jsp'><button>Registrer bruker</button></a><br>
