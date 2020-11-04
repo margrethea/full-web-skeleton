@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,35 +27,23 @@
     <h1>Registrer resultat</h1>
 
     <div class="registrer-resultat" style="text-align: center"><div>
-        <a href="registrer-senior.jsp">Senior</a>
-        <a href="registrer-juniorA.jsp">Junior A</a>
-        <a href="registrer-juniorB.jsp">Junior B</a>
-        <a class="active" href="registrer-juniorC.jsp">Junior C</a>
+        <a href="SeniorDD" >Senior</a>
+        <a href="JuniorADD">Junior A</a>
+        <a href="JuniorBDD">Junior B</a>
+        <a class="active" href="JuniorCDD">Junior C</a>
     </div></div><br>
 
     <a href='RoklubbList'><button>Registrer bruker</button></a><br>
 
     <form action="JuniorC" method="post">
-        <div class="registrer_resultat">
-            <label for="kjønn">Kjønn</label>
-            <select class="registrer_resultat" id="kjønn">
-                <option>Velg kjønn... </option>
-                <option>Gutt</option>
-                <option>Jente</option>
-            </select>
-        </div><br>
-<!--
-        <div class="registrer_resultat">
-            <label for="fornavn">Fornavn</label>
-            <input type="text" name="fornavn" class="registrer_resultat" id="fornavn" placeholder="Skriv fornavn her...">
-        </div><br>
+        Velg bruker:&nbsp;
+        <select name="ListUtøver">
+            <option value="">Velg Utøver</option>
+            <c:forEach items="${listUtøver}" var="bruker">
+                <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
+            </c:forEach>
+        </select><br>
 
-
-        <div class="registrer_resultat">
-            <label for="etternavn">Etternavn</label>
-            <input type="text" name="etternavn" class="registrer_resultat" id="etternavn" placeholder="Skriv etternavn her...">
-        </div><br>
---!>
         <div class="registrer_resultat">
             <label for="testperiode">Testperiode</label>
             <select class="registrer_resultat" id="testperiode">

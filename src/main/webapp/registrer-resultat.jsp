@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +26,10 @@
     <h1>Registrer resultat</h1>
 
     <div class="registrer-resultat" style="text-align: center"><div>
-        <a href="UtøverList">Senior</a>
-        <a href="registrer-juniorA.jsp">Junior A</a>
-        <a href="registrer-juniorB.jsp">Junior B</a>
-        <a href="registrer-juniorC.jsp">Junior C</a>
+        <a href="SeniorDD" >Senior</a>
+        <a href="JuniorADD">Junior A</a>
+        <a href="JuniorBDD">Junior B</a>
+        <a href="JuniorCDD">Junior C</a>
     </div></div>
 
     </body>
