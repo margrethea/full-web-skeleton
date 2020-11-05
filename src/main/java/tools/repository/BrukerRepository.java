@@ -25,7 +25,7 @@ public class BrukerRepository {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.bruker (bruker.fornavn, bruker.etternavn, bruker.epost, bruker.fødselsår, bruker.kjønn, bruker.roklubb) values (?,?,?,?,?,?)";
+                    "INSERT INTO ro.bruker (bruker.fornavn, bruker.etternavn, bruker.epost, bruker.fødselsår, bruker.kjønn, bruker.roklubb_id, bruker.klasse_id) values (?,?,?,?,?,?,?)";
 
             regNyttResultatBruker = db.prepareStatement(query);
             regNyttResultatBruker.setString(1, resultat.getFornavn());
@@ -34,6 +34,7 @@ public class BrukerRepository {
             regNyttResultatBruker.setString(4, resultat.getFødselsår());
             regNyttResultatBruker.setString(5, resultat.getKjønn());
             regNyttResultatBruker.setInt(6, resultat.getRoklubb());
+            regNyttResultatBruker.setInt(7, resultat.getKlasseid());
             regNyttResultatBruker.execute();
 
         } catch (SQLException throwables) {

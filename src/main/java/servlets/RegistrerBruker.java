@@ -23,15 +23,16 @@ public class RegistrerBruker extends AbstractAppServlet {
         String fødselsår = req.getParameter("fødselsår");
         String kjønn = req.getParameter("kjønn");
         int roklubbid = Integer.parseInt(req.getParameter("ListRoklubb"));
+        int klasseid = Integer.parseInt(req.getParameter("klasse"));
         System.out.println(fornavn + etternavn + epost + fødselsår + kjønn + roklubbid);
 
-        BrukerModell reqResultatBruker = new BrukerModell(fornavn, etternavn, epost, fødselsår, kjønn, roklubbid);
+        BrukerModell reqResultatBruker = new BrukerModell(fornavn, etternavn, epost, fødselsår, kjønn, roklubbid, klasseid);
         BrukerRepository.regResultatBruker(reqResultatBruker, out);
 
         out.format("<h1>Bruker er registrert</h1>", fornavn);
 
 
-        BrukerModell Bruker = new BrukerModell(fornavn,etternavn,epost,fødselsår,kjønn,roklubbid);
+        BrukerModell Bruker = new BrukerModell(fornavn,etternavn,epost,fødselsår,kjønn,roklubbid, klasseid);
         BrukerRepository.regResultatBruker(Bruker, out);
         System.out.println(Bruker);
         out.println("<html><body><h2> Registrert bruker </h2>");
@@ -43,6 +44,7 @@ public class RegistrerBruker extends AbstractAppServlet {
         out.println("<td><b>Fødseslår</b></td>");
         out.println("<td><b>Kjønn</b></td>");
         out.println("<td><b>Roklubb</b></td>");
+        out.println("<td><b>Klasse</b></td>");
         out.println("</tr>");
 
         out.println("<tr>");
@@ -52,6 +54,7 @@ public class RegistrerBruker extends AbstractAppServlet {
         out.println("<td>"+fødselsår+ "</td>");
         out.println("<td>"+kjønn+ "</td>");
         out.println("<td>"+roklubbid+ "</td>");
+        out.println("<td>"+klasseid+ "</td>");
         out.println("</tr>");
 }
 

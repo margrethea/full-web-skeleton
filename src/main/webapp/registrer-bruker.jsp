@@ -49,7 +49,7 @@
 
     <div class="registrer-bruker">
         <label for="kjønn">Kjønn</label>
-        <select name="" class="registrer-bruker" id="kjønn">
+        <select name="kjønn" class="registrer-bruker" id="kjønn">
             <option> Velg kjønn...</option>
             <option>Mann</option>
             <option>Kvinne</option>
@@ -64,6 +64,13 @@
         </c:forEach>
     </select>
     <br>
+
+    <select name="klasse">
+        <option value="">Velg klasse...</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
 
     <input type="submit" name="action" value="Registrer">
 

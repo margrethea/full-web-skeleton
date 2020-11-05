@@ -7,14 +7,16 @@ public class BrukerModell {
     private String fødselsår;
     private String kjønn;
     private int roklubb;
+    private int klasseid;
 
-    public BrukerModell(String fornavn, String etternavn, String epost, String fødselsår, String kjønn, int roklubb) {
+    public BrukerModell(String fornavn, String etternavn, String epost, String fødselsår, String kjønn, int roklubb, int klasseid) {
         this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.epost = epost;
         this.fødselsår = fødselsår;
         this.kjønn = kjønn;
         this.roklubb = roklubb;
+        this.klasseid = klasseid;
     }
 
     /** Getters og setters*/
@@ -65,5 +67,13 @@ public class BrukerModell {
 
      public void setRoklubb(int roklubb) {
         this.roklubb = roklubb;
+    }
+
+    public int getKlasseid() {
+        return klasseid;
+    }
+
+    public void setKlasseid(int klasseid) {
+        this.klasseid = klasseid;
     }
 }
