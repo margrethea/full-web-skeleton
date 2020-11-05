@@ -50,10 +50,19 @@ public class UtøverList extends HttpServlet {
                  RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorB.jsp");
                  dispatcher.forward(request, response);
              }
-              else if(user.equals("JuniorC")){
-                  RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorC.jsp");
+              else if(user.equals("JuniorC")) {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorC.jsp");
+                dispatcher.forward(request, response);
+            }
+             /* else if(user.equals("HentPåFornavn")){
+                  RequestDispatcher dispatcher = request.getRequestDispatcher("resultatsøk-senior.jsp");
                   dispatcher.forward(request, response);
               }
+              else if(user.equals("HentbrukerS")){
+                  RequestDispatcher dispatcher = request.getRequestDispatcher("resultatsøk-senior.jsp");
+                  dispatcher.forward(request, response);
+
+            }*/
 
 
         } catch (SQLException e) {

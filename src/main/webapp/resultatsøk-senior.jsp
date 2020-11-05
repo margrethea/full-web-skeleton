@@ -1,3 +1,4 @@
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,8 @@
                          alt="logo" class="center" ></a>
 
 <h1>Resultatsøk</h1>
-<form action="HentBrukerS" method="post">
+<%--<form action="HentBrukerS" method="post">--%>
+<form action="HentResultat" method="post">
 <div class="resultatsøk_linker" style="text-align: center"><div>
     <a class="active" href="resultatsøk-senior.jsp">Senior</a>
     <a href="resultatsøk-juniorA.jsp">Junior A</a>
@@ -33,34 +35,43 @@
 </div></div><br>
 
     <div class="resultatsøk">
-        <label for="utøver">Utøver</label>
-        <select name="Utøver" id="utøver">
-            <option value="velg_utøver">Velg utøver...</option>
-        </select>
-    </div><br>
+        <%--   <label for="utøver">Utøver</label>
+           <select name="Utøver" id="utøver">
+               <option value="velg_utøver">Velg utøver...</option>
+               <c:forEach items="${listUtøver}" var="bruker">
+                   <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
+               </c:forEach>
+           </select>
+       </div><br> --%>
+
+        <label for="fornavn">Fornavn</label>
+            <input type="text"  name="Utøver" id="fornavn">
 
     <div class="resultatsøk_linker">
         <label for="testperiode">Testperiode</label>
-        <select class="resultatsøk" id="testperiode">
+        <input type="text" name="Periode" id="testperiode" >
+       <%-- <select class="resultatsøk" id="testperiode" name ="periode">
             <option> Velg testperiode...</option>
-            <option>Testperiode 1</option>
-            <option>Testperiode 2</option>
-            <option>Testperiode 3</option>
-        </select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>--%>
     </div><br>
 
     <div class="resultatsøk">
         <label for="kjønn">Kjønn</label>
-        <select name="Kjønn" id="kjønn">
+        <input type="text" name="Kjønn" id="kjønn">
+      <%--  <select name="Kjønn" id="kjønn">
             <option value="velg_kjønn">Velg kjønn...</option>
             <option value="mann">Mann</option>
             <option value="kvinne">Kvinne</option>
-        </select>
+        </select>--%>
     </div><br>
 
     <div class="resultatsøk">
         <label for="øvelse">Øvelse</label>
-        <select name="Øvelse" id="øvelse">
+        <input type="text" name="Øvelse" id="øvelse">
+       <%-- <select name="Øvelse" id="øvelse">
             <option value="Velg_øvelse">Velg øvelse...</option>
             <option value="5000m_w">5000 meter watt</option>
             <option value="5000m_t">5000 meter tid</option>
@@ -72,12 +83,13 @@
             <option value="Bevegelighet">Bevegelighet</option>
             <option value="Knebøy_p">Knebøy prosent</option>
             <option value="Knebøy_kg">Knebøy kg</option>
-        </select>
+        </select>--%>
     </div><br>
 
     <div class="resultatsøk">
         <label for="årstall">Årstall</label>
-        <select name="Årstall" id="årstall">
+        <input type="text" name="Årstall" id="årstall">
+       <%-- <select name="Årstall" id="årstall">
             <option value="Velg_årstall">Velg årstall...</option>
             <option value="2004">2004</option>
             <option value="2005">2005</option>
@@ -96,10 +108,12 @@
             <option value="2018">2018</option>
             <option value="2019">2019</option>
             <option value="2020">2020</option>
-        </select>
+        </select>--%>
     </div><br>
 
     <input type="submit" name="action" value="Søk">
 </form>
+
+
 </body>
 </html>

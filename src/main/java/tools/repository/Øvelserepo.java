@@ -56,19 +56,19 @@ public class Øvelserepo {
         try {
             db = DbTool.getINSTANCE().dbLoggIn(p);
             String query =
-                    "INSERT INTO ro.s_resultat (60w, bevegelighet, 5000t, 5000w, 2000t, 2000w, ligg_ro_p, ligg_ro_kg, knebøy_kg, knebøy_p, bruker_id, periode, år) values (?,?,?,?,?,?,?,?,?,?,?,?,2020)";
+                    "INSERT INTO ro.s_resultat (60w, bevegelighet, 5000w, 5000t, 2000w, 2000t, ligg_ro_p, ligg_ro_kg, knebøy_p, knebøy_kg, bruker_id, periode, år) values (?,?,?,?,?,?,?,?,?,?,?,?,2020)";
 
             regNyttResultatS = db.prepareStatement(query);
             regNyttResultatS.setString(1, resultat.getSeksti());
             regNyttResultatS.setString(2, resultat.getBeveglighet());
-            regNyttResultatS.setString(3, resultat.getFemtusenT());
-            regNyttResultatS.setString(4, resultat.getFemtusenW());
+            regNyttResultatS.setString(3, resultat.getFemtusenW());
+            regNyttResultatS.setString(4, resultat.getFemtusenT());
             regNyttResultatS.setString(5, resultat.gettotusenW());
             regNyttResultatS.setString(6, resultat.gettotusenT());
             regNyttResultatS.setString(7, resultat.getLiggendeRoingP());
             regNyttResultatS.setString(8, resultat.getLiggendeRoingKG());
-            regNyttResultatS.setString(9, resultat.getKnebøyKG());
-            regNyttResultatS.setString(10, resultat.getKnebøyP());
+            regNyttResultatS.setString(9, resultat.getKnebøyP());
+            regNyttResultatS.setString(10, resultat.getKnebøyKG());
             regNyttResultatS.setInt(11, resultat.getBrukerid());
             regNyttResultatS.setInt(12, resultat.getTestperiode());
             regNyttResultatS.execute();
