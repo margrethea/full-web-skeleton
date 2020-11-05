@@ -1,9 +1,11 @@
 package servlets;
 
+
 import models.QuerysC;
-import models.QuerysS;
 import tools.DbTool;
+import tools.repository.BrukerRepository;
 import tools.repository.SearchRepo;
+import tools.repository.UserRepository;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,8 +18,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet(name = "HentBrukerS", urlPatterns = "/HentBrukerS")
-public class HentBrukerS extends AbstractAppServlet {
+@WebServlet(name = "HentPåFornavn", urlPatterns = "/HentPåFornavn")
+public class HentPåFornavn extends AbstractAppServlet {
 
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
@@ -41,10 +43,11 @@ public class HentBrukerS extends AbstractAppServlet {
         out.println("</tr>");
 
         out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
-
-        SearchRepo.søkAlleResultat(out);
+        String fornavn = req.getParameter("Utøver");
+        SearchRepo.søkEtParameter(fornavn, out);
 
     }
+
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -53,7 +56,4 @@ public class HentBrukerS extends AbstractAppServlet {
 
 
 
-
-
 }
-
