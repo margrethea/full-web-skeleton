@@ -1,6 +1,6 @@
 package tools.repository;
 
-import models.BrukerModell;
+import models.bruker.BrukerModell;
 import tools.DbTool;
 
 import java.io.PrintWriter;
