@@ -30,14 +30,11 @@
             <a href="toppscore2.jsp">Klubb</a>
             <!--<p class="nasjonalt">Nasjonalt</p>
             <p class="klubb">Klubb</p> -->
-        </div></div>
+        </div></div><br>
+
         <div style="text-align: center;"><div>
-            <p class="SeniorM">Senior Mann</p>
-            <p class="JuniorAG">Junior A Gutt</p>
-            <p class="JuniorBG">Junior B Gutt</p>
-        </div></div>
-        <div style="text-align: center" class="t1">
-            <table style="" class="table1">
+            <table style="" class="nasjonalt">
+                <caption>Senior Mann</caption>
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
@@ -63,7 +60,9 @@
                     <td></td>
                 </tr>
             </table>
-            <table style="" class="table2">
+
+            <table style="" class="nasjonalt">
+                <caption>Junior A Gutt</caption>
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
@@ -89,7 +88,9 @@
                     <td></td>
                 </tr>
             </table>
-            <table style="" class="table3">
+
+            <table style="" class="nasjonalt">
+                <caption>Junior B Gutt</caption>
                 <tr>
                     <th>Plassering</th>
                     <th>Toppscore</th>
@@ -114,93 +115,91 @@
                     <td>5</td>
                     <td></td>
                 </tr>
-            </table><br><br><br>
-        </div>
-        <div style="text-align: center;"><div>
-            <p class="SeniorK">Senior Kvinne</p>
-            <p class="JuniorAJ">Junior A Jente</p>
-            <p class="JuniorBJ">Junior B Jente</p>
-        </div></div>
-        <div style="text-align: center" class="t2">
-            <table style="" class="table4">
-                <tr>
-                    <th>Plassering</th>
-                    <th>Toppscore</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td></td>
-                </tr>
+
+                <table style="" class="nasjonalt">
+                    <caption>Senior Kvinne</caption>
+                    <tr>
+                        <th>Plassering</th>
+                        <th>Toppscore</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <table style="" class="nasjonalt">
+                    <caption>Junior A Jente</caption>
+                    <tr>
+                        <th>Plassering</th>
+                        <th>Toppscore</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <table style="" class="nasjonalt">
+                    <caption>Junior B Jente</caption>
+                    <tr>
+                        <th>Plassering</th>
+                        <th>Toppscore</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td></td>
+                    </tr>
+                </table>
             </table>
-            <table style="" class="table5">
-                <tr>
-                    <th>Plassering</th>
-                    <th>Toppscore</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td></td>
-                </tr>
-            </table>
-            <table style="" class="table6">
-                <tr>
-                    <th>Plassering</th>
-                    <th>Toppscore</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
     </body>
 
 </html>

@@ -80,27 +80,32 @@ th, td {
     text-decoration: underline;
 }
 
-
-.nasjklubb a:hover {
+/* Toppscore links */
+.nasjklubb a {
+    color: #21418f;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nasjklubb a:hover {
     color: #21418f;
     text-decoration: underline;
 }
-
-.nasjklubb a:active {
-    text-align: center;
+.nasjklubb a.active {
     color: #21418f;
     text-decoration: underline;
 }
 
 /* Toppscore: Display "Nasjonalt" and "Klubb" side by side */
-.nasjklubb a{
+/* .nasjklubb a{
     text-align: center;
     display: inline-block;
     float: none;
     font-size: 15px;
     padding: 10px;
 }
+   /
 
 /* Center logo */
 .center {
@@ -116,42 +121,36 @@ img {
     height: 110px;
     object-fit: contain;
 }
-
-.SeniorM, .JuniorAG, .JuniorBG {
-    display: inline-block;
-    font-size: 20px;
-    padding: 30px;
-    margin: 30px;
-    color: #21418f;
-}
-
-.table1, .table2, .table3 {
+/* Toppscore tabeller */
+.nasjonalt {
     display: inline-block;
     font-size: 20px;
     padding: 10px;
-    color: #21418f;
 }
 
-.SeniorK, .JuniorAJ, .JuniorBJ {
-    display: inline-block;
-    font-size: 20px;
-    padding: 30px;
-    margin: 30px;
-    color: #21418f;
+.nasjonalt {
+    border-collapse: collapse;
+    width: 25%;
 }
 
-.table4, .table5, .table6 {
-    display: inline-block;
-    border: 1px;
-    border-color: #21418f;
-    font-size: 20px;
-    padding: 10px;
-    color: #21418f;
+.nasjonalt td, .nasjonalt th {
+    border: 1px solid #ddd;
+    padding: 8px;
 }
-.t1, t2 {
-    border: 1px;
-    border-color: #21418f;
+
+.nasjonalt tr:nth-child(even){
+    background-color: #f2f2f2;
 }
+
+.nasjonalt th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #21418f;
+    color: white;
+}
+
+
 
 .bevegelighet, .liggendeRoing, .knebøy {
     display: inline-block;
