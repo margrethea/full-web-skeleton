@@ -21,7 +21,8 @@ public class HentBrukerS extends AbstractAppServlet {
 
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
-        out.println("<html><body><h2> Resultat av søk i senior : </h2>");
+        out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i senior : </h2>");
+        out.println("<div class='tabellcss'>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");

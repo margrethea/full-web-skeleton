@@ -33,7 +33,8 @@ public class HentBrukerB extends AbstractAppServlet {
 
             PreparedStatement st = db.prepareStatement(QuerysB.alleResultat(query));
             ResultSet r1 = st.executeQuery();
-            out.println("<html><body><h2> Resultat av søk i Junior B: </h2>");
+            out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i Junior B: </h2>");
+            out.println("<div class='tabellcss'>");
             out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
             out.println("<tr>");
             out.println("<td><b>Fornavn</b></td>");
@@ -47,7 +48,7 @@ public class HentBrukerB extends AbstractAppServlet {
             out.println("<td><b>Kroppshev</b></td>");
             out.println("<td><b>Sargeant</b></td>");
             out.println("<td><b>toppscore</b></td>");
-            out.println("</tr>");
+            out.println("</tr></div>");
 
             out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
             while(r1.next()) {
