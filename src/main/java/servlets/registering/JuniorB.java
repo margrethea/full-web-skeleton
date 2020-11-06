@@ -1,0 +1,50 @@
+package servlets.registering;
+
+import models.øvelse.ØvelseBModell;
+import servlets.tryms.AbstractAppServlet;
+import tools.repository.Øvelserepo;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+@WebServlet(name = "JuniorB", urlPatterns = {"/JuniorB"})
+public class JuniorB extends AbstractAppServlet {
+
+
+    @Override
+    protected void writeBody(HttpServletRequest req, PrintWriter out) {
+        String seksti = req.getParameter("60");
+        String beveglighet = req.getParameter("bevegelighet");
+        String tretusen = req.getParameter("3000m");
+        String totusenW = req.getParameter("2000m_w");
+        String totusenT = req.getParameter("20000m_t");
+        String kroppshev = req.getParameter("kroppshev");
+        String sargeant = req.getParameter("sargeant");
+        System.out.println(seksti + beveglighet + tretusen + totusenW + totusenT +
+                kroppshev + sargeant);
+
+        ØvelseBModell regResultat = new ØvelseBModell(seksti, beveglighet, tretusen, totusenW, totusenT, kroppshev, sargeant);
+          Øvelserepo.regResultatB(regResultat, out);
+
+          out.format("<h1> The result %s Has been added to the database with id: %s <h1>", seksti);
+
+    }
+
+    @Override
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        writeResponse(request, response, "Hello!");
+    }
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        writeResponse(request, response, "Added to database");
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+
+    }
+}

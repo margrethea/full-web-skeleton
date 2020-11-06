@@ -1,6 +1,6 @@
 package tools.repository;
 
-import models.QuerysS;
+import models.Query.QuerysS;
 import tools.DbTool;
 
 import java.io.PrintWriter;

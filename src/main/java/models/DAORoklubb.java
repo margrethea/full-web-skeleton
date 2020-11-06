@@ -1,10 +1,8 @@
 package models;
 
-import jdk.jfr.Category;
-import servlets.UtøverList;
+import models.bruker.DropdownRoklubb;
 import tools.DbTool;
 
-import javax.print.DocFlavor;
 import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;

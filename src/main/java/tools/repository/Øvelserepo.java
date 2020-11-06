@@ -1,9 +1,9 @@
 package tools.repository;
 
-import models.ØvelseAModell;
-import models.ØvelseBModell;
-import models.ØvelseCModell;
-import models.ØvelseSmodell;
+import models.øvelse.ØvelseAModell;
+import models.øvelse.ØvelseBModell;
+import models.øvelse.ØvelseCModell;
+import models.øvelse.ØvelseSmodell;
 import tools.DbTool;
 
 import java.io.PrintWriter;

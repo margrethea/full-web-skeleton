@@ -36,7 +36,7 @@
 
         <a href='RoklubbList'><button>Registrer bruker</button></a><br>
 
-    <form action="servlets.Senior" method="post">
+    <form action="Senior" method="post">
      Velg bruker:&nbsp;
         <select name="ListUtøver">
             <option value="">Velg Utøver</option>
