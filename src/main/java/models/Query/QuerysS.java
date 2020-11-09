@@ -1,6 +1,9 @@
 package models.Query;
 
 public class QuerysS {
+    /**
+     * En egen klasse som lagrer alt av Querys for Senior
+     */
     public QuerysS() {
 
     }
@@ -47,12 +50,20 @@ public class QuerysS {
     //Sorteres etter år
     //Brukes i klassen SearchRepo
     public static String søkKjønn(String query){
-        query = ("");   //må fylles
+        query = ("select bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore FROM ro.bruker, ro.s_resultat WHERE s_resultat.bruker_id = bruker.bruker_id AND bruker.kjønn = ? ORDER BY s_resultat.år;");
 
         return query;
     }
     public static String søkÅr(String query){
-        query = ("");   //Må fylles
+        query = ("select bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore, bruker.klasse_id FROM ro.bruker, ro.s_resultat WHERE s_resultat.bruker_id = bruker.bruker_id AND s_resultat.år = ? ORDER BY s_resultat.år;");
+        return query;
+    }
+    public static String søkFornavnEtternavn(String query){
+        query = ("select bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore, bruker.klasse_id FROM ro.bruker, ro.s_resultat WHERE s_resultat.bruker_id = bruker.bruker_id AND bruker.fornavn = ? AND bruker.etternavn = ? ORDER BY s_resultat.år;");
+        return query;
+    }
+    public static String søkEtternavnKjønn(String query){
+        query = ("select bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore, bruker.klasse_id FROM ro.bruker, ro.s_resultat WHERE s_resultat.bruker_id = bruker.bruker_id AND bruker.kjønn = ? AND bruker.etternavn = ? ORDER BY s_resultat.år;");
         return query;
     }
 

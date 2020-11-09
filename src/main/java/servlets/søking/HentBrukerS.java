@@ -20,6 +20,7 @@ public class HentBrukerS extends AbstractAppServlet {
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");
+        out.println("<td><b>Etternavn</b></td>");
         out.println("<td><b>Toppscore</b></td>");
         out.println("<td><b>År</b></td>");
         out.println("<td><b>Testperiode</b></td>");
@@ -37,7 +38,7 @@ public class HentBrukerS extends AbstractAppServlet {
 
         out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
 
-        SearchRepo.søkAlleResultat(out);
+        SearchRepo.søkAlleResultatS(out);
 
     }
     @Override

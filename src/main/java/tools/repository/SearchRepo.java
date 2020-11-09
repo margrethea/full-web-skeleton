@@ -1,5 +1,6 @@
 package tools.repository;
 
+import models.Query.QuerysB;
 import models.Query.QuerysS;
 import tools.DbTool;
 
@@ -11,84 +12,12 @@ import java.sql.SQLException;
 
 public class SearchRepo {
 
-    public static String søkAlleResultat(PrintWriter p){
-        Connection db = null;
-        PreparedStatement ps = null;
-
+    public static String søkAlleResultatS(PrintWriter p){
         String toReturn = null;
-
-        try{
-            db = DbTool.getINSTANCE().dbLoggIn(p);
-            ps = db.prepareStatement(QuerysS.alleResultat(toReturn));
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                p.println("<tr>");
-                p.println("<td>"+rs.getString("fornavn") + "</td>");
-                p.println("<td>"+rs.getString("etternavn") + "</td>");
-                p.println("<td>"+rs.getString("toppscore") + "</td>");
-                p.println("<td>"+rs.getString("år") + "</td>");
-                p.println("<td>"+rs.getString("periode") + "</td>");
-                p.println("<td>"+rs.getString("60w") + "</td>");
-                p.println("<td>"+rs.getString("bevegelighet") + "</td>");
-                p.println("<td>"+rs.getString("5000w") + "</td>");
-                p.println("<td>"+rs.getString("5000t") + "</td>");
-                p.println("<td>"+rs.getString("2000w") + "</td>");
-                p.println("<td>"+rs.getString("2000t") + "</td>");
-                p.println("<td>"+rs.getString("ligg_ro_kg") + "</td>");
-                p.println("<td>"+rs.getString("ligg_ro_p") + "</td>");
-                p.println("<td>"+rs.getString("knebøy_kg") + "</td>");
-                p.println("<td>"+rs.getString("knebøy_p") + "</td>");
-                p.println("</tr>");
-
-            }rs.close();
-
-
-        }catch (SQLException throwables ){
-            throwables.printStackTrace();
-        }
-
+        refactorAlleRes(QuerysS.alleResultat(toReturn), p);
         return toReturn;
     }
 
-    public static String søkEtParameter(String param, PrintWriter p){
-        Connection db = null;
-        PreparedStatement ps = null;
-
-        String toReturn = null;
-
-        try{
-            db = DbTool.getINSTANCE().dbLoggIn(p);
-            //mulig if else statement her?
-            ps = db.prepareStatement(QuerysS.søkFornavn(toReturn));
-            ps.setString(1,param);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                p.println("<tr>");
-                p.println("<td>" + rs.getString("fornavn") + "</td>");
-                p.println("<td>" + rs.getString("etternavn") + "</td>");
-                p.println("<td>" + rs.getString("toppscore") + "</td>");
-                p.println("<td>" + rs.getString("år") + "</td>");
-                p.println("<td>" + rs.getString("periode") + "</td>");
-                p.println("<td>" + rs.getString("60w") + "</td>");
-                p.println("<td>" + rs.getString("bevegelighet") + "</td>");
-                p.println("<td>" + rs.getString("5000w") + "</td>");
-                p.println("<td>" + rs.getString("5000t") + "</td>");
-                p.println("<td>" + rs.getString("2000w") + "</td>");
-                p.println("<td>" + rs.getString("2000t") + "</td>");
-                p.println("<td>" + rs.getString("ligg_ro_kg") + "</td>");
-                p.println("<td>" + rs.getString("ligg_ro_p") + "</td>");
-                p.println("<td>" + rs.getString("knebøy_kg") + "</td>");
-                p.println("<td>" + rs.getString("knebøy_p") + "</td>");
-                p.println("</tr>");
-            }
-
-
-        }catch (SQLException throwables){
-            throwables.printStackTrace();
-        }
-        return toReturn;
-    }
 
     public static String søkAlleParametre(String fornavn, String etternavn, String periode, String kjønn, String årstall, PrintWriter p){
         Connection db = null;
@@ -132,44 +61,45 @@ public class SearchRepo {
         return toReturn;
     }
 
-    public static String søkEtternavn(String param, PrintWriter p){
-        Connection db = null;
-        PreparedStatement ps = null;
-
+    public static String søkFornavn(String param, PrintWriter p) {
         String toReturn = null;
+        refactorEttParam(QuerysS.søkFornavn(toReturn), param,p);
+        return toReturn;
+    }
 
-        try{
-            db = DbTool.getINSTANCE().dbLoggIn(p);
-            ps = db.prepareStatement(QuerysS.søkEtternavn(toReturn));
-            ps.setString(1,param);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                p.println("<tr>");
-                p.println("<td>" + rs.getString("fornavn") + "</td>");
-                p.println("<td>" + rs.getString("etternavn") + "</td>");
-                p.println("<td>" + rs.getString("toppscore") + "</td>");
-                p.println("<td>" + rs.getString("år") + "</td>");
-                p.println("<td>" + rs.getString("periode") + "</td>");
-                p.println("<td>" + rs.getString("60w") + "</td>");
-                p.println("<td>" + rs.getString("bevegelighet") + "</td>");
-                p.println("<td>" + rs.getString("5000w") + "</td>");
-                p.println("<td>" + rs.getString("5000t") + "</td>");
-                p.println("<td>" + rs.getString("2000w") + "</td>");
-                p.println("<td>" + rs.getString("2000t") + "</td>");
-                p.println("<td>" + rs.getString("ligg_ro_kg") + "</td>");
-                p.println("<td>" + rs.getString("ligg_ro_p") + "</td>");
-                p.println("<td>" + rs.getString("knebøy_kg") + "</td>");
-                p.println("<td>" + rs.getString("knebøy_p") + "</td>");
-                p.println("</tr>");
-            }
-
-
-        }catch (SQLException throwables){
-            throwables.printStackTrace();
-        }
+    public static String søkEtternavn(String param, PrintWriter p){
+        String toReturn = null;
+        refactorEttParam(QuerysS.søkEtternavn(toReturn), param,p);
         return toReturn;
     }
     public static String søkPeriode(String param, PrintWriter p){
+        String toReturn = null;
+        refactorEttParam(QuerysS.søkPeriode(toReturn),param,p);
+        return toReturn;
+    }
+
+    public static String søkKjønn(String param, PrintWriter p){
+        String toReturn = null;
+        refactorEttParam(QuerysS.søkKjønn(toReturn), param, p);
+        return toReturn;
+    }
+
+    /**
+     * Metode som kobler opp mot database
+     * Henter Query fra en annen klasse
+     * Via Query hentes data ut fra databasen
+     * @param param
+     * @param p
+     * @return
+     */
+
+    public static String søkÅr(String param, PrintWriter p){
+        String toReturn = null;
+        refactorEttParam(QuerysS.søkÅr(toReturn), param, p);
+        return toReturn;
+    }
+
+    public static String refactorEttParam (String query,String a, PrintWriter p){
         Connection db = null;
         PreparedStatement ps = null;
 
@@ -177,8 +107,8 @@ public class SearchRepo {
 
         try{
             db = DbTool.getINSTANCE().dbLoggIn(p);
-            ps = db.prepareStatement(QuerysS.søkPeriode(toReturn));
-            ps.setString(1,param);
+            ps = db.prepareStatement(query);
+            ps.setString(1,a);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 p.println("<tr>");
@@ -200,10 +130,100 @@ public class SearchRepo {
                 p.println("</tr>");
             }
 
+        }catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
+        return toReturn;
+    }
+
+
+    public static String søkForEtt(String param, String b, PrintWriter p){
+        String toReturn = null;
+     refactorToParam(QuerysS.søkFornavnEtternavn(toReturn), param, b, p);
+
+        return toReturn;
+    }
+    public static String søkEttKjønn(String param, String b, PrintWriter p){
+        String toReturn = null;
+        refactorToParam(QuerysS.søkEtternavnKjønn(toReturn), param, b, p);
+
+        return toReturn;
+    }
+
+    public static String refactorToParam (String query,String a, String b, PrintWriter p){
+        Connection db = null;
+        PreparedStatement ps = null;
+
+        String toReturn = null;
+
+        try{
+            db = DbTool.getINSTANCE().dbLoggIn(p);
+            ps = db.prepareStatement(query);
+            ps.setString(1,a);
+            ps.setString(2,b);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                p.println("<tr>");
+                p.println("<td>" + rs.getString("fornavn") + "</td>");
+                p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("toppscore") + "</td>");
+                p.println("<td>" + rs.getString("år") + "</td>");
+                p.println("<td>" + rs.getString("periode") + "</td>");
+                p.println("<td>" + rs.getString("60w") + "</td>");
+                p.println("<td>" + rs.getString("bevegelighet") + "</td>");
+                p.println("<td>" + rs.getString("5000w") + "</td>");
+                p.println("<td>" + rs.getString("5000t") + "</td>");
+                p.println("<td>" + rs.getString("2000w") + "</td>");
+                p.println("<td>" + rs.getString("2000t") + "</td>");
+                p.println("<td>" + rs.getString("ligg_ro_kg") + "</td>");
+                p.println("<td>" + rs.getString("ligg_ro_p") + "</td>");
+                p.println("<td>" + rs.getString("knebøy_kg") + "</td>");
+                p.println("<td>" + rs.getString("knebøy_p") + "</td>");
+                p.println("</tr>");
+            }
 
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
         return toReturn;
     }
+
+    public static String refactorAlleRes (String query, PrintWriter p){
+        Connection db = null;
+        PreparedStatement ps = null;
+
+        String toReturn = null;
+
+        try{
+            db = DbTool.getINSTANCE().dbLoggIn(p);
+            ps = db.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                p.println("<tr>");
+                p.println("<td>" + rs.getString("fornavn") + "</td>");
+                p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("toppscore") + "</td>");
+                p.println("<td>" + rs.getString("år") + "</td>");
+                p.println("<td>" + rs.getString("periode") + "</td>");
+                p.println("<td>" + rs.getString("60w") + "</td>");
+                p.println("<td>" + rs.getString("bevegelighet") + "</td>");
+                p.println("<td>" + rs.getString("5000w") + "</td>");
+                p.println("<td>" + rs.getString("5000t") + "</td>");
+                p.println("<td>" + rs.getString("2000w") + "</td>");
+                p.println("<td>" + rs.getString("2000t") + "</td>");
+                p.println("<td>" + rs.getString("ligg_ro_kg") + "</td>");
+                p.println("<td>" + rs.getString("ligg_ro_p") + "</td>");
+                p.println("<td>" + rs.getString("knebøy_kg") + "</td>");
+                p.println("<td>" + rs.getString("knebøy_p") + "</td>");
+                p.println("</tr>");
+            }
+
+        }catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
+        return toReturn;
+    }
+
+
+
 }

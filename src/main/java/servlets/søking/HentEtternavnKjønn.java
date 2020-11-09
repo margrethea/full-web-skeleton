@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "HentPåFornavn", urlPatterns = "/HentPåFornavn")
-public class HentPåFornavn extends AbstractAppServlet {
+@WebServlet(name = "HentEtternavnKjønn", urlPatterns = "/HentEtternavnKjønn")
+public class HentEtternavnKjønn extends AbstractAppServlet {
 
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
@@ -37,8 +37,12 @@ public class HentPåFornavn extends AbstractAppServlet {
         out.println("</tr>");
 
         out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
-        String fornavn = req.getParameter("fornavn");
-        SearchRepo.søkFornavn(fornavn, out);
+
+        String kjønn = req.getParameter("gender");
+        String etternavn = req.getParameter("etternavn");
+        SearchRepo.søkEttKjønn(kjønn, etternavn, out);
+        System.out.println("Kjønn og etternavn");
+
 
     }
 
