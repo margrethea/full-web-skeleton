@@ -1,6 +1,9 @@
 package models.Query;
 
 public class QuerysA {
+    /**
+     * En egen klasse som lagrer alt av Querys for Junior A
+     */
     public QuerysA() {
 
     }

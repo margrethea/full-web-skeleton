@@ -3,6 +3,9 @@ package models.Query;
 import java.sql.PreparedStatement;
 
 public class QuerysC {
+    /**
+     * En egen klasse som lagrer alt av Querys for Junior C
+     */
 
     public QuerysC() {
 
