@@ -54,7 +54,7 @@ public class HentBrukerA extends AbstractAppServlet {
             out.println("<td><b>Toppscore</b></td>");
             out.println("</tr></div>");
 
-            out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
+            out.println("<a href=resultatsøk-juniorA.jsp>Tilbake til resultat</a>");
 
             while (r1.next()) {
                 //  query = r1.getString("fornavn") + " " + r1.getString("etternavn") + " " + r1.getString("epost") + " " + r1.getString("60w");

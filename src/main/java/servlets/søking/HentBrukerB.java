@@ -42,7 +42,7 @@ public class HentBrukerB extends AbstractAppServlet {
         out.println("<td><b>Sargeant</b></td>");
         out.println("</tr>");
 
-        out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
+        out.println("<a href=resultatsøk-juniorB.jsp>Tilbake til resultat</a>");
 
         SearchRepoB.søkAlleResultat(out);
 
