@@ -25,6 +25,18 @@
 
         <h1>Resultatsøk</h1>
 
+        <a href="resultatsøk-senior.jsp"><button class="button button1">Senior</button></a>
+        <a href="resultatsøk-juniorA.jsp"><button class="button button1">Junior A</button></a>
+        <br>
+        <a href="resultatsøk-juniorB.jsp"><button class="button button1">Junior B</button></a>
+        <a href="resultatsøk-juniorC.jsp"><button class="button button1">Junior C</button></a>
+
+    </body>
+
+</html>
+
+
+<!--
         <div class="resultatsøk_linker" style="text-align: center"><div>
             <a href="resultatsøk-senior.jsp">Senior</a>
             <a href="resultatsøk-juniorA.jsp">Junior A</a>

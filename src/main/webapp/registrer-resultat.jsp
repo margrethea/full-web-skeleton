@@ -25,8 +25,18 @@
 
     <h1>Registrer resultat</h1>
 
-    <div class="registrer-resultat" style="text-align: center"><div>
-        <a href="SeniorDD" >Senior</a>
+    <a href="SeniorDD"><button class="button button1">Senior</button></a>
+    <a href="JuniorADD"><button class="button button1">Junior A</button></a>
+    <br>
+    <a href="JuniorBDD"><button class="button button1">Junior B</button></a>
+    <a href="JuniorCDD"><button class="button button1">Junior C</button></a>
+
+
+    </body>
+
+</html>
+  <!--  <div class="registrer-resultat" style="text-align: center"><div>
+        <a href="SeniorDD">Senior</a>
         <a href="JuniorADD">Junior A</a>
         <a href="JuniorBDD">Junior B</a>
         <a href="JuniorCDD">Junior C</a>
