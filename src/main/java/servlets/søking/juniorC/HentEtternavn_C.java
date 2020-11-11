@@ -21,6 +21,7 @@ public class HentEtternavn_C extends AbstractAppServlet {
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");
+        out.println("<td><b>Etternavn</b></td>");
         out.println("<td><b>År</b></td>");
         out.println("<td><b>Testperiode</b></td>");
         out.println("<td><b>60w</b></td>");

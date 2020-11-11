@@ -4,6 +4,7 @@ package servlets.søking.juniorC;
 import models.Query.QuerysC;
 import servlets.tryms.AbstractAppServlet;
 import tools.DbTool;
+import tools.repository.SearchRepoC;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,25 +22,13 @@ public class HentBrukerC extends AbstractAppServlet {
 
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out){
-    Connection db = null;
-    //PreparedStatement prepareStatement = null;
-    String query = null;
-    // String toReturn = null;
-            try {
-        db = DbTool.getINSTANCE().dbLoggIn(out);
-
-        // SELECT salesman.name AS "Salesman",//customer.cust_name, customer.city
-        //FROM salesman,customer
-        // WHERE salesman.city=customer.city;
-
-        PreparedStatement st = db.prepareStatement(QuerysC.alleResultatC(query));
-        ResultSet r1 = st.executeQuery();
 
         out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i Junior C : </h2>");
         out.println("<div class='tabellcss'>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");
+        out.println("<td><b>Etternavn</b></td>");
         out.println("<td><b>År</b></td>");
         out.println("<td><b>Testperiode</b></td>");
         out.println("<td><b>60w</b></td>");
@@ -51,42 +40,10 @@ public class HentBrukerC extends AbstractAppServlet {
 
         out.println("<a href=resultatsøk-juniorC.jsp>Tilbake til resultat</a>");
 
-        while(r1.next()) {
-            //  query = r1.getString("fornavn") + " " + r1.getString("etternavn") + " " + r1.getString("epost") + " " + r1.getString("60w");
-            out.println("<tr>");
-            out.println("<td>"+r1.getString("fornavn") + "</td>");
-            out.println("<td>"+r1.getString("år") + "</td>");
-            out.println("<td>"+r1.getString("periode") + "</td>");
-            out.println("<td>"+r1.getString("60w") + "</td>");
-            out.println("<td>"+r1.getString("bevegelighet") + "</td>");
-            out.println("<td>"+r1.getString("3000m") + "</td>");
-            out.println("<td>"+r1.getString("kroppshev") + "</td>");
-            out.println("<td>"+r1.getString("sargeant") + "</td>");
-            out.println("</tr>");
+        SearchRepoC.søkAlleResultatC(out);
 
-            // out.format(query);
-        } r1.close();
-           /* ResultSet rs = null;
-            String query = "SELECT * FROM ro.bruker WHERE fornavn = ?";
-            prepareStatement = db.prepareStatement(query);
-            prepareStatement.setString(1, fornavn);
-            rs = prepareStatement.executeQuery();
-            while (rs.next()) {
-                toReturn = rs.getString("epost");
-            }
-            r1.close() */
-
-        } catch (
-        SQLException throwables) {
-         throwables.printStackTrace();
-        }
     }
 
-
-
-    // String fornavn = req.getParameter("bruker");
-    //String skrivUt = UserRepository.getBruker(out);
-    //out.format("<h1> Here is your request: %s</h1", skrivUt);
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
