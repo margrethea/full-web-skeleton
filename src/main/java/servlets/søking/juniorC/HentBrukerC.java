@@ -32,7 +32,7 @@ public class HentBrukerC extends AbstractAppServlet {
         //FROM salesman,customer
         // WHERE salesman.city=customer.city;
 
-        PreparedStatement st = db.prepareStatement(QuerysC.alleResultat(query));
+        PreparedStatement st = db.prepareStatement(QuerysC.alleResultatC(query));
         ResultSet r1 = st.executeQuery();
 
         out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i Junior C : </h2>");
