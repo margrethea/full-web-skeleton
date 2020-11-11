@@ -1,10 +1,7 @@
 package servlets.søking.juniorB;
 
 
-import models.Query.QuerysB;
 import servlets.tryms.AbstractAppServlet;
-import tools.DbTool;
-import tools.repository.SearchRepo;
 import tools.repository.SearchRepoB;
 
 import javax.servlet.ServletException;
@@ -13,17 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-@WebServlet(name = "HentBrukerB", urlPatterns = "/HentBrukerB")
-public class HentBrukerB extends AbstractAppServlet {
 
+@WebServlet(name = "AlleParametre_B", urlPatterns = "/AlleParametre_B")
+public class AlleParametre_B extends AbstractAppServlet {
+    /**
+     * skriver ut body på servlet som html.
+     * @param req http request objektet med data.
+     * @param out http respons objektet som sender data.
+     */
     @Override
-    protected void writeBody(HttpServletRequest req, PrintWriter out){
-
+    protected void writeBody(HttpServletRequest req, PrintWriter out) {
+        /**
+         * Printer ut tabell for resultatsøk
+         */
         out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i Junior B: </h2>");
         out.println("<div class='tabellcss'>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
@@ -44,14 +44,25 @@ public class HentBrukerB extends AbstractAppServlet {
 
         out.println("<a href=resultatsøk-juniorB.jsp>Tilbake til resultat</a>");
 
-        SearchRepoB.søkAlleResultatB(out);
+        /**
+         * Henter input fra brukeren fra inputfeltene
+         */
+        String fornavn = req.getParameter("fornavn");
+        String etternavn = req.getParameter("etternavn");
+        String periode = req.getParameter("periode");
+        String kjønn = req.getParameter("gender");
+        String fødselsår = req.getParameter("year");
+
+        /**
+         * Henter metode fra klassen SearchRepo som henter informasjon fra databasen
+         */
+        SearchRepoB.søkAlleParametreB(fornavn, etternavn, periode, kjønn, fødselsår, out);
 
     }
 
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hent bruker B");
+        writeResponse(request, response, "Hello!");
     }
-
 }
