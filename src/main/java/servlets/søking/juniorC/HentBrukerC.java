@@ -1,4 +1,4 @@
-package servlets.søking;
+package servlets.søking.juniorC;
 
 
 import models.Query.QuerysC;

@@ -1,4 +1,4 @@
-package servlets.søking;
+package servlets.søking.juniorA;
 
 import models.Query.QuerysA;
 import servlets.tryms.AbstractAppServlet;
