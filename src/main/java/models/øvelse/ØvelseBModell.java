@@ -1,6 +1,8 @@
 package models.øvelse;
 
 public class ØvelseBModell {
+    private int testperiode;
+    private int brukerid;
     private String seksti;
     private String beveglighet;
     private String tretusen;
@@ -9,7 +11,7 @@ public class ØvelseBModell {
     private String kroppshev;
     private String sargeant;
 
-    public ØvelseBModell(String seksti, String beveglighet, String tretusen, String totusenW, String totusenT, String kroppshev, String sargeant) {
+    public ØvelseBModell(int testperiode, int brukerid, String seksti, String beveglighet, String tretusen, String totusenW, String totusenT, String kroppshev, String sargeant) {
         this.seksti = seksti;
         this.beveglighet = beveglighet;
         this.tretusen = tretusen;
@@ -17,6 +19,8 @@ public class ØvelseBModell {
         this.totusenT = totusenT;
         this.kroppshev = kroppshev;
         this.sargeant = sargeant;
+        this.brukerid = brukerid;
+        this.testperiode = testperiode;
     }
 
 
@@ -75,5 +79,13 @@ public class ØvelseBModell {
     public void setTotusenT(String totusenT) {
         this. totusenT = totusenT;
     }
+
+    public int getBrukerid() { return brukerid; }
+
+    public void setBrukerid(int brukerid) { this.brukerid = brukerid; }
+
+    public int getTestperiode() { return testperiode; }
+
+    public void setTestperiode(int testperiode) { this.testperiode = testperiode; }
 }
 
