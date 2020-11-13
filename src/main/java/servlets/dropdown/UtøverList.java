@@ -30,9 +30,12 @@ public class UtøverList extends HttpServlet {
         String user = (String) request.getAttribute("user");
 
         try {
-            List<DropdownBruker> listUtøver = dao.list(out);
+            List<DropdownBruker> listUtøver = dao.listS(out);
            listUtøver.add((new DropdownBruker("1","2","3")));
-           request.setAttribute("listUtøver", listUtøver);
+            request.setAttribute("listUtøver", listUtøver);
+
+
+
             System.out.println(listUtøver);
 
             if (user.equals("Senior")){
@@ -41,14 +44,23 @@ public class UtøverList extends HttpServlet {
             }
 
             else if (user.equals("JuniorA")){
+                List<DropdownBruker> listA = dao.listA(out);
+                listA.add(new DropdownBruker("1","2","3"));
+                request.setAttribute("listUtøver", listA);
                 RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorA.jsp");
                 dispatcher.forward(request, response);
             }
              else if (user.equals("JuniorB")){
+                List<DropdownBruker> listB = dao.listB(out);
+                listB.add(new DropdownBruker("1","2","3"));
+                request.setAttribute("listUtøver", listB);
                  RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorB.jsp");
                  dispatcher.forward(request, response);
              }
               else if(user.equals("JuniorC")) {
+                List<DropdownBruker> listC = dao.listC(out);
+                listC.add(new DropdownBruker("1","2","3"));
+                request.setAttribute("listUtøver", listC);
                 RequestDispatcher dispatcher = request.getRequestDispatcher("registrer-juniorC.jsp");
                 dispatcher.forward(request, response);
             }
