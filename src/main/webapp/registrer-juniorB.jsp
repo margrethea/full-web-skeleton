@@ -40,7 +40,7 @@
 <form action="JuniorB" method="post">
         Velg bruker:&nbsp;
         <select name="ListUtøver">
-            <option value="">Velg Utøver</option>
+            <option value="" disabled selected>Velg Utøver</option>
             <c:forEach items="${listUtøver}" var="bruker">
                 <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
             </c:forEach>
@@ -49,7 +49,7 @@
     <div class="registrer_resultat">
         <label for="testperiode">Testperiode</label>
         <select name="testperiode" class="registrer_resultat" id="testperiode">
-            <option> Velg testperiode... </option>
+            <option disabled selected> Velg testperiode... </option>
             <option>1</option>
             <option>2</option>
             <option>3</option>

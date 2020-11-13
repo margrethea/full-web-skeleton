@@ -38,7 +38,7 @@
 <form action="JuniorA" method="post">
     Velg bruker:&nbsp;
     <select name="ListUtøver">
-        <option value="">Velg Utøver</option>
+        <option value="" disabled selected>Velg Utøver</option>
         <c:forEach items="${listUtøver}" var="bruker">
             <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
         </c:forEach>
@@ -46,11 +46,11 @@
 
     <div class="registrer_resultat">
         <label for="testperiode">Testperiode</label>
-        <select class="registrer_resultat" id="testperiode" name="testperiode">
-            <option> Velg testperiode... </option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+        <select name="" class="registrer_resultat" id="testperiode">
+            <option disabled selected> Velg testperiode... </option>
+            <option>Testperiode 1</option>
+            <option>Testperiode 2</option>
+            <option>Testperiode 3</option>
         </select>
     </div><br>
 
