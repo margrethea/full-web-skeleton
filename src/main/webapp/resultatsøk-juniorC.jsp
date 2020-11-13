@@ -53,7 +53,7 @@
             <label for="testperiode">Testperiode</label>
             <%--  <input type="text" name="periode" id="testperiode" > --%>
             <select class="resultatsøk" id="testperiode" name ="periode" >
-                <option>Periode</option>
+                <option disabled selected>Periode</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -64,7 +64,7 @@
             <label for="kjønn">Kjønn</label>
             <%-- <input type="text" name="kjønn" id="kjønn">--%>
             <select name="gender" id="kjønn">
-                <option>Gender</option>
+                <option disabled selected>Gender</option>
                 <option value="mann">Mann</option>
                 <option value="kvinne">Kvinne</option>
             </select>
@@ -75,7 +75,7 @@
         <label for="årstall">Årstall</label>
         <%--  <input type="text" name="testår" id="årstall">--%>
         <select name="year" id="årstall">
-            <option>Year</option>
+            <option disabled selected>Year</option>
             <option value="2004">2004</option>
             <option value="2005">2005</option>
             <option value="2006">2006</option>
