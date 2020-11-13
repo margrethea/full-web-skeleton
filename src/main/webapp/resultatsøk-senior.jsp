@@ -26,7 +26,7 @@
 
 <h1>Resultatsøk</h1>
 <%--<form action="HentBrukerS" method="post">--%>
-<form action="HentResultat" method="post">
+<form action="HentResultat" method="post" accept-charset="UTF-8">
 <div class="resultatsøk_linker" style="text-align: center"><div>
     <a class="active" href="resultatsøk-senior.jsp">Senior</a>
     <a href="resultatsøk-juniorA.jsp">Junior A</a>
@@ -91,7 +91,6 @@
 
     <div class="resultatsøk">
         <label for="årstall">Årstall</label>
-      <%--  <input type="text" name="testår" id="årstall">--%>
        <select name="year" id="årstall">
             <option>Year</option>
             <option value="2004">2004</option>
@@ -113,6 +112,9 @@
             <option value="2020">2020</option>
         </select>
     </div><br>
+
+    <label for="roklubb">Roklubb</label>
+    <input type="text"  name="roklubb" id="roklubb" ><br>
 
     <input type="submit" name="action" value="Søk">
 </form>

@@ -66,5 +66,18 @@ public class QuerysS {
         query = ("select bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore, bruker.klasse_id FROM ro.bruker, ro.s_resultat WHERE s_resultat.bruker_id = bruker.bruker_id AND bruker.kjønn = ? AND bruker.etternavn = ? ORDER BY s_resultat.år;");
         return query;
     }
+    public static String søkKlubb(String query){
+        query = ("SELECT roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore FROM ro.bruker, ro.roklubb, ro.s_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id and bruker.bruker_id = s_resultat.bruker_id AND roklubb.klubbnavn = ? Order By s_resultat.år");
+        return query;
+    }
+    public static String søkTreParam(String query){
+        query = ("SELECT roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore FROM ro.bruker, ro.roklubb, ro.s_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id and bruker.bruker_id = s_resultat.bruker_id AND bruker.fornavn = ? AND bruker.etternavn = ?  AND roklubb.klubbnavn = ? Order By s_resultat.år");
+        return query;
+    }
+    public static String søkKlubbKjønn(String query){
+        query = ("SELECT roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, s_resultat.år, s_resultat.periode, s_resultat.60w, s_resultat.bevegelighet, s_resultat.5000w, s_resultat.5000t, s_resultat.2000w, s_resultat.2000t, s_resultat.ligg_ro_kg, s_resultat.ligg_ro_p, s_resultat.knebøy_kg, s_resultat.knebøy_p, s_resultat.toppscore FROM ro.bruker, ro.roklubb, ro.s_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id and bruker.bruker_id = s_resultat.bruker_id AND bruker.kjønn= ? AND roklubb.klubbnavn = ? Order By s_resultat.år");
+        return query;
+    }
+
 
 }

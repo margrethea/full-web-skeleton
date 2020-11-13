@@ -1,5 +1,6 @@
 package servlets.søking.senior;
 
+
 import servlets.tryms.AbstractAppServlet;
 import tools.repository.SearchRepo;
 
@@ -10,13 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "HentBrukerS", urlPatterns = "/HentBrukerS")
-public class HentBrukerS extends AbstractAppServlet {
+@WebServlet(name = "HentKlubbKjønn", urlPatterns = "/HentKlubbKjønn")
+public class HentKlubbKjønn extends AbstractAppServlet {
 
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
-        out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i senior : </h2>");
-        out.println("<div class='tabellcss'>");
+        out.println("<html><body><h2> Resultat av søk i senior : </h2>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");
@@ -38,9 +38,14 @@ public class HentBrukerS extends AbstractAppServlet {
 
         out.println("<a href=resultatsøk-senior.jsp>Tilbake til resultat</a>");
 
-        SearchRepo.søkAlleResultatS(out);
+        String kjønn = req.getParameter("gender");
+        String klubb = req.getParameter("roklubb");
+        SearchRepo.søkKlubbKjønn(kjønn, klubb, out);
+
+
 
     }
+
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -49,7 +54,4 @@ public class HentBrukerS extends AbstractAppServlet {
 
 
 
-
-
 }
-

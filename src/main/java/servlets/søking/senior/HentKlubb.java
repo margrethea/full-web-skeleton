@@ -10,13 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "HentBrukerS", urlPatterns = "/HentBrukerS")
-public class HentBrukerS extends AbstractAppServlet {
+@WebServlet(name = "HentKlubb", urlPatterns = "/HentKlubb")
+public class HentKlubb extends AbstractAppServlet {
 
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
-        out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i senior : </h2>");
-        out.println("<div class='tabellcss'>");
+        out.println("<html><body><h2> Resultat av søk i senior : </h2>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");
@@ -37,19 +36,18 @@ public class HentBrukerS extends AbstractAppServlet {
         out.println("</tr>");
 
         out.println("<a href=resultatsøk-senior.jsp>Tilbake til resultat</a>");
-
-        SearchRepo.søkAlleResultatS(out);
+        String roklubb = req.getParameter("roklubb");
+        SearchRepo.søkRoklubb(roklubb, out);
+        System.out.println(roklubb + "skjer dette");
 
     }
+
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         writeResponse(request, response, "Hello!");
     }
-
-
-
-
-
 }
+
+
 
