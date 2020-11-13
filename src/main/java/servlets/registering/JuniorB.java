@@ -30,7 +30,8 @@ public class JuniorB extends AbstractAppServlet {
         ØvelseBModell regResultat = new ØvelseBModell(testperiode, brukerid, seksti, beveglighet, tretusen, totusenW, totusenT, kroppshev, sargeant);
         Øvelserepo.regResultatB(regResultat, out);
         System.out.println(regResultat);
-        out.println("<html><body><h2> Registrerte resultater for Junior B </h2>");
+        out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2>Registrerte resultater for Junior B</h2>");
+        out.println("<div class='tabellcss'>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>BrukerID</b></td>");
