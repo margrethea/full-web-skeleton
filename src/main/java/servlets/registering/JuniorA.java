@@ -22,18 +22,53 @@ public class JuniorA extends AbstractAppServlet {
         String femtusenT = req.getParameter("5000m_t");
         String totusenW = req.getParameter("2000m_w");
         String totusenT = req.getParameter("2000m_t");
-        String liggendeRoingP = req.getParameter ("ligg_ro_p");
-        String liggendeRoingKG = req.getParameter("ligg_ro_kg");
+        String liggendeRoingKG = req.getParameter ("ligg_ro_kg");
+        String liggendeRoingP = req.getParameter("ligg_ro_p");
         String sargeant = req.getParameter("sargeant");
-        System.out.println(seksti + bevegelighet + femtusenW + femtusenT +
-                totusenW + totusenT + liggendeRoingP + liggendeRoingKG + sargeant);
+        int brukerid = Integer.parseInt(req.getParameter("ListUtøver"));
+        int testperiode = Integer.parseInt(req.getParameter("testperiode"));
 
-        ØvelseAModell reqResultat = new ØvelseAModell(seksti,bevegelighet,femtusenW,femtusenT,
-                totusenW,totusenT,liggendeRoingP,liggendeRoingKG,sargeant);
+
+        ØvelseAModell reqResultat = new ØvelseAModell(testperiode,brukerid,seksti,bevegelighet,femtusenW,femtusenT,
+                totusenW,totusenT,liggendeRoingKG,liggendeRoingP,sargeant);
             Øvelserepo.regResultatA(reqResultat, out);
 
-            out.format("<h1> %s Has been added to the database with id: %s</h1>", seksti);
+        out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i Junior B: </h2>");
+        out.println("<div class='tabellcss'>");
+        out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
+        out.println("<tr>");
+        out.println("<td><b>BrukerID</b></td>");
+        out.println("<td><b>År</b></td>");
+        out.println("<td><b>Testperiode</b></td>");
+        out.println("<td><b>60w</b></td>");
+        out.println("<td><b>Bevegelighet</b></td>");
+        out.println("<td><b>5000 watt</b></td>");
+        out.println("<td><b>5000 tid</b></td>");
+        out.println("<td><b>2000 watt</b></td>");
+        out.println("<td><b>2000 tid</b></td>");
+        out.println("<td><b>Liggende Roing kg</b></td>");
+        out.println("<td><b>Liggende Roing p</b></td>");
+        out.println("<td><b>Sargeant</b></td>");
+        out.println("</tr>");
+
+
+        out.println("<tr>");
+        out.println("<td>"+ brukerid +"</td>");
+        out.println("<td>2020</td>");
+        out.println("<td>"+testperiode+ "</td>");
+        out.println("<td>"+seksti+ "</td>");
+        out.println("<td>"+bevegelighet+ "</td>");
+        out.println("<td>"+femtusenW+ "</td>");
+        out.println("<td>"+femtusenT + "</td>");
+        out.println("<td>"+totusenW+ "</td>");
+        out.println("<td>"+totusenT+ "</td>");
+        out.println("<td>"+liggendeRoingKG + "</td>");
+        out.println("<td>"+liggendeRoingP+ "</td>");
+        out.println("<td>"+sargeant + "</td>");
+        out.println("</tr>");
     }
+
+
 
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
