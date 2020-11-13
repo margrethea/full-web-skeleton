@@ -48,9 +48,9 @@
         <label for="testperiode">Testperiode</label>
         <select name="" class="registrer_resultat" id="testperiode">
             <option disabled selected> Velg testperiode... </option>
-            <option>Testperiode 1</option>
-            <option>Testperiode 2</option>
-            <option>Testperiode 3</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
         </select>
     </div><br>
 
