@@ -40,7 +40,7 @@ public class HentKjønn extends AbstractAppServlet {
         out.println("<td><b>knebøy p</b></td>");
         out.println("</tr>");
 
-        out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
+        out.println("<a href=resultatsøk-senior.jsp>Tilbake til resultat</a>");
         String kjønn = req.getParameter("gender");
         SearchRepo.søkKjønn(kjønn, out);
 

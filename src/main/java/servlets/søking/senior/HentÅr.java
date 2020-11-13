@@ -35,7 +35,7 @@ public class HentÅr extends AbstractAppServlet {
         out.println("<td><b>knebøy p</b></td>");
         out.println("</tr>");
 
-        out.println("<a href=resultatsøk.jsp>Tilbake til resultat</a>");
+        out.println("<a href=resultatsøk-senior.jsp>Tilbake til resultat</a>");
         String år = req.getParameter("year");
         SearchRepo.søkÅr(år, out);
 
