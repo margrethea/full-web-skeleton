@@ -50,27 +50,30 @@ public class HentResultat_A extends HttpServlet {
         String c = req.getParameter("periode");
         String d = req.getParameter("gender");
         String e = req.getParameter("year");
-        System.out.println(a + b + c + d + e);
-        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year")) {
+        String f = req.getParameter("roklubb");
+        System.out.println(a + b + c + d + e + f);
+        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year") && f.equals("")) {
+
             System.out.println("IFIF");
             RequestDispatcher rd = req.getRequestDispatcher("HentBruker_A");
             rd.forward(req, res);
 
-        }else if (!(a.equals("") || b.equals("") || c.equals("Periode") || d.equals("Gender") || e.equals("Year"))) {
+        }else if (!(a.equals("") || b.equals("") || c.equals("Periode") || d.equals("Gender") || e.equals("Year") || f.equals(""))) {
 
             System.out.println("ELSEELSE");
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("AlleParametre_A");
             requestDispatcher.forward(req, res);
 
         }else if (!(a.equals("") || b.equals( ""))){
+
             System.out.println("ToParametre");
             RequestDispatcher rd = req.getRequestDispatcher("ToParametre_A");
             rd.forward(req,res);
 
         }else if (!(b.equals("") || d.equals("Gender"))){
-        System.out.println("Kjønn og etternavn");
-        RequestDispatcher rd = req.getRequestDispatcher("HentEtternavnKjønn_A");
-        rd.forward(req, res);
+            System.out.println("Kjønn og etternavn");
+            RequestDispatcher rd = req.getRequestDispatcher("HentEtternavnKjønn_A");
+            rd.forward(req, res);
 
         }else if(a != "" && b != "" && c != "Periode" && d != "Gender" && e != "Year") {
             if(!(a.equals(""))) {
@@ -92,6 +95,10 @@ public class HentResultat_A extends HttpServlet {
             }else if (!(e.equals("Year"))){
                 System.out.println("år");
                 RequestDispatcher rd = req.getRequestDispatcher("HentÅr_A");
+                rd.forward(req,res);
+            }else if (!(f.equals(""))){
+                System.out.println("klubb");
+                RequestDispatcher rd = req.getRequestDispatcher("HentKlubb");
                 rd.forward(req,res);
             }
         }

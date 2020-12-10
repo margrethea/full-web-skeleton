@@ -28,6 +28,8 @@ public class JuniorA extends AbstractAppServlet {
         int brukerid = Integer.parseInt(req.getParameter("ListUtøver"));
         int testperiode = Integer.parseInt(req.getParameter("testperiode"));
 
+        System.out.println(seksti + bevegelighet + femtusenT+ femtusenW + totusenT + totusenW + liggendeRoingKG + liggendeRoingP +sargeant + brukerid + testperiode);
+
 
         ØvelseAModell reqResultat = new ØvelseAModell(testperiode,brukerid,seksti,bevegelighet,femtusenW,femtusenT,
                 totusenW,totusenT,liggendeRoingKG,liggendeRoingP,sargeant);
@@ -76,10 +78,10 @@ public class JuniorA extends AbstractAppServlet {
         writeResponse(request, response, "Hello!");
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        writeResponse(request, response, "Added to database");
-    }
+    //public void doPost(HttpServletRequest request, HttpServletResponse response)
+   //         throws ServletException, IOException {
+    //    writeResponse(request, response, "Added to database");
+   // }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }

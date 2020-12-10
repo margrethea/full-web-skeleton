@@ -1,6 +1,7 @@
 package servlets.søking.juniorA;
 
 
+import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
 import tools.repository.SearchRepo_A;
 
@@ -11,39 +12,35 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Klasse som arver fra AbstractAppServlet, skriver ut tabell på nettside.
+ * Henter informasjon fra brukeren, før den kobles opp med SearchRepo_A sin metode som henter fra databasen
+ * Klasse for søking på etternavn og kjønn
+ */
+
 @WebServlet(name = "HentEtternavnKjønn_A", urlPatterns = "/HentEtternavnKjønn_A")
 public class HentEtternavnKjønn_A extends AbstractAppServlet {
 
+    /**
+     * Skriver ut body på servlet som html
+     * @param req
+     * @param out
+     */
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
-        out.println("<html><head><link rel='stylesheet' href='main.css'></head><body><h2> Resultat av søk i Junior A: </h2>");
-        out.println("<div class='tabellcss'>");
-        out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
-        out.println("<tr>");
-        out.println("<td><b>Fornavn</b></td>");
-        out.println("<td><b>Etternavn</b></td>");
-        out.println("<td><b>Toppscore</b></td>");
-        out.println("<td><b>År</b></td>");
-        out.println("<td><b>Testperiode</b></td>");
-        out.println("<td><b>60w</b></td>");
-        out.println("<td><b>Bevegelighet</b></td>");
-        out.println("<td><b>5000 watt</b></td>");
-        out.println("<td><b>5000 tid</b></td>");
-        out.println("<td><b>2000 watt</b></td>");
-        out.println("<td><b>2000 tid</b></td>");
-        out.println("<td><b>Liggende Roing kg</b></td>");
-        out.println("<td><b>Liggende Roing p</b></td>");
-        out.println("<td><b>Sargeant</b></td>");
-        out.println("</tr>");
-
-        out.println("<a href=resultatsøk-juniorA.jsp>Tilbake til resultat</a>");
+        Tabell.skrivTabellA(out);
+        //Skriver ut på nettsiden
 
 
         String kjønn = req.getParameter("gender");
         String etternavn = req.getParameter("etternavn");
-        SearchRepo_A.søkEttKjønnA(kjønn, etternavn, out);
-        System.out.println("Kjønn og etternavn");
+        //Henter input fra brukeren
 
+        SearchRepo_A.søkEttKjønnA(kjønn, etternavn, out);
+        //Henter metode som henter resultat fra databasen
+
+        System.out.println("Kjønn og etternavn");
+        //Testing
 
     }
 

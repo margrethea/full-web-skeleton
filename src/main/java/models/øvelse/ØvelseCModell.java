@@ -1,5 +1,10 @@
 package models.øvelse;
 
+
+/**
+ * Modell som representerer øvelsene en utøver skal fullføre i virkeligheten i utøverklassen Junior C
+ * Feltene er de ulike kolonnene som finnes i databasen
+ */
 public class ØvelseCModell {
     private int testperiode;
     private int brukerid;
@@ -9,6 +14,18 @@ public class ØvelseCModell {
     private String kroppshev;
     private String sargeant;
 
+
+    /**
+     * Constructor som bruker når et testresultat skal legges inn i databasen-
+     * Metoden blir brukt i servlets.registrering.JuniorC
+     * @param testperiode
+     * @param brukerid
+     * @param seksti
+     * @param beveglighet
+     * @param kroppshev
+     * @param sargeant
+     * @param tretusen
+     */
     public ØvelseCModell(int testperiode, int brukerid, String seksti, String beveglighet, String kroppshev, String sargeant, String tretusen){
         this.seksti = seksti;
         this.beveglighet = beveglighet;

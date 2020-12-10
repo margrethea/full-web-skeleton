@@ -1,5 +1,11 @@
 package models.bruker;
 
+
+/**
+ * Modell som representerer en bruker fra virkeligheten.
+ * Variablene er det en bruker vil ha i databasen.
+ */
+
 public class BrukerModell {
     private String fornavn;
     private String etternavn;
@@ -8,6 +14,18 @@ public class BrukerModell {
     private String kjønn;
     private int roklubb;
     private int klasseid;
+
+    /**
+     * Constructor som brukes når en bruker skal legges inn i databasen.
+     * Metoden blir brukt i servlets.registrering.RegistrerBruker.
+     * @param fornavn
+     * @param etternavn
+     * @param epost
+     * @param fødselsår
+     * @param kjønn
+     * @param roklubb
+     * @param klasseid
+     */
 
     public BrukerModell(String fornavn, String etternavn, String epost, String fødselsår, String kjønn, int roklubb, int klasseid) {
         this.fornavn = fornavn;
