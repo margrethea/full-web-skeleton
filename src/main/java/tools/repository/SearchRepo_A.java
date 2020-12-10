@@ -13,13 +13,14 @@ import java.sql.SQLException;
 public class SearchRepo_A {
 
     public static String søkAlleResultatA(PrintWriter p){
+        System.out.println("kommer dne hit");
         String toReturn = null;
         refactorAlleRes(QuerysA.alleResultat(toReturn), p);
         return toReturn;
     }
 
 
-    public static String søkAlleParametreA(String fornavn, String etternavn, String periode, String kjønn, String årstall, PrintWriter p){
+    public static String søkAlleParametreA(String fornavn, String etternavn, String periode, String kjønn, String årstall, String roklubb, PrintWriter p){
         Connection db = null;
         PreparedStatement ps = null;
 
@@ -33,12 +34,14 @@ public class SearchRepo_A {
             ps.setString(3, periode);
             ps.setString(4, kjønn);
             ps.setString(5, årstall);
+            ps.setString(6, roklubb);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
@@ -83,6 +86,12 @@ public class SearchRepo_A {
         return toReturn;
     }
 
+    public static String søkKlubb(String param, PrintWriter p){
+        String toReturn = null;
+        refactorEttParam(QuerysA.søkKjønn(toReturn), param, p);
+        return toReturn;
+    }
+
     /**
      * Metode som kobler opp mot database
      * Henter Query fra en annen klasse
@@ -113,6 +122,7 @@ public class SearchRepo_A {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
@@ -164,6 +174,7 @@ public class SearchRepo_A {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
@@ -199,6 +210,7 @@ public class SearchRepo_A {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");

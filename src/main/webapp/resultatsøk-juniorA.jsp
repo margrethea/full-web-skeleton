@@ -42,9 +42,8 @@
 
     <div class="resultatsøk_linker">
         <label for="testperiode">Testperiode</label>
-        <%--  <input type="text" name="periode" id="testperiode" > --%>
         <select class="resultatsøk" id="testperiode" name ="periode" >
-            <option disabled selected>Velg testperiode...</option>
+            <option>Periode</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -53,37 +52,19 @@
 
     <div class="resultatsøk">
         <label for="kjønn">Kjønn</label>
-        <%-- <input type="text" name="kjønn" id="kjønn">--%>
         <select name="gender" id="kjønn">
-            <option disabled selected>Gender</option>
+            <option>Gender</option>
             <option value="mann">Mann</option>
             <option value="kvinne">Kvinne</option>
         </select>
     </div><br>
 
-    <%-- <div class="resultatsøk">
-          <label for="øvelse">Øvelse</label>
-          <input type="text" name="øvelse" id="øvelse">
-          <select name="Øvelse" id="øvelse">
-              <option value="Velg_øvelse">Velg øvelse...</option>
-              <option value="5000m_w">5000 meter watt</option>
-              <option value="5000m_t">5000 meter tid</option>
-              <option value="2000m_w">2000 meter watt</option>
-              <option value="2000m_t">2000 meter tid</option>
-              <option value="60">60"</option>
-              <option value="Liggende_roing_p">Liggende roing prosent</option>
-              <option value="Liggende_roing_kg">Liggende roing kg</option>
-              <option value="Bevegelighet">Bevegelighet</option>
-              <option value="Knebøy_p">Knebøy prosent</option>
-              <option value="Knebøy_kg">Knebøy kg</option>
-          </select>--%>
 </div><br>
 
         <div class="resultatsøk">
             <label for="årstall">Årstall</label>
-            <%--  <input type="text" name="testår" id="årstall">--%>
             <select name="year" id="årstall">
-                <option disabled selected>Year</option>
+                <option>Year</option>
                 <option value="2004">2004</option>
                 <option value="2005">2005</option>
                 <option value="2006">2006</option>
@@ -103,6 +84,12 @@
                 <option value="2020">2020</option>
             </select>
         </div><br>
+
+        <div class="roklubb">
+            <label for ="roklubb">Roklubb</label>
+            <input type="text" name="roklubb" id="roklubb">
+        </div><br>
+
 
         <input type="submit" name="action" value="Søk">
     </form>

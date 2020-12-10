@@ -1,6 +1,7 @@
 package servlets.søking.senior;
 
 
+import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
 import tools.repository.SearchRepo;
 
@@ -25,27 +26,7 @@ public class AlleParametre extends AbstractAppServlet {
         /**
          * Printer ut tabell for resultatsøk
          */
-        out.println("<html><body><h2> Resultat av søk i senior : </h2>");
-        out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
-        out.println("<tr>");
-        out.println("<td><b>Fornavn</b></td>");
-        out.println("<td><b>Etternavn</b></td>");
-        out.println("<td><b>Toppscore</b></td>");
-        out.println("<td><b>År</b></td>");
-        out.println("<td><b>Testperiode</b></td>");
-        out.println("<td><b>60w</b></td>");
-        out.println("<td><b>Bevegelighet</b></td>");
-        out.println("<td><b>5000 watt</b></td>");
-        out.println("<td><b>5000 tid</b></td>");
-        out.println("<td><b>2000 watt</b></td>");
-        out.println("<td><b>2000 tid</b></td>");
-        out.println("<td><b>Liggende Roing kg</b></td>");
-        out.println("<td><b>Liggende Roing p</b></td>");
-        out.println("<td><b>knebøy kg</b></td>");
-        out.println("<td><b>knebøy p</b></td>");
-        out.println("</tr>");
-
-        out.println("<a href=resultatsøk-senior.jsp>Tilbake til resultat</a>");
+        Tabell.skrivTabellS(out);
 
         /**
          * Henter input fra brukeren fra inputfeltene

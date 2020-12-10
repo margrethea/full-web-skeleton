@@ -16,7 +16,7 @@ import java.io.PrintWriter;
  * Henter informasjon fra brukeren, før den kobles opp med Searchrepo_A sin metode som henter fra databasen.
  * Klasse for søking på ingen parametre
  */
-@WebServlet(name = "HentBruker_A", urlPatterns = "/HentBrukerA")
+@WebServlet(name = "HentBruker_A", urlPatterns = "/HentBruker_A")
 public class HentBruker_A extends AbstractAppServlet {
 
     /**
@@ -27,7 +27,7 @@ public class HentBruker_A extends AbstractAppServlet {
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Tabell.skrivTabellA(out);
-
+        System.out.println("Etter if");
         SearchRepo_A.søkAlleResultatA(out);
         //Henter metode som henter ut resultat fra databasen.
 
