@@ -1,5 +1,10 @@
 package models.øvelse;
 
+
+/**
+ * Modell som representerer øvelsene en utøver skal fullføre i virkeligheten i utøver klassen Junior A
+ * Feltene er de ulike kolonene som finnes i databasen
+ */
 public class ØvelseAModell {
     private int testperiode;
     private int brukerid;
@@ -13,7 +18,21 @@ public class ØvelseAModell {
     private String liggendeRoingP;
     private String sargeant;
 
-
+    /**
+     * Constructor  som brukes når et testresultat skal legges inn i databasen.
+     * Metoden blir brukt i servlets.registrering.JuniorA
+     * @param testperiode
+     * @param brukerid
+     * @param seksti
+     * @param beveglighet
+     * @param femtusenW
+     * @param femtusenT
+     * @param totusenW
+     * @param totusenT
+     * @param liggendeRoingKG
+     * @param liggendeRoingP
+     * @param sargeant
+     */
     public ØvelseAModell(int testperiode, int brukerid, String seksti, String beveglighet, String femtusenW, String femtusenT, String totusenW, String totusenT, String liggendeRoingKG, String liggendeRoingP, String sargeant) {
         this.seksti = seksti;
         this.beveglighet = beveglighet;

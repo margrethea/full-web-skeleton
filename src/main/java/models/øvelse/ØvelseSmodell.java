@@ -1,8 +1,12 @@
 package models.øvelse;
 
+
+/**
+ * Modell som representerer øvelsene en utøver skal fullføre i virkeligheten i utøverklassen Senior
+ * Feltene er de ulike kolonnene som finnes i databasen
+ */
 public class ØvelseSmodell {
     private int testperiode;
-   // private int år;
     private int brukerid;
     private String seksti;
     private String beveglighet;
@@ -15,6 +19,23 @@ public class ØvelseSmodell {
     private String knebøyKG;
     private String knebøyP;
 
+
+    /**
+     * Cosntructor som brukes når et testresultat skal legges inn i databasen
+     * Metoden blir brukt i servlets.registering.Senior
+     * @param testperiode
+     * @param brukerid
+     * @param seksti
+     * @param beveglighet
+     * @param femtusenW
+     * @param femtusenT
+     * @param totusenW
+     * @param totusenT
+     * @param liggendeRoingP
+     * @param liggendeRoingKg
+     * @param knebøyKG
+     * @param knebøyP
+     */
     public ØvelseSmodell(int testperiode, int brukerid, String seksti, String beveglighet, String femtusenW, String femtusenT, String totusenW, String totusenT, String liggendeRoingP, String liggendeRoingKg, String knebøyKG, String knebøyP) {
         this.seksti = seksti;
         this.beveglighet = beveglighet;

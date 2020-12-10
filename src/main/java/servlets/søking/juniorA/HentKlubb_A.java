@@ -11,15 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "HentPeriode_A", urlPatterns = "/HentPeriode_A")
-public class HentPeriode_A extends AbstractAppServlet {
-
+@WebServlet(name = "HentKlubb_A", urlPatterns = "/HentKlubb_A")
+public class HentKlubb_A extends AbstractAppServlet {
+    /**
+     * Skriver ut tabell på nettsiden
+     * Henter fra databasen via en annen klasse.
+     * @param req
+     * @param out
+     */
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
-        Tabell.skrivTabellA(out);
 
-        String periode = req.getParameter("periode");
-        SearchRepo_A.søkPeriodeA(periode, out);
+        Tabell.skrivTabellA(out);
+        String klubb = req.getParameter("roklubb");
+        SearchRepo_A.søkKlubb(klubb, out);
+
     }
 
     @Override
