@@ -39,6 +39,7 @@ public class SearchRepo {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
@@ -114,6 +115,7 @@ public class SearchRepo {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
@@ -184,6 +186,7 @@ public class SearchRepo {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
@@ -223,6 +226,7 @@ public class SearchRepo {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
@@ -259,6 +263,7 @@ public class SearchRepo {
                 p.println("<tr>");
                 p.println("<td>" + rs.getString("fornavn") + "</td>");
                 p.println("<td>" + rs.getString("etternavn") + "</td>");
+                p.println("<td>" + rs.getString("klubbnavn") + "</td>");
                 p.println("<td>" + rs.getString("toppscore") + "</td>");
                 p.println("<td>" + rs.getString("år") + "</td>");
                 p.println("<td>" + rs.getString("periode") + "</td>");
