@@ -10,11 +10,11 @@ import java.io.IOException;
 
 @WebServlet(name = "JuniorADD", urlPatterns = "/JuniorADD")
 public class JuniorADD extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    /**protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("user","JuniorA");
         RequestDispatcher rd = request.getRequestDispatcher("UtøverList");
         rd.forward(request,response);
-    }
+    }*/
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("user","JuniorA");

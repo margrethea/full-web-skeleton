@@ -19,10 +19,15 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "RoklubbList", urlPatterns = {"/RoklubbList"})
 public class RoklubbList extends HttpServlet {
-    // er det httpservlet vi skal extrende til eller abstract?
-    private static final long serialVersionUID = 1L;
 
-
+    /**
+     *  Metoden henter Fra DAORoklubb og DropdownRoklubb
+     *  Deretter skriver den ut roklubbene i form av en dropdown
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         DAORoklubb dao = new DAORoklubb();
@@ -43,15 +48,5 @@ public class RoklubbList extends HttpServlet {
         }
 
     }
-
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        //int brukerId = Integer.parseInt(request.getParameter("Utøverliste"));
-
-        //request.setAttribute("SelectedBrukerId", brukerId);
-
-    }
-    // Hva betyr dette ? O_O
 }
 

@@ -76,20 +76,7 @@ public class Senior extends AbstractAppServlet {
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
+        writeResponse(request, response, "Resultat Senior");
     }
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        writeResponse(request, response, "HEIHEI");
-    }
-
-
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-
 }
 

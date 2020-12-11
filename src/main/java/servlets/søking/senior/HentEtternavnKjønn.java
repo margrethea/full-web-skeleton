@@ -3,7 +3,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +21,7 @@ public class HentEtternavnKjønn extends AbstractAppServlet {
 
         String kjønn = req.getParameter("gender");
         String etternavn = req.getParameter("etternavn");
-        SearchRepo.søkEttKjønn(kjønn, etternavn, out);
+        SearchRepoS.søkEttKjønn(kjønn, etternavn, out);
         System.out.println("Kjønn og etternavn");
 
 

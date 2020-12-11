@@ -3,8 +3,7 @@ package servlets.søking.juniorA;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
-import tools.repository.SearchRepo_A;
+import tools.repository.SearchRepoA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,7 +40,7 @@ public class AlleParametre_A extends AbstractAppServlet {
         //Henter Input fra brukeren
 
 
-        SearchRepo_A.søkAlleParametreA(fornavn, etternavn, periode, kjønn, fødselsår, klubb, out);
+        SearchRepoA.søkAlleParametreA(fornavn, etternavn, periode, kjønn, fødselsår, klubb, out);
         // Henter metode som henter resultater ut fra databasen
 
     }

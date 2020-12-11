@@ -40,7 +40,7 @@
      Velg bruker:&nbsp;
         <select name="ListUtøver">
             <option value="" disabled selected>Velg Utøver</option>
-            <c:forEach items="${listUtøver}" var="bruker">
+            <c:forEach items="${listUtøver}" var="bruker">      <!--For hver brukerID i databasen, printes det ut fornavn og etternavn til utøveren -->
                 <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
             </c:forEach>
         </select>

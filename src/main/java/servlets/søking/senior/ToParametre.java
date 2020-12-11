@@ -3,7 +3,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +21,7 @@ public class ToParametre extends AbstractAppServlet {
 
         String fornavn = req.getParameter("fornavn");
         String etternavn = req.getParameter("etternavn");
-        SearchRepo.søkForEtt(fornavn, etternavn, out);
+        SearchRepoS.søkForEtt(fornavn, etternavn, out);
         System.out.println("to param");
 
 

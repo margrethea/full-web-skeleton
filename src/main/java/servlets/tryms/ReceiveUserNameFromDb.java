@@ -1,4 +1,4 @@
-package servlets.tryms;
+/**package servlets.tryms;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +19,7 @@ public class ReceiveUserNameFromDb extends AbstractAppServlet {
      * @param response objektet sender data fra servleten.
      * @throws ServletException
      * @throws IOException
-     */
+
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
@@ -30,7 +30,7 @@ public class ReceiveUserNameFromDb extends AbstractAppServlet {
      * skriver ut body på servlet som html.
      * @param req http request objektet med data.
      * @param out http respons objektet som sender data.
-     */
+
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         String username = req.getParameter("uname");
@@ -46,7 +46,7 @@ public class ReceiveUserNameFromDb extends AbstractAppServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
-     */
+
 
     /**
      * Alle get forespørsler til denne servleten blir håndert av doGEt.
@@ -55,7 +55,7 @@ public class ReceiveUserNameFromDb extends AbstractAppServlet {
      * @param response servlet response
      * @throws ServletException
      * @throws IOException
-     */
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
@@ -69,7 +69,7 @@ public class ReceiveUserNameFromDb extends AbstractAppServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
-     */
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
@@ -80,9 +80,10 @@ public class ReceiveUserNameFromDb extends AbstractAppServlet {
      * Returns a short description of the servlet.
      *
      * @return a String containing servlet description
-     */
+
     @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 }
+ */

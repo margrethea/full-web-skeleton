@@ -2,7 +2,7 @@ package servlets.søking.juniorA;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo_A;
+import tools.repository.SearchRepoA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,7 +33,7 @@ public class HentEtternavn_A extends AbstractAppServlet {
         String år = req.getParameter("etternavn");
         //Henter input fra brukeren
 
-        SearchRepo_A.søkEtternavnA(år, out);
+        SearchRepoA.søkEtternavnA(år, out);
         //Henter metode som henter resultater fra databasen
 
     }

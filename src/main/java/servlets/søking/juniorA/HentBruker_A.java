@@ -2,7 +2,7 @@ package servlets.søking.juniorA;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo_A;
+import tools.repository.SearchRepoA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,8 +27,7 @@ public class HentBruker_A extends AbstractAppServlet {
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Tabell.skrivTabellA(out);
-        System.out.println("Etter if");
-        SearchRepo_A.søkAlleResultatA(out);
+        SearchRepoA.søkAlleResultatA(out);
         //Henter metode som henter ut resultat fra databasen.
 
     }

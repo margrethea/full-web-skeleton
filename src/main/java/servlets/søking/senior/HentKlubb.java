@@ -2,7 +2,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,7 @@ public class HentKlubb extends AbstractAppServlet {
         Tabell.skrivTabellS(out);
 
         String roklubb = req.getParameter("roklubb");
-        SearchRepo.søkRoklubb(roklubb, out);
+        SearchRepoS.søkRoklubb(roklubb, out);
         System.out.println(roklubb + "skjer dette");
 
     }
@@ -27,7 +27,7 @@ public class HentKlubb extends AbstractAppServlet {
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
+        writeResponse(request, response, "Resultatsøk!");
     }
 }
 

@@ -18,24 +18,6 @@ import java.io.IOException;
 public class HentResultat_A extends HttpServlet {
 
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-        String a = req.getParameter("fornavn");
-        String b = req.getParameter("Periode");
-        String c = req.getParameter("Kjønn");
-        String d = req.getParameter("Øvelse");
-        String e = req.getParameter("Årstall");
-        System.out.println(a + b + c + d + e);
-        if (b.isEmpty() && c.isEmpty() && d.isEmpty() && e.isEmpty()) {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn_A");
-            requestDispatcher.forward(req, res);
-        } else {
-            RequestDispatcher rd = req.getRequestDispatcher("HentBruker_A");
-            rd.forward(req, res);
-        }
-
-    }
-
     /**
      * Metoden Sjekker hva brukeren har tastet inn i inputfeltet
      * Sender videre til riktig servlet basert på dette
@@ -52,6 +34,7 @@ public class HentResultat_A extends HttpServlet {
         String e = req.getParameter("year");
         String f = req.getParameter("roklubb");
         System.out.println(a + b + c + d + e + f);
+
         if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year") && f.equals("")) {
 
             System.out.println("IFIF");
@@ -98,7 +81,7 @@ public class HentResultat_A extends HttpServlet {
                 rd.forward(req,res);
             }else if (!(f.equals(""))){
                 System.out.println("klubb");
-                RequestDispatcher rd = req.getRequestDispatcher("HentKlubb");
+                RequestDispatcher rd = req.getRequestDispatcher("HentKlubb_A");
                 rd.forward(req,res);
             }
         }

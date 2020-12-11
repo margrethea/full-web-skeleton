@@ -2,7 +2,7 @@ package servlets.søking.juniorA;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo_A;
+import tools.repository.SearchRepoA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,7 @@ public class HentÅr_A extends AbstractAppServlet {
         Tabell.skrivTabellA(out);
 
         String år = req.getParameter("year");
-        SearchRepo_A.søkÅrA(år, out);
+        SearchRepoA.søkÅrA(år, out);
 
     }
 

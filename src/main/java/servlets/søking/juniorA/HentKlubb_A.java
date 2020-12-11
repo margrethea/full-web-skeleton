@@ -2,7 +2,7 @@ package servlets.søking.juniorA;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo_A;
+import tools.repository.SearchRepoA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,11 +21,9 @@ public class HentKlubb_A extends AbstractAppServlet {
      */
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
-
         Tabell.skrivTabellA(out);
         String klubb = req.getParameter("roklubb");
-        SearchRepo_A.søkKlubb(klubb, out);
-
+        SearchRepoA.søkKlubb(klubb, out);
     }
 
     @Override

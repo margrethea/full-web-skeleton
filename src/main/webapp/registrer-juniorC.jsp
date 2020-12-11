@@ -81,7 +81,6 @@
 
 
         <input type="submit" name="action" value="Registrer">
-        <p>trololol</p>
     </form>
 
     </body>
