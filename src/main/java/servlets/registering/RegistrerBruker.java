@@ -11,9 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Servlet for å registrere bruker
+ */
 @WebServlet(name = "RegistrerBruker", urlPatterns = {"/RegistrerBruker"})
 public class RegistrerBruker extends AbstractAppServlet {
 
+    /**
+     * Metoden henter parametre fra brukeren før den kobler opp med databasen ved hjelp av brukermodell
+     * Deretter lages en tabell, og parametrene blir skrivet inn i tabellen
+     * @param req
+     * @param out
+     */
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         String fornavn = req.getParameter("fornavn");
@@ -60,14 +69,6 @@ public class RegistrerBruker extends AbstractAppServlet {
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
-    }
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        writeResponse(request, response, "Added to database");
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        writeResponse(request, response, "Registrert bruker");
     }
 }

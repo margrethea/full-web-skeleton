@@ -64,14 +64,7 @@ public class JuniorB extends AbstractAppServlet {
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
-    }
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-        writeResponse(request, response, "Added to database");
+        writeResponse(request, response, "Resultat Junior B");
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-
-    }
 }

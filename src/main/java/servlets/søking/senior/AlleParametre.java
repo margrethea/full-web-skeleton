@@ -3,7 +3,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,7 +40,7 @@ public class AlleParametre extends AbstractAppServlet {
         /**
          * Henter metode fra klassen SearchRepo som henter informasjon fra databasen
          */
-        SearchRepo.søkAlleParametre(fornavn, etternavn, periode, kjønn, fødselsår, out);
+        SearchRepoS.søkAlleParametre(fornavn, etternavn, periode, kjønn, fødselsår, out);
 
     }
 

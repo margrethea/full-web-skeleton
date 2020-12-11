@@ -1,4 +1,4 @@
-package tools.repository;
+/**package tools.repository;
 
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -17,7 +17,7 @@ public class UserRepository {
      * @param user bruker objekt som inneholder all informasjon om personen.
      * Tips: Objektet må instansieres i en servlet før man kaller på addUser().
      * @param p printwriter for å skrive ut html i servlet. F.eks SQL feilmeldinger eller annen info.
-     */
+     
 
     public static void addUser(UserModel user, PrintWriter p) {
         Connection db = null;
@@ -51,7 +51,7 @@ public class UserRepository {
      * @param username brukerens epost-addresse ("trym@example.com");
      * @param p printwriter see metoden over.
      * @return et String objekt med eposten til brukeren.
-     */
+
 
     public static String getUserName(String username, PrintWriter p) {
         Connection db = null;
@@ -78,3 +78,4 @@ public class UserRepository {
 
     }
 }
+**/

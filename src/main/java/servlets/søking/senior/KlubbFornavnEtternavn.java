@@ -3,7 +3,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +22,7 @@ public class KlubbFornavnEtternavn extends AbstractAppServlet {
         String fornavn = req.getParameter("fornavn");
         String etternavn = req.getParameter("etternavn");
         String klubb = req.getParameter("roklubb");
-        SearchRepo.søkKlubbForEtt(fornavn, etternavn, klubb, out);
+        SearchRepoS.søkKlubbForEtt(fornavn, etternavn, klubb, out);
         System.out.println("Kjønn og etternavn");
 
 

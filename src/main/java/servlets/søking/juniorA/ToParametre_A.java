@@ -3,8 +3,7 @@ package servlets.søking.juniorA;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
-import tools.repository.SearchRepo_A;
+import tools.repository.SearchRepoA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +21,7 @@ public class ToParametre_A extends AbstractAppServlet {
 
         String fornavn = req.getParameter("fornavn");
         String etternavn = req.getParameter("etternavn");
-        SearchRepo_A.søkForEttA(fornavn, etternavn, out);
+        SearchRepoA.søkForEttA(fornavn, etternavn, out);
         System.out.println("to param");
 
 

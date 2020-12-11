@@ -11,11 +11,8 @@ import java.sql.SQLException;
 public class BrukerRepository {
     /**
      * legger til bruker til databasen.
-     * Denne er ikke implementert. Her må dere gjerne prøve å lage en egen servlet som kan kommunisere med
-     * denne metoden.
      *
      * @param resultat bruker objekt som inneholder all informasjon om personen.
-     *                 Tips: Objektet må instansieres i en servlet før man kaller på addUser().
      * @param p        printwriter for å skrive ut html i servlet. F.eks SQL feilmeldinger eller annen info.
      **/
 

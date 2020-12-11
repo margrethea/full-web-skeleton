@@ -1,6 +1,9 @@
 package models.bruker;
 
-
+/**
+ * Modell som henter fornavn og etternavn fra brukeren, sjekkket med BrukerId
+ * Brukes for å lage en Dropdown
+ */
 public class DropdownBruker {
     private String bruker_id;
     private String forNavn;

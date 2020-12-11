@@ -2,7 +2,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +18,7 @@ public class HentEtternavn extends AbstractAppServlet {
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Tabell.skrivTabellS(out);
         String etternavn = req.getParameter("etternavn");
-        SearchRepo.søkEtternavn(etternavn, out);
+        SearchRepoS.søkEtternavn(etternavn, out);
 
     }
 

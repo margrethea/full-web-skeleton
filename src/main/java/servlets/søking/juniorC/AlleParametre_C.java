@@ -3,7 +3,6 @@ package servlets.søking.juniorC;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
 import tools.repository.SearchRepoC;
 
 import javax.servlet.ServletException;

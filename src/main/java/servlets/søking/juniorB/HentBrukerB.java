@@ -1,11 +1,8 @@
 package servlets.søking.juniorB;
 
 
-import models.Query.QuerysB;
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.DbTool;
-import tools.repository.SearchRepo;
 import tools.repository.SearchRepoB;
 
 import javax.servlet.ServletException;
@@ -14,10 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 @WebServlet(name = "HentBrukerB", urlPatterns = "/HentBrukerB")
 public class HentBrukerB extends AbstractAppServlet {

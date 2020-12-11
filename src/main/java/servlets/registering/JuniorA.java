@@ -30,7 +30,6 @@ public class JuniorA extends AbstractAppServlet {
 
         System.out.println(seksti + bevegelighet + femtusenT+ femtusenW + totusenT + totusenW + liggendeRoingKG + liggendeRoingP +sargeant + brukerid + testperiode);
 
-
         ØvelseAModell reqResultat = new ØvelseAModell(testperiode,brukerid,seksti,bevegelighet,femtusenW,femtusenT,
                 totusenW,totusenT,liggendeRoingKG,liggendeRoingP,sargeant);
             Øvelserepo.regResultatA(reqResultat, out);
@@ -75,14 +74,6 @@ public class JuniorA extends AbstractAppServlet {
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
-    }
-
-    //public void doPost(HttpServletRequest request, HttpServletResponse response)
-   //         throws ServletException, IOException {
-    //    writeResponse(request, response, "Added to database");
-   // }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        writeResponse(request, response, "Resultat Junior A");
     }
 }

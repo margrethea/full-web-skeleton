@@ -2,7 +2,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +18,7 @@ public class HentPeriode extends AbstractAppServlet {
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Tabell.skrivTabellS(out);
         String periode = req.getParameter("periode");
-        SearchRepo.søkPeriode(periode, out);
+        SearchRepoS.søkPeriode(periode, out);
 
     }
 

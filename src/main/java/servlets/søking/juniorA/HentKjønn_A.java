@@ -2,7 +2,7 @@ package servlets.søking.juniorA;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo_A;
+import tools.repository.SearchRepoA;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +24,7 @@ public class HentKjønn_A extends AbstractAppServlet {
 
         Tabell.skrivTabellA(out);
         String kjønn = req.getParameter("gender");
-        SearchRepo_A.søkKjønnA(kjønn, out);
+        SearchRepoA.søkKjønnA(kjønn, out);
 
     }
 

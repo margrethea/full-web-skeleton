@@ -2,7 +2,7 @@ package servlets.søking.senior;
 
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.repository.SearchRepo;
+import tools.repository.SearchRepoS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +17,7 @@ public class HentBrukerS extends AbstractAppServlet {
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Tabell.skrivTabellS(out);
-        SearchRepo.søkAlleResultatS(out);
+        SearchRepoS.søkAlleResultatS(out);
 
     }
     @Override

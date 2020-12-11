@@ -58,25 +58,10 @@ public class JuniorC extends AbstractAppServlet {
         out.println("</tr>");
     }
 
-
-
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        writeResponse(request, response, "Hello!");
+        writeResponse(request, response, "Resultat Junior C");
     }
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        writeResponse(request, response, "HEIHEI");
-    }
-    
-
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-
 }
 

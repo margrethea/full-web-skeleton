@@ -14,13 +14,13 @@ public class LoginServlet extends HttpServlet {
         String brukernavn = request.getParameter("brukernavn");
         String passord = request.getParameter("passord");
 
-        if (brukernavn.equals("superuser") && passord.equals("123")) {
+        if (brukernavn.equals("Admin") && passord.equals("123")) {
             response.sendRedirect("index.jsp");
 
-        } else if (brukernavn.equals("trener") && passord.equals("123")) {
+        } else if (brukernavn.equals("Trener") && passord.equals("123")) {
             response.sendRedirect("index.jsp");
 
-        } else if (brukernavn.equals("utøver") && passord.equals("123")) {
+        } else if (brukernavn.equals("Utøver") && passord.equals("123")) {
             response.sendRedirect("");
         }
 
