@@ -37,13 +37,14 @@ public class RegistrerBruker extends AbstractAppServlet {
         BrukerModell reqResultatBruker = new BrukerModell(fornavn, etternavn, epost, fødselsår, kjønn, roklubbid, klasseid);
         BrukerRepository.regResultatBruker(reqResultatBruker, out);
 
-        out.format("<h1>Bruker er registrert</h1>", fornavn);
+        out.format("<h1>Bruker " + fornavn + " er registrert</h1>");
 
 
         BrukerModell Bruker = new BrukerModell(fornavn,etternavn,epost,fødselsår,kjønn,roklubbid, klasseid);
         BrukerRepository.regResultatBruker(Bruker, out);
         System.out.println(Bruker);
-        out.println("<html><body><h2> Registrert bruker </h2>");
+        out.println("<html><head><link rel='stylesheet' href='main.css'></head>");
+        out.println("<div class='tabellcss'>");
         out.println("<hr></br><table cellspacing='0' cellpadding='5' border='1'>");
         out.println("<tr>");
         out.println("<td><b>Fornavn</b></td>");
@@ -64,6 +65,8 @@ public class RegistrerBruker extends AbstractAppServlet {
         out.println("<td>"+roklubbid+ "</td>");
         out.println("<td>"+klasseid+ "</td>");
         out.println("</tr>");
+
+        out.println("<a href=registrer-resultat.jsp>Tilbake til registrer resultat</a>");
 }
 
     @Override
