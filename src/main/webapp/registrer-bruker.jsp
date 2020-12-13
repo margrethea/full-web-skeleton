@@ -65,7 +65,7 @@
             </select>
         </li>
 
-        <li>
+         <li>
             <input type="submit" name="action" value="Registrer"/>
         </li>
     </ul>
