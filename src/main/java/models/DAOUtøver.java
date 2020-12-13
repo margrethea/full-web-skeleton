@@ -8,6 +8,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Modell som henter metodene for hver av de ulike klassene i Norges Roforbund som henter metoder fra DropDownBruker
+ * og returnerer en liste ved hjelp av SQL query
+ */
+
 public class DAOUtøver {
 
     public List<DropdownBruker> listS(PrintWriter out) throws SQLException {
