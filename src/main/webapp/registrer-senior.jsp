@@ -37,77 +37,49 @@
         <a href='RoklubbList'><button>Registrer bruker</button></a><br>
 
     <form action="Senior" method="post">
-     Velg bruker:&nbsp;
-        <select name="ListUtøver">
-            <option value="" disabled selected>Velg Utøver</option>
-            <c:forEach items="${listUtøver}" var="bruker">      <!--For hver brukerID i databasen, printes det ut fornavn og etternavn til utøveren -->
-                <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
-            </c:forEach>
-        </select>
-
-        <br/><br/>
-            <div class="registrer_resultat">
-                <label for="testperiode">Testperiode</label>
-                <select id="testperiode" name="testperiode">
-                    <option disabled selected>Velg testperiode...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
+        <ul class="form-style-1">
+            <li><label>Utøver</label>
+                <select name="ListUtøver" class="field-select">
+                    <option disabled selected>Velg Utøver</option>
+                    <c:forEach items="${listUtøver}" var="bruker">
+                        <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
+                    </c:forEach>
                 </select>
-            </div><br>
+            </li>
 
-            <div class="registrer_resultat">
-                <label for="60">60"</label>
-                <input type="text" name="60" class="registrer_resultat" id="60" placeholder="Skriv resultat her...">
-            </div><br>
+            <li>
+                <label>Testperiode</label>
+                <select name="testperiode" class="field-select">
+                    <option disabled selected> Velg testperiode... </option>
+                    <option value="1">Testperiode 1</option>
+                    <option value="2">Testperiode 2</option>
+                    <option value="3">Testperiode 3</option>
+                </select>
+            </li>
 
-            <div class="registrer_resultat">
-                <label for="bevegelighet">Bevegelighet</label>
-                <input type="text" name="bevegelighet" class="registrer_resultat" id="bevegelighet" placeholder="Skriv resultat her...">
-            </div><br>
+            <li>
+                <label>60"</label>
+                <input type="text" name="60" class="field-long" />
+            </li>
 
-            <div class="registrer_resultat">
-                <label for="5000m_w">5000m (watt)</label>
-                <input type="text" name="5000m_w" class="registrer_resultat" id="5000m_w" placeholder="Skriv resultat her...">
-            </div><br>
+            <li>
+                <label>Bevegelighet</label>
+                <input type="text" name="bevegelighet" class="field-long" /></label>
+            </li>
 
-            <div class="registrer_resultat">
-                <label for="5000m_t">5000m (tid)</label>
-                <input type="text" name="5000m_t" class="registrer_resultat" id="5000m_t" placeholder="Skriv resultat her...">
-            </div><br>
+            <li><label>5000m</label><input type="text" name="5000m_w" class="field-divided" placeholder="Watt"  /><input type="text" name="5000m_t" class="field-divided" placeholder="Tid"/></li>
 
-            <div class="registrer_resultat">
-                <label for="2000m_w">2000m (watt)</label>
-                <input type="text" name="2000m_w" class="registrer_resultat" id="2000m_w" placeholder="Skriv resultat her...">
-            </div><br>
+            <li><label>2000m</label><input type="text" name="2000m_w" class="field-divided" placeholder="Watt" /><input type="text" name="2000m_t" class="field-divided" placeholder="Tid" /></li>
 
-            <div class="registrer_resultat">
-                <label for="2000m_t">2000m (tid)</label>
-                <input type="text" name="2000m_t" class="registrer_resultat" id="2000m_t" placeholder="Skriv resultat her...">
-            </div><br>
+            <li><label>Liggende roing</label><input type="text" name="ligg_ro_p" class="field-divided" placeholder="Prosent"/><input type="text" name="ligg_ro_kg" class="field-divided" placeholder="KG" /></li>
 
-            <div class="registrer_resultat">
-                <label for="ligg_ro_p">Liggende roing (prosent)</label>
-                <input type="text" name="ligg_ro_p" class="registrer_resultat" id="ligg_ro_p" placeholder="Skriv resultat her...">
-            </div><br>
+            <li><label>Knebøy</label><input type="text" name="kneboy_p" class="field-divided" placeholder="Prosent"><input type="text" name="kneboy_kg" class="field-divided" placeholder="KG"></li>
 
-            <div class="registrer_resultat">
-                <label for="ligg_ro_kg">Liggende roing (Kg)</label>
-                <input type="text" name="ligg_ro_kg" class="registrer_resultat" id="ligg_ro_kg" placeholder="Skriv resultat her...">
-            </div><br>
+            <li>
+            <input type="submit" value="Registrer">
+            </li>
+        </ul>
 
-            <div class="registrer_resultat">
-                <label for="kneboy_p">Knebøy (prosent)</label>
-                <input type="text" name="kneboy_p" class="registrer_resultat" id="kneboy_p" placeholder="Skriv resultat her...">
-            </div><br>
-
-            <div class="registrer_resultat">
-                <label for="kneboy_kg">Knebøy (Kg)</label>
-                <input type="text" name="kneboy_kg" class="registrer_resultat" id="kneboy_kg" placeholder="Skriv resultat her...">
-            </div><br>
-
-            <input type="submit" name="action" value="Registrer">
-
-        </form>
-    </body>
+    </form>
+</body>
 </html>
