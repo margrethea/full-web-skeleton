@@ -23,11 +23,11 @@
     <div class="center">
         <h1>Velg tjeneste </h1>
         <div class="buttons">
-            <button class="btn">Registrer resultat</button>
-            <button class="btn">Resultatsøk</button>
+            <a href="registrer-resultat.jsp"><button class="btn">Registrer resultat</button></a>
+            <a href="resultatsøk.jsp"><button class="btn">Resultatsøk</button></a>
             <br>
-            <button class="btn">Toppscore</button>
-            <button class="btn">Min side</button>
+            <a href="toppscore.jsp"><button class="btn">Toppscore</button></a>
+            <a href="min-side.jsp"> <button class="btn">Min side</button></a>
         </div>
     </div>
 </div>
