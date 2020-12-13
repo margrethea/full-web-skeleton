@@ -10,9 +10,11 @@ html {
 }
 .center{
     /* er noe med denne delen som gjør at det bakgrunen blir litt feil. Forslag til fiks?   */
+    margin-top: 70px;
     width: 430px;
     margin: 130px auto;
     position: relative;
+
 }
 
 input {
@@ -21,10 +23,6 @@ input {
 
 button:focus {
     outline: none;
-}
-
-{
-    color: #005E6D;
 }
 
 .input-line:focus + input-placeholder {
@@ -111,10 +109,11 @@ button:focus {
 }
 
 .input-fields {
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .container {
+    margin-top: 80px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -127,11 +126,6 @@ button:focus {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    /*
-    background: #eee;
-    height: 100%;
-
-     */
 }
 
 .content {
@@ -186,11 +180,6 @@ button:focus {
     box-sizing: border-box;
     height: 560px;
     width: 360px;
-    /*
-    background: #fff;
-    background: url('https://pexels.imgix.net/photos/27718/pexels-photo-27718.jpg?fit=crop&w=1280&h=823') top left no-repeat;
-
-     */
 }
 
 .overlay {
@@ -216,5 +205,3 @@ button:focus {
     opacity: 0.1;
 
 }
-
-
