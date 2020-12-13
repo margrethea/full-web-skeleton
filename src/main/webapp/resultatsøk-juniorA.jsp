@@ -25,7 +25,7 @@
 
 
 <h1>Resultatsøk</h1>
-    <form action="HentBrukerA" method="post">
+
     <div class="resultatsøk_linker" style="text-align: center"><div>
     <a href="resultatsøk-senior.jsp">Senior</a>
     <a class="active" href="resultatsøk-juniorA.jsp">Junior A</a>
@@ -33,73 +33,62 @@
     <a href="resultatsøk-juniorC.jsp">Junior C</a>
 </div></div><br>
 
-<div class="resultatsøk">
-    <label for="utøver">Utøver</label>
-    <select name="Utøver" id="utøver">
-        <option value="velg_utøver">Velg utøver...</option>
-    </select>
-</div><br>
+    <form action="HentResultat_A" method="post">
+            <ul class="form-style-1">
+                <li><label>Navn</label><input type="text" name="fornavn" class="field-divided" placeholder="Fornavn"><input type="text" name="etternavn" class="field-divided" placeholder="Etternavn"></li>
 
-<div class="resultatsøk_linker">
-    <label for="testperiode">Testperiode</label>
-    <select class="resultatsøk" id="testperiode">
-        <option> Velg testperiode...</option>
-        <option>Testperiode 1</option>
-        <option>Testperiode 2</option>
-        <option>Testperiode 3</option>
-    </select>
-</div><br>
+                <li>
+                    <label>Testperiode</label>
+                    <select name="periode" class="field-long">
+                        <option value="Periode"> Velg testperiode... </option>
+                        <option value="1">Testperiode 1</option>
+                        <option value="2">Testperiode 2</option>
+                        <option value="3">Testperiode 3</option>
+                    </select>
+                </li>
 
-<div class="resultatsøk">
-    <label for="kjønn">Kjønn</label>
-    <select name="Kjønn" id="kjønn">
-        <option value="velg_kjønn">Velg kjønn...</option>
-        <option value="mann">Mann</option>
-        <option value="kvinne">Kvinne</option>
-    </select>
-</div><br>
+                <li>
+                    <label>Kjønn</label>
+                <select name="gender" class="field-long">
+                    <option value="Gender">Velg kjønn...</option>
+                    <option value="kvinne">Kvinne</option>
+                    <option value="mann">Mann</option>
+                </select>
+                </li>
 
-<div class="resultatsøk">
-    <label for="øvelse">Øvelse</label>
-    <select name="Øvelse" id="øvelse">
-        <option value="Velg_øvelse">Velg øvelse...</option>
-        <option value="5000m_w">5000 meter watt</option>
-        <option value="5000m_t">5000 meter tid</option>
-        <option value="2000m_w">2000 meter watt</option>
-        <option value="2000m_t">2000 meter tid</option>
-        <option value="60">60"</option>
-        <option value="Liggende_roing_p">Liggende roing prosent</option>
-        <option value="Liggende_roing_kg">Liggende roing kg</option>
-        <option value="Sargeant">Sargeant</option>
-        <option value="Bevegelighet">Bevegelighet</option>
-    </select>
-</div><br>
+                <li>
+                    <label>År</label>
+                    <select name="year" class="field-long">
+                        <option>Year</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </li>
 
-<div class="resultatsøk">
-    <label for="årstall">Årstall</label>
-    <select name="Årstall" id="årstall">
-        <option value="Velg_årstall">Velg årstall...</option>
-        <option value="2004">2004</option>
-        <option value="2005">2005</option>
-        <option value="2006">2006</option>
-        <option value="2007">2007</option>
-        <option value="2008">2008</option>
-        <option value="2009">2009</option>
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-    </select>
-</div><br>
+                <li>
+                    <label>Roklubb</label>
+                    <input type="text" name="roklubb" class="field-long">
+                </li>
 
-<input type="submit" name="action" value="Søk">
-</form>
+                <li>
+                <input type="submit" name="action" value="Søk">
+                </li>
+            </ul>
+    </form>
 </body>
 </html>

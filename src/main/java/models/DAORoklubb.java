@@ -8,17 +8,24 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAORoklubb {
-    String databaseURL = "jdbc:mariadb://172.17.0.1:3308/ro";
-    String user = "root";
-    String password = "12345";
 
+public class DAORoklubb {
+
+
+    /**
+     * Metode som lager en ny liste for roklubbene fra databsen
+     * @param out
+     * @return ListRoklubb, Dropdown for roklubbene
+     * @throws SQLException
+     */
     public List<DropdownRoklubb> list(PrintWriter out) throws SQLException {
+        //Lager variabel for en ny Arraylist
         List<DropdownRoklubb> listRoklubb = new ArrayList<>();
+
+        //Conenction ???
         Connection db = null;
 
         try  {
-            // over, skal vi bruke "db=null" greiene isteden for det som står?
             db  = DbTool.getINSTANCE().dbLoggIn(out);
             String sql = "SELECT roklubb.roklubb_id, roklubb.klubbnavn FROM ro.roklubb ORDER BY roklubb.klubbnavn";
             Statement statement = db.createStatement();
@@ -28,16 +35,12 @@ public class DAORoklubb {
                 String roklubb_id = result.getString("roklubb_id");
                 String klubbnavn = result.getString("klubbnavn");
                 DropdownRoklubb roklubb = new DropdownRoklubb(roklubb_id, klubbnavn);
-
-                //SE OVER. DET ER NOE FEIL ved "= new Category". Se feilmeilding om at "category er abstrakt".
-
                 listRoklubb.add(roklubb);
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
             throw ex;
-            //skal vi bruke trym sin catch her?
         }
 
         return listRoklubb;

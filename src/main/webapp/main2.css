@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    height: 100%;
+    background-image: url("Bilder/IMG_1346.JPG");
+    background-size: cover;
+    font-family: 'Roboto';
+
+}
+.navbar{
+    height: 80px;
+    width: 100%;
+    background: rgba(255, 255, 255, 255);
+}
+.logo{
+    width: 105px;
+    height: 60px;
+    padding: 10px;
+}
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #005e6d;;
+    font-size: 20px;
+    padding: 6px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    transition: .4s;
+    letter-spacing: 0px;
+    letter-spacing: 0.02rem;
+
+
+}
+.topnav a:hover {
+    color: #005e6d;
+    text-decoration: underline;
+}
+.topnav a.active {
+    color: #005e6d;
+    text-decoration: underline;
+
+}
+.wrapper .center{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto';
+    font-weight: lighter;
+    letter-spacing: 0px;
+    letter-spacing: 0.02rem;
+    user-select: none;
+
+}
+
+.center h1 {
+    color: white;
+    font-weight: lighter;
+    margin-top: 40px;
+    text-align: center;
+    width: 900px;
+    font-size: 125px;
+    font-size: 3.5rem;
+    letter-spacing: 0px;
+    letter-spacing: 0.05rem;
+    -webkit-text-stroke: 1px white;
+
+}
+.center h2 {
+    color: white;
+    font-size: 70px;
+    width: 885px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.center .buttons{
+    position: absolute;
+
+
+}
+
+.buttons button{
+    height: 100px;
+    width: 250px;
+    font-size: 22px;
+    font-weight: lighter;
+    color: #005e6d;
+    background: white;
+    border: #dcdcdc 1px solid ;
+    outline: none;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: .5s;
+    box-shadow: 3px 5px #bbbbbb
+}
+
+.buttons .btn{
+    margin-top: 120px;
+    margin-left: 130px;
+}
+
+.buttons button:hover{
+    background: #e4e4e4;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 3px;
+    color: white;
+    font-size: 15px;
+}

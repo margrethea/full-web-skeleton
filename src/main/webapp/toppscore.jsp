@@ -34,6 +34,10 @@
         <form action="HentTopp" method="post">
           <input type="submit" name="action" value="Søk">
 
+        <form action="HentTopp" method="post">
+            <input type="submit" name="action" value="søk">
+        </form>
+
         <div style="text-align: center;"><div>
             <table style="" class="nasjonalt">
                 <caption>Senior Mann</caption>

@@ -19,23 +19,7 @@ import java.io.PrintWriter;
 public class HentResultat extends HttpServlet {
 
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-        String a = req.getParameter("fornavn");
-        String b = req.getParameter("Periode");
-        String c = req.getParameter("Kjønn");
-        String d = req.getParameter("Øvelse");
-        String e = req.getParameter("Årstall");
-        System.out.println(a + b + c + d + e);
-        if (b.isEmpty() && c.isEmpty() && d.isEmpty() && e.isEmpty()) {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn");
-            requestDispatcher.forward(req, res);
-        } else {
-            RequestDispatcher rd = req.getRequestDispatcher("HentBrukerS");
-            rd.forward(req, res);
-        }
 
-    }
 
     /**
      * Metoden Sjekker hva brukeren har tastet inn i inputfeltet
@@ -51,19 +35,25 @@ public class HentResultat extends HttpServlet {
         String c = req.getParameter("periode");
         String d = req.getParameter("gender");
         String e = req.getParameter("year");
+        // String f = req.getParameter("roklubb");
         System.out.println(a + b + c + d + e);
-        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year")) {
+        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year")/** && f.equals("")**/) {
             System.out.println("IFIF");
             RequestDispatcher rd = req.getRequestDispatcher("HentBrukerS");
             rd.forward(req, res);
 
-        }else if (!(a.equals("") || b.equals("") || c.equals("Periode") || d.equals("Gender") || e.equals("Year"))) {
+        }else if (!(a.equals("") || b.equals("") || c.equals("Periode") || d.equals("Gender") || e.equals("Year") /**|| f.equals("")**/)) {
 
             System.out.println("ELSEELSE");
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("AlleParametre");
             requestDispatcher.forward(req, res);
 
-        }else if (!(a.equals("") || b.equals( ""))){
+        }else if (!(a.equals("") || b.equals("")/** || f.equals("")*/))  {
+            System.out.println("tjohei hvor det går");
+            RequestDispatcher rd = req.getRequestDispatcher("KlubbFornavnEtternavn");
+            rd.forward(req,res);
+        }
+        else if (!(a.equals("") || b.equals( ""))){
             System.out.println("ToParametre");
             RequestDispatcher rd = req.getRequestDispatcher("ToParametre");
             rd.forward(req,res);
@@ -73,7 +63,12 @@ public class HentResultat extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("HentEtternavnKjønn");
         rd.forward(req, res);
 
-        }else if(a != "" && b != "" && c != "Periode" && d != "Gender" && e != "Year") {
+        }else if(!(d.equals("Gender") /**|| f.equals("")*/)){
+            System.out.println("klubb og kjønn");
+            RequestDispatcher rd = req.getRequestDispatcher("HentKlubbKjønn");
+            rd.forward(req,res);
+        }
+        else if(a != "" && b != "" && c != "Periode" && d != "Gender" && e != "Year"/** && f != ""*/) {
             if(!(a.equals(""))) {
                 System.out.println("Funker den statementen her i det heletatt?");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn");
@@ -94,10 +89,15 @@ public class HentResultat extends HttpServlet {
                 System.out.println("år");
                 RequestDispatcher rd = req.getRequestDispatcher("HentÅr");
                 rd.forward(req,res);
-            }
+          /**  }else if (!(f.equals(""))){
+                System.out.println("roklubb");
+                RequestDispatcher rd = req.getRequestDispatcher("HentKlubb");
+                rd.forward(req,res);
+            }**/
         }
         }
     }
+}
 
 
 

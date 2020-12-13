@@ -12,7 +12,7 @@
 <body>
 <div class="topnav">
     <a href="index.jsp">Hjem</a>
-    <a class="active" href="RoklubbList">Registrer resultat</a>
+    <a class="active" href="registrer-resultat.jsp">Registrer resultat</a>
     <a href="toppscore.jsp">Toppscore</a>
     <div class="topnav-right">
         <a href="min-side.jsp">Min side</a>
@@ -26,55 +26,51 @@
 
 <h1>Registrer bruker</h1>
 
-<form action="servlets.RegistrerBruker" method="post">
-    <div class="registrer-bruker">
-        <label for="fornavn">Fornavn</label>
-        <input type="text" name="fornavn" class="registrer-bruker" id="fornavn" placeholder="Skriv fornavn her...">
-    </div><br>
+<form action="RegistrerBruker" method="post" class="form-style-9">
+    <ul>
+        <li>
+            <input type="text" name="fornavn" class="field-style field-split align-left" placeholder="Fornavn" />
+            <input type="text" name="etternavn" class="field-style field-split align-right" placeholder="Etternavn" />
+        </li>
 
-    <div class="registrer-bruker">
-        <label for="etternavn">Etternavn</label>
-        <input type="text" name="etternavn" class="registrer-bruker" id="etternavn" placeholder="Skriv etternavn her...">
-    </div><br>
+        <li>
+            <input type="email" name="epost" class="field-style field-full align-left" placeholder="E-post adresse" />
+        </li>
 
-    <div class="registrer-bruker">
-    <label for="epost">E-post</label>
-    <input type="text" name="epost" class="registrer-bruker" id="epost" placeholder="Skriv e-post her...">
-    </div><br>
+        <li>
+            <input type="text" name="fødselsår" class="field-style field-split align-left" placeholder="Fødselsår (YYYY)" />
+            <select name="kjønn" class="field-style field-split align-right">
+                <option disabled selected> Velg kjønn... </option>
+                <option value="Kvinne">Kvinne</option>
+                <option value="Mann">Mann</option>
+            </select>
+        </li>
 
-    <div class="registrer-bruker">
-    <label for="fødselsår">Fødselsår</label>
-    <input type="text" name="fødselsår" class="registrer-bruker" id="fødselsår" placeholder="Skriv fødselsår her...">
-    </div><br>
-
-    <div class="registrer-bruker">
-        <label for="kjønn">Kjønn</label>
-        <select name="kjønn" class="registrer-bruker" id="kjønn">
-            <option> Velg kjønn...</option>
-            <option>Mann</option>
-            <option>Kvinne</option>
+        <li>
+        <select name="klasse" class="field-style field-full align-left">
+            <option disabled selected> Velg klasse... </option>
+            <option value="1">Senior</option>
+            <option value="2">Junior A</option>
+            <option value="3">Junior B</option>
+            <option value="4">Junior C</option>
         </select>
-    </div><br>
+        </li>
 
-    Roklubb
-    <select name="ListRoklubb">
-        <option value="">Velg roklubb...</option>
-        <c:forEach items="${listRoklubb}" var="roklubb">
-            <option value="${roklubb.roklubb_id}">${roklubb.klubbnavn}</option>
-        </c:forEach>
-    </select>
-    <br>
+        <li>
+            <select name="ListRoklubb" class="field-style field-full align-right">
+                <option value="">Velg roklubb...</option>
+                <c:forEach items="${listRoklubb}" var="roklubb">
+                    <option value="${roklubb.roklubb_id}">${roklubb.klubbnavn}</option>
+                </c:forEach>
+            </select>
+        </li>
 
-    <select name="klasse">
-        <option value="">Velg klasse...</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </select>
-
-    <input type="submit" name="action" value="Registrer">
-
+         <li>
+            <input type="submit" name="action" value="Registrer"/>
+        </li>
+    </ul>
 </form>
+
 </body>
 
 </html>
