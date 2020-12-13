@@ -12,7 +12,7 @@
 <div class="topnav">
     <a class="active" href="index.jsp">Hjem</a>
     <a href="registrer-resultat.jsp">Registrer resultat</a>
-    <a href="toppscore.jsp">Toppscore</a>
+    <a href="toppscore_test.jsp">Toppscore</a>
     <div class="topnav-right">
         <a href="min-side.jsp">Min side</a>
         <a href="resultatsøk.jsp">Resultatsøk</a>
@@ -31,7 +31,7 @@
 <a href="registrer-resultat.jsp"><button class="button button1"><i class="fas fa-pencil-alt"></i></i>Registrer Resultat</button></a>
 <a href="resultatsøk.jsp"><button class="button button1"><i class="fas fa-search"></i>Resultatsøk</button></a>
 <br>
-<a href="toppscore.jsp"><button class="button button1"><i class="fas fa-trophy"></i></i>Topscore</button></a>
+<a href="toppscore_test.jsp"><button class="button button1"><i class="fas fa-trophy"></i></i>Toppscore</button></a>
 <a href="min-side.jsp"><button class="button button1"><i class="fas fa-user"></i>Min Side</button></a>
 
 
