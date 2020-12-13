@@ -3,38 +3,34 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
-    <title>Velkommen - Roforbundet</title>
-</head>
+    <title>Norges Roforbund</title>
+    <link rel="stylesheet" href="main2.css">
 
+</head>
 <body>
-<div class="topnav">
-    <a class="active" href="index.jsp">Hjem</a>
-    <a href="registrer-resultat.jsp">Registrer resultat</a>
-    <a href="toppscore_test.jsp">Toppscore</a>
-    <div class="topnav-right">
-        <a href="min-side.jsp">Min side</a>
-        <a href="resultatsøk.jsp">Resultatsøk</a>
-        <a href="innstillinger.jsp">Innstillinger</a>
+<div class="wrapper">
+    <nav class="navbar">
+        <img class="logo" src="Bilder/NRF2.JPG" alt="Roforbundet logo">
+        <ul>
+            <li><a class="active" href="index.p">Hjem</a></li>
+            <li><a href="registrer-resultat.jsp">Registrer resultat</a></li>
+            <li><a href="resultatsøk.jsp">Resultatsøk</a></li>
+            <li><a href="toppscore.jsp">Toppscore</a></li>
+            <li><a href="min-side.jsp">Min side</a></li>
+        </ul>
+    </nav>
+    <div class="center">
+        <h1>Velg tjeneste </h1>
+        <div class="buttons">
+            <button class="btn">Registrer resultat</button>
+            <button class="btn">Resultatsøk</button>
+            <br>
+            <button class="btn">Toppscore</button>
+            <button class="btn">Min side</button>
+        </div>
     </div>
 </div>
 
-<a href="index.jsp"><img src="https://assets.website-files.com/5b3335ab4ca8551124a2ba8f/5cbf778b0cdebda6ec56b4a6_norges-roforbund-logo-p-500.png"
-                         alt="logo" class="center" ></a>
-<link href="https://fontawesome.com/icons?d=gallery">
-<h1>Velkommen!</h1>
-
-
-
-
-<a href="registrer-resultat.jsp"><button class="button button1"><i class="fas fa-pencil-alt"></i></i>Registrer Resultat</button></a>
-<a href="resultatsøk.jsp"><button class="button button1"><i class="fas fa-search"></i>Resultatsøk</button></a>
-<br>
-<a href="toppscore_test.jsp"><button class="button button1"><i class="fas fa-trophy"></i></i>Toppscore</button></a>
-<a href="min-side.jsp"><button class="button button1"><i class="fas fa-user"></i>Min Side</button></a>
-
 
 </body>
-
-</html>
