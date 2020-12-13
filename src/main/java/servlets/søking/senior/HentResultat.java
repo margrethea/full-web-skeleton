@@ -19,23 +19,7 @@ import java.io.PrintWriter;
 public class HentResultat extends HttpServlet {
 
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-        String a = req.getParameter("fornavn");
-        String b = req.getParameter("Periode");
-        String c = req.getParameter("Kjønn");
-        String d = req.getParameter("Øvelse");
-        String e = req.getParameter("Årstall");
-        System.out.println(a + b + c + d + e);
-        if (b.isEmpty() && c.isEmpty() && d.isEmpty() && e.isEmpty()) {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn");
-            requestDispatcher.forward(req, res);
-        } else {
-            RequestDispatcher rd = req.getRequestDispatcher("HentBrukerS");
-            rd.forward(req, res);
-        }
 
-    }
 
     /**
      * Metoden Sjekker hva brukeren har tastet inn i inputfeltet

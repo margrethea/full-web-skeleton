@@ -36,51 +36,55 @@
     <a href='RoklubbList'><button>Registrer bruker</button></a><br>
 
     <form action="JuniorC" method="post">
-        Velg bruker:&nbsp;
-        <select name="ListUtøver">
-            <option value="" disabled selected>Velg Utøver</option>
-            <c:forEach items="${listUtøver}" var="bruker">
-                <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
-            </c:forEach>
-        </select><br>
+        <ul class="form-style-1">
+            <li><label>Utøver</label>
+                <select name="ListUtøver" class="field-select">
+                    <option disabled selected>Velg Utøver</option>
+                    <c:forEach items="${listUtøver}" var="bruker">
+                        <option value="${bruker.bruker_id}">${bruker.forNavn} ${bruker.etterNavn}</option>
+                    </c:forEach>
+                </select>
+            </li>
 
-        <div class="registrer_resultat">
-            <label for="testperiode">Testperiode</label>
-            <select class="registrer_resultat" id="testperiode" name="testperiode">
-                <option disabled selected> Velg testperiode... </option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-        </div><br>
+            <li>
+                <label>Testperiode</label>
+                <select name="testperiode" class="field-select">
+                    <option disabled selected> Velg testperiode... </option>
+                    <option value="1">Testperiode 1</option>
+                    <option value="2">Testperiode 2</option>
+                    <option value="3">Testperiode 3</option>
+                </select>
+            </li>
 
-        <div class="registrer_resultat">
-            <label for="60">60"</label>
-            <input type="text" name="60" class="registrer_resultat" id="60" placeholder="Skriv resultat her...">
-        </div><br>
+            <li>
+                <label>60"</label>
+                <input type="text" name="60" class="field-long" />
+            </li>
 
-        <div class="registrer_resultat">
-            <label for="bevegelighet">Bevegelighet</label>
-            <input type="text" name="bevegelighet" class="registrer_resultat" id="bevegelighet" placeholder="Skriv resultat her...">
-        </div><br>
+            <li>
+                <label>Bevegelighet</label>
+                <input type="text" name="bevegelighet" class="field-long" />
+            </li>
 
-        <div class="registrer_resultat">
-            <label for="3000m">3000m</label>
-            <input type="text" name="3000m" class="registrer_resultat" id="3000m" placeholder="Skriv resultat her...">
-        </div><br>
+            <li>
+                <label>3000m</label>
+                <input type="text" name="3000m" class="field-long" />
+            </li>
 
-        <div class="registrer_resultat">
-            <label for="kroppshev">Kroppshev</label>
-            <input type="text" name="kroppshev" class="registrer_resultat" id="kroppshev" placeholder="Skriv resultat her...">
-        </div><br>
+            <li>
+                <label>Kroppshev</label>
+                <input type="text" name="kroppshev" class="field-long" />
+            </li>
 
-        <div class="registrer_resultat">
-            <label for="sargeant">Sargeant</label>
-            <input type="text" name="sargeant" class="registrer_resultat" id="sargeant" placeholder="Skriv resultat her...">
-        </div><br>
+            <li>
+                <label>Sargeant</label>
+                <input type="text" name="sargeant" class="field-long" />
+            </li>
 
-
-        <input type="submit" name="action" value="Registrer">
+            <li>
+                <input type="submit" value="Registrer" />
+            </li>
+        </ul>
     </form>
-
     </body>
+</html>
