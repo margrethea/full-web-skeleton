@@ -12,7 +12,7 @@
         <div class="topnav">
             <a href="index.jsp">Hjem</a>
             <a href="registrer-resultat.jsp">Registrer resultat</a>
-            <a class="active" href="toppscore.jsp">Toppscore</a>
+            <a class="active" href="toppscore_test.jsp">Toppscore</a>
             <div class="topnav-right">
                 <a href="min-side.jsp">Min side</a>
                 <a href="resultatsøk.jsp">Resultatsøk</a>
@@ -26,14 +26,12 @@
         <h1>Toppscore</h1>
 
         <div class="nasjklubb" style="text-align: center;"><div>
-            <a href="toppscore.jsp">Nasjonalt</a>
+            <a href="toppscore_test.jsp">Nasjonalt</a>
             <a class="active" href="toppscore2.jsp">Klubb</a>
-            <!--<p class="nasjonalt">Nasjonalt</p>
-            <p class="klubb">Klubb</p> -->
         </div></div><br>
 
 
-        <div style="text-align: center;"><div>
+        <div style="text-align: center;"></div>
             <table style="" class="nasjonalt">
                 <caption>Senior Mann</caption>
                 <tr>
@@ -68,72 +66,6 @@
                 </tr>
             </table>
 
-            <table style="" class="nasjonalt">
-                <caption>Junior A Gutt</caption>
-                <tr>
-                    <th>Plassering</th>
-                    <th>Toppscore</th>
-                    <th>Navn</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-
-            <table style="" class="nasjonalt">
-                <caption>Junior B Gutt</caption>
-                <tr>
-                    <th>Plassering</th>
-                    <th>Toppscore</th>
-                    <th>Navn</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                </tr>
 
                 <table style="" class="nasjonalt">
                     <caption>Senior Kvinne</caption>
@@ -169,73 +101,5 @@
                     </tr>
                 </table>
 
-                <table style="" class="nasjonalt">
-                    <caption>Junior A Jente</caption>
-                    <tr>
-                        <th>Plassering</th>
-                        <th>Toppscore</th>
-                        <th>Navn</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-
-                <table style="" class="nasjonalt">
-                    <caption>Junior B Jente</caption>
-                    <tr>
-                        <th>Plassering</th>
-                        <th>Toppscore</th>
-                        <th>Navn</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </table>
     </body>
 </html>
