@@ -81,6 +81,7 @@
 .center h2 {
     color: white;
     font-size: 70px;
+    font-weight: lighter;
     width: 885px;
     margin-top: 10px;
     text-align: center;
@@ -88,8 +89,6 @@
 
 .center .buttons{
     position: absolute;
-
-
 }
 
 .buttons button{

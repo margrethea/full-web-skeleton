@@ -61,6 +61,11 @@ public class SearchRepoC {
         refactorEttParam(QuerysC.søkFornavnC(toReturn), param,p);
         return toReturn;
     }
+    public static String søkKlubbC(String param, PrintWriter p) {
+        String toReturn = null;
+        refactorEttParam(QuerysC.søkKlubb(toReturn), param,p);
+        return toReturn;
+    }
 
     public static String søkEtternavnC(String param, PrintWriter p){
         String toReturn = null;

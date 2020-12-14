@@ -19,7 +19,8 @@ public class QuerysC {
      * @return
      */
     public static String alleResultatC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.klasse_id = 4 ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.klasse_id = 4 ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -29,7 +30,8 @@ public class QuerysC {
      * @return
      */
     public static String søkFornavnC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.fornavn = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.fornavn = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -39,7 +41,8 @@ public class QuerysC {
      * @return
      */
     public static String søkAlleParamC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.fornavn = ? AND bruker.etternavn = ? AND c_resultat.periode = ? AND bruker.kjønn = ? AND c_resultat.år = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.fornavn = ? AND bruker.etternavn = ? AND c_resultat.periode = ? AND bruker.kjønn = ? AND c_resultat.år = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -49,7 +52,8 @@ public class QuerysC {
      * @return
      */
     public static String søkEtternavnC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.etternavn = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.etternavn = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -59,7 +63,8 @@ public class QuerysC {
      * @return
      */
     public static String søkPeriodeC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND c_resultat.periode = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND c_resultat.periode = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -69,7 +74,8 @@ public class QuerysC {
      * @return
      */
     public static String søkKjønnC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.kjønn = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.kjønn = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -79,7 +85,8 @@ public class QuerysC {
      * @return
      */
     public static String søkÅrC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND c_resultat.år = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND c_resultat.år = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -89,7 +96,7 @@ public class QuerysC {
      * @return
      */
     public static String søkKlubb(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND roklubb.klubbnavn = ? ORDER BY c_resultat.år;");
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND roklubb.klubbnavn = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -99,7 +106,8 @@ public class QuerysC {
      * @return
      */
     public static String søkFornavnEtternavnC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.fornavn = ? AND bruker.etternavn = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.fornavn = ? AND bruker.etternavn = ? ORDER BY c_resultat.år;");
         return query;
     }
 
@@ -109,7 +117,8 @@ public class QuerysC {
      * @return
      */
     public static String søkEtternavnKjønnC(String query) {
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb.id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.kjønn = ? AND bruker.etternavn = ? ORDER BY c_resultat.år;");
+
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, c_resultat.år, c_resultat.periode, c_resultat.60w, c_resultat.bevegelighet, c_resultat.3000m, c_resultat.kroppshev, c_resultat.sargeant FROM ro.bruker, ro.roklubb, ro.c_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND c_resultat.bruker_id=bruker.bruker_id AND bruker.kjønn = ? AND bruker.etternavn = ? ORDER BY c_resultat.år;");
         return query;
     }
 

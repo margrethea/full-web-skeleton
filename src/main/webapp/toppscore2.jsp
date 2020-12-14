@@ -28,46 +28,44 @@
         <div class="nasjklubb" style="text-align: center;"><div>
             <a href="toppscore_test.jsp">Nasjonalt</a>
             <a class="active" href="toppscore2.jsp">Klubb</a>
-            <!--<p class="nasjonalt">Nasjonalt</p>
-            <p class="klubb">Klubb</p> -->
         </div></div><br>
 
 
-        <div style="text-align: center;"><div>
-                <table style="" class="nasjonalt">
-                    <caption>Senior Mann</caption>
-                    <tr>
-                        <th>Plassering</th>
-                        <th>Toppscore</th>
-                        <th>Navn</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
 
+        <div style="text-align: center;"></div>
+            <table style="" class="nasjonalt">
+                <caption>Senior Mann</caption>
+                <tr>
+                    <th>Plassering</th>
+                    <th>Toppscore</th>
+                    <th>Navn</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
 
 
                 <table style="" class="nasjonalt">
@@ -103,7 +101,6 @@
                         <td></td>
                     </tr>
                 </table>
-
 
     </body>
 </html>

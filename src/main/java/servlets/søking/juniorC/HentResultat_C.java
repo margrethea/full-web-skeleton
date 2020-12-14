@@ -17,25 +17,6 @@ import java.io.IOException;
 @WebServlet(name = "HentResultat_C", urlPatterns = "/HentResultat_C")
 public class HentResultat_C extends HttpServlet {
 
-
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-        String a = req.getParameter("fornavn");
-        String b = req.getParameter("Periode");
-        String c = req.getParameter("Kjønn");
-        String d = req.getParameter("Øvelse");
-        String e = req.getParameter("Årstall");
-        System.out.println(a + b + c + d + e);
-        if (b.isEmpty() && c.isEmpty() && d.isEmpty() && e.isEmpty()) {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn");
-            requestDispatcher.forward(req, res);
-        } else {
-            RequestDispatcher rd = req.getRequestDispatcher("HentBrukerC");
-            rd.forward(req, res);
-        }
-
-    }
-
     /**
      * Metoden Sjekker hva brukeren har tastet inn i inputfeltet
      * Sender videre til riktig servlet basert på dette
@@ -50,8 +31,9 @@ public class HentResultat_C extends HttpServlet {
         String c = req.getParameter("periode");
         String d = req.getParameter("gender");
         String e = req.getParameter("year");
+        String f = req.getParameter("roklubb");
         System.out.println(a + b + c + d + e);
-        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year")) {
+        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year") && f.equals("")) {
             System.out.println("IFIF");
             RequestDispatcher rd = req.getRequestDispatcher("HentBrukerC");
             rd.forward(req, res);
@@ -92,6 +74,10 @@ public class HentResultat_C extends HttpServlet {
             }else if (!(e.equals("Year"))){
                 System.out.println("år");
                 RequestDispatcher rd = req.getRequestDispatcher("HentÅr_C");
+                rd.forward(req,res);
+            }else if (!(f.equals(""))){
+                System.out.println("klubb");
+                RequestDispatcher rd = req.getRequestDispatcher("HentKlubb_C");
                 rd.forward(req,res);
             }
         }

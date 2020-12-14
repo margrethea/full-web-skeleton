@@ -25,7 +25,6 @@ public class HentBrukerC extends AbstractAppServlet {
     protected void writeBody(HttpServletRequest req, PrintWriter out){
 
         Tabell.skrivTabellC(out);
-
         SearchRepoC.søkAlleResultatC(out);
 
     }

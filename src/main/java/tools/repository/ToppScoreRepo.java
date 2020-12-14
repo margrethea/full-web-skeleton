@@ -30,7 +30,6 @@ public class ToppScoreRepo {
         return toReturn;
     }
 
-
     public static String HentToppScore(String query, PrintWriter p){
         Connection db = null;
         PreparedStatement ps = null;

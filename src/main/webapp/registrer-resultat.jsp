@@ -13,10 +13,10 @@
         <nav class="navbar">
             <img class="logo" src="Bilder/NRF2.JPG" alt="Roforbundet logo">
             <ul>
-                <li><a class="active" href="index2.jsp">Hjem</a></li>
+                <li><a class="active" href="index.jsp">Hjem</a></li>
                 <li><a href="registrer-resultat.jsp">Registrer resultat</a></li>
                 <li><a href="resultatsøk.jsp">Resultatsøk</a></li>
-                <li><a href="toppscore.jsp">Toppscore</a></li>
+                <li><a href="toppscore_test.jsp.jsp">Toppscore</a></li>
                 <li><a href="min-side.jsp">Min side</a></li>
                 </ul>
           </nav>
