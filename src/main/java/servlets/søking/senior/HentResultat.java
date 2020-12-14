@@ -35,9 +35,9 @@ public class HentResultat extends HttpServlet {
         String c = req.getParameter("periode");
         String d = req.getParameter("gender");
         String e = req.getParameter("year");
-        // String f = req.getParameter("roklubb");
+        String f = req.getParameter("roklubb");
         System.out.println(a + b + c + d + e);
-        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year")/** && f.equals("")**/) {
+        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year") && f.equals("")) {
             System.out.println("IFIF");
             RequestDispatcher rd = req.getRequestDispatcher("HentBrukerS");
             rd.forward(req, res);
@@ -63,12 +63,12 @@ public class HentResultat extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("HentEtternavnKjønn");
         rd.forward(req, res);
 
-        }else if(!(d.equals("Gender") /**|| f.equals("")*/)){
+        }else if(!(d.equals("Gender") || f.equals(""))){
             System.out.println("klubb og kjønn");
             RequestDispatcher rd = req.getRequestDispatcher("HentKlubbKjønn");
             rd.forward(req,res);
         }
-        else if(a != "" && b != "" && c != "Periode" && d != "Gender" && e != "Year"/** && f != ""*/) {
+        else if(a != "" && b != "" && c != "Periode" && d != "Gender" && e != "Year" && f != "") {
             if(!(a.equals(""))) {
                 System.out.println("Funker den statementen her i det heletatt?");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn");
@@ -89,15 +89,15 @@ public class HentResultat extends HttpServlet {
                 System.out.println("år");
                 RequestDispatcher rd = req.getRequestDispatcher("HentÅr");
                 rd.forward(req,res);
-          /**  }else if (!(f.equals(""))){
+            }else if (!(f.equals(""))){
                 System.out.println("roklubb");
                 RequestDispatcher rd = req.getRequestDispatcher("HentKlubb");
                 rd.forward(req,res);
-            }**/
-        }
+            }
         }
     }
 }
+
 
 
 

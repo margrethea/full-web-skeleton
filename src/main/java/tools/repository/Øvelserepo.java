@@ -15,7 +15,7 @@ public class Øvelserepo {
     /**
      * legger til resultater til databasen.
 
-     * @param resultat bruker objekt som inneholder all informasjon om personen.
+     * @param resultat bruker objekt som inneholder all informasjon om øvelsene.
      *
      * @param p        printwriter for å skrive ut html i servlet. F.eks SQL feilmeldinger eller annen info.
      **/
