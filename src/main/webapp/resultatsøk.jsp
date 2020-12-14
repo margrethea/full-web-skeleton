@@ -24,11 +24,11 @@
     <div class="center">
         <h1>Resultatsøk </h1>
         <div class="buttons">
-            <button class="btn">Senior</button>
-            <button class="btn">Junior A</button>
+            <a href="resultatsøk-senior.jsp"><button class="btn">Senior</button></a>
+            <a href="resultatsøk-juniorA.jsp"><button class="btn">Junior A</button></a>
             <br>
-            <button class="btn">Junior B</button>
-            <button class="btn">Junior C</button>
+            <a href="resultatsøk-juniorB.jsp"><button class="btn">Junior B</button></a>
+            <a href="resultatsøk-juniorC.jsp"><button class="btn">Junior C</button></a>
 
         </div>
     </div>
