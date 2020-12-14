@@ -23,7 +23,7 @@ public class HentKlubb_C extends AbstractAppServlet {
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Tabell.skrivTabellC(out);
         String roklubb = req.getParameter("roklubb");
-        SearchRepoC.søkKlubbC(kjønn, out);
+        SearchRepoC.søkKlubbC(roklubb, out);
 
     }
 
