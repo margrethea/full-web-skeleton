@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Modell som henter metodene for hver av de ulike klassene i Norges Roforbund som henter metoder fra DropDownBruker
- * og returnerer en liste ved hjelp av SQL query
+ * Modell som lager arraylist ved hjelp av metodene fra Dropdownbruker, lager en forbindelsen med databasen og
+ * bruker SQL queries to å hennte ut data. Itereres over listen for å hente ut de ønskede verdiene gjennom
+ * en while loop
  */
 
 public class DAOUtøver {
