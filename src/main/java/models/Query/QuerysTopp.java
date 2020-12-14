@@ -15,14 +15,18 @@ public class QuerysTopp {
     }
 
     public static String hentToppScoreMenn(String query){
-        query = ("select  toppscore from v_toppscore_senior_menn order by toppscore limit 5 ;");
-
+        query = ("select  toppscore from v_toppscore_senior\n" +
+                "where toppscore is not null\n" +
+                "and kjønn = 'mann'\n" +
+                "order by toppscore desc limit 5 ;");
         return query;
     }
 
     public static String hentToppScoreKvinner(String query){
-        query = ("select  toppscore from v_toppscore_senior_kvinner order by toppscore limit 5 ;");
-
+        query = ("select  toppscore from v_toppscore_senior\n" +
+                "where toppscore is not null\n" +
+                "and kjønn = 'kvinne'\n" +
+                "order by toppscore desc limit 5 ;");
         return query;
     }
 
