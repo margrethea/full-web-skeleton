@@ -27,8 +27,6 @@ public class HentToppScore extends AbstractAppServlet {
         out.println("<td><b>Toppscore</b></td>");
         out.println("</tr>");
 
-
-
         ToppScoreRepo.VisToppScoreMenn(out);
 
         out.println("<tr>");
