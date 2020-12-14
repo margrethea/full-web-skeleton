@@ -8,6 +8,12 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Modell som lager arraylist ved hjelp av metodene fra Dropdownbruker, lager en forbindelsen med databasen og
+ * bruker SQL queries to å hennte ut data. Itereres over listen for å hente ut de ønskede verdiene gjennom
+ * en while loop
+ */
+
 public class DAOUtøver {
 
     public List<DropdownBruker> listS(PrintWriter out) throws SQLException {

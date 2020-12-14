@@ -17,25 +17,6 @@ import java.io.IOException;
 @WebServlet(name = "HentResultat_B", urlPatterns = "/HentResultat_B")
 public class HentResultat_B extends HttpServlet {
 
-
-    protected void doGet(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-        String a = req.getParameter("fornavn");
-        String b = req.getParameter("Periode");
-        String c = req.getParameter("Kjønn");
-        String d = req.getParameter("Øvelse");
-        String e = req.getParameter("Årstall");
-        System.out.println(a + b + c + d + e);
-        if (b.isEmpty() && c.isEmpty() && d.isEmpty() && e.isEmpty()) {
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn_B");
-            requestDispatcher.forward(req, res);
-        } else {
-            RequestDispatcher rd = req.getRequestDispatcher("HentBrukerB");
-            rd.forward(req, res);
-        }
-
-    }
-
     /**
      * Metoden Sjekker hva brukeren har tastet inn i inputfeltet
      * Sender videre til riktig servlet basert på dette
@@ -50,13 +31,14 @@ public class HentResultat_B extends HttpServlet {
         String c = req.getParameter("periode");
         String d = req.getParameter("gender");
         String e = req.getParameter("year");
+        String f = req.getParameter("roklubb");
         System.out.println(a + b + c + d + e);
-        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year")) {
+        if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year") && f.equals("")) {
             System.out.println("IFIF");
             RequestDispatcher rd = req.getRequestDispatcher("HentBrukerB");
             rd.forward(req, res);
 
-        }else if (!(a.equals("") || b.equals("") || c.equals("Periode") || d.equals("Gender") || e.equals("Year"))) {
+        }else if (!(a.equals("") || b.equals("") || c.equals("Periode") || d.equals("Gender") || e.equals("Year") || f.equals(""))) {
 
             System.out.println("ELSEELSE");
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("AlleParametre_B");
@@ -72,7 +54,7 @@ public class HentResultat_B extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("HentEtternavnKjønn_B");
         rd.forward(req, res);
 
-        }else if(a != "" && b != "" && c != "Periode" && d != "Gender" && e != "Year") {
+        }else if(a != "" && b != "" && c != "Periode" && d != "Gender" && e != "Year" && f != "") {
             if(!(a.equals(""))) {
                 System.out.println("Funker den statementen her i det heletatt?");
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("HentPåFornavn_B");
@@ -92,6 +74,10 @@ public class HentResultat_B extends HttpServlet {
             }else if (!(e.equals("Year"))){
                 System.out.println("år");
                 RequestDispatcher rd = req.getRequestDispatcher("HentÅr_B");
+                rd.forward(req,res);
+            }else if (!(f.equals(""))){
+                System.out.println("Klubb");
+                RequestDispatcher rd = req.getRequestDispatcher("HentKlubb_B");
                 rd.forward(req,res);
             }
         }
