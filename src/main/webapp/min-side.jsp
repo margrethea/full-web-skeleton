@@ -12,7 +12,7 @@
 <div class="topnav">
     <a href="index.jsp">Hjem</a>
     <a href="registrer-resultat.jsp">Registrer resultat</a>
-    <a href="toppscore.jsp">Toppscore</a>
+    <a href="toppscore_test.jsp">Toppscore</a>
     <div class="topnav-right">
         <a class="active" href="min-side.jsp">Min side</a>
         <a href="resultatsøk.jsp">Resultatsøk</a>

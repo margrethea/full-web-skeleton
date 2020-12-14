@@ -38,10 +38,6 @@
             <input type="submit" name="action" value="Klubb">
         </form>
 
-        <a href="resultatsøk-senior.jsp"><button class="button button1">Senior</button></a>
-        <a href="resultatsøk-juniorA.jsp"><button class="button button1">Junior A</button></a>
-
-
 
     </body>
 

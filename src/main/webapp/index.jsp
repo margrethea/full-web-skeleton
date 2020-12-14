@@ -16,7 +16,10 @@
             <li><a class="active" href="index.p">Hjem</a></li>
             <li><a href="registrer-resultat.jsp">Registrer resultat</a></li>
             <li><a href="resultatsøk.jsp">Resultatsøk</a></li>
+
+
             <li><a href="toppscore_test.jsp">Toppscore</a></li>
+
             <li><a href="min-side.jsp">Min side</a></li>
         </ul>
     </nav>
@@ -26,7 +29,8 @@
             <a href="registrer-resultat.jsp"><button class="btn">Registrer resultat</button></a>
             <a href="resultatsøk.jsp"><button class="btn">Resultatsøk</button></a>
             <br>
-            <a href="toppscore_test.jsp.jsp"><button class="btn">Toppscore</button></a>
+            <a href="toppscore_test.jsp"><button class="btn">Toppscore</button></a>
+
             <a href="min-side.jsp"> <button class="btn">Min side</button></a>
         </div>
     </div>
