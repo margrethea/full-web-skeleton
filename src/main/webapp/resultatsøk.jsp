@@ -1,50 +1,41 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
+
 <html lang="en">
 
-    <head>
-        <link rel="stylesheet" href="main.css">
-        <meta charset="UTF-8">
-        <title>Resultatsøk - Roforbundet</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Norges Roforbund</title>
+    <link rel="stylesheet" href="main2.css">
 
-    <body>
-        <div class="topnav">
-            <a href="index.jsp">Hjem</a>
-            <a href="registrer-resultat.jsp">Registrer resultat</a>
-            <a href="toppscore.jsp">Toppscore</a>
-        <div class="topnav-right">
-            <a href="min-side.jsp">Min side</a>
-            <a class="active" href="resultatsøk.jsp">Resultatsøk</a>
-            <a href="innstillinger.jsp">Innstillinger</a>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="navbar">
+        <img class="logo" src="Bilder/NRF2.JPG" alt="Roforbundet logo">
+        <ul>
+            <li><a class="active" href="resultatsøk.jsp">Hjem</a></li>
+            <li><a href="registrer-resultat.jsp">Registrer resultat</a></li>
+            <li><a href="resultatsøk.jsp">Resultatsøk</a></li>
+            <li><a href="toppscore_test.jsp">Toppscore</a></li>
+            <li><a href="min-side.jsp">Min side</a></li>
+        </ul>
+    </nav>
+    <div class="center">
+        <h1>Resultatsøk </h1>
+        <div class="buttons">
+            <button class="btn">Senior</button>
+            <button class="btn">Junior A</button>
+            <br>
+            <button class="btn">Junior B</button>
+            <button class="btn">Junior C</button>
+
         </div>
-        </div>
-
-        <a href="index.jsp"><img src="https://assets.website-files.com/5b3335ab4ca8551124a2ba8f/5cbf778b0cdebda6ec56b4a6_norges-roforbund-logo-p-500.png"
-                         alt="logo" class="center" ></a>
-
-        <h1>Resultatsøk</h1>
-
-        <a href="resultatsøk-senior.jsp"><button class="button button1">Senior</button></a>
-        <a href="resultatsøk-juniorA.jsp"><button class="button button1">Junior A</button></a>
-        <br>
-        <a href="resultatsøk-juniorB.jsp"><button class="button button1">Junior B</button></a>
-        <a href="resultatsøk-juniorC.jsp"><button class="button button1">Junior C</button></a>
-
-    </body>
-
-</html>
+    </div>
+</div>
 
 
-<!--
-        <div class="resultatsøk_linker" style="text-align: center"><div>
-            <a href="resultatsøk-senior.jsp">Senior</a>
-            <a href="resultatsøk-juniorA.jsp">Junior A</a>
-            <a href="resultatsøk-juniorB.jsp">Junior B</a>
-            <a href="resultatsøk-juniorC.jsp">Junior C</a>
-        </div></div>
-
-    </body>
+</body>
 
 </html>
 

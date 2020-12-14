@@ -4,9 +4,9 @@
     margin: 0;
 }
 .wrapper{
-    height: 100%;
     background-image: url("Bilder/IMG_1346.JPG");
     background-size: cover;
+    height: 100%;
     font-family: 'Roboto';
 
 }
@@ -44,11 +44,11 @@
 
 }
 .topnav a:hover {
-    color: #005e6d;
+    color: #21418f;
     text-decoration: underline;
 }
 .topnav a.active {
-    color: #005e6d;
+    color: #21418f;
     text-decoration: underline;
 
 }
@@ -58,7 +58,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Roboto';
-    font-weight: lighter;
+    font-weight: 300;
     letter-spacing: 0px;
     letter-spacing: 0.02rem;
     user-select: none;
@@ -81,7 +81,7 @@
 .center h2 {
     color: white;
     font-size: 70px;
-    font-weight: lighter;
+    font-weight: 300px;
     width: 885px;
     margin-top: 10px;
     text-align: center;
@@ -89,13 +89,15 @@
 
 .center .buttons{
     position: absolute;
+
+
 }
 
 .buttons button{
     height: 100px;
     width: 250px;
     font-size: 22px;
-    font-weight: lighter;
+    font-weight: 300px;;
     color: #005e6d;
     background: white;
     border: #dcdcdc 1px solid ;

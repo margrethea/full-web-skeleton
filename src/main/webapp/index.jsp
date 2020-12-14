@@ -16,7 +16,7 @@
             <li><a class="active" href="index.p">Hjem</a></li>
             <li><a href="registrer-resultat.jsp">Registrer resultat</a></li>
             <li><a href="resultatsøk.jsp">Resultatsøk</a></li>
-            <li><a href="toppscore_test.jsp.jsp">Toppscore</a></li>
+            <li><a href="toppscore_test.jsp">Toppscore</a></li>
             <li><a href="min-side.jsp">Min side</a></li>
         </ul>
     </nav>
