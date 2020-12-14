@@ -35,7 +35,7 @@ public class HentResultat extends HttpServlet {
         String c = req.getParameter("periode");
         String d = req.getParameter("gender");
         String e = req.getParameter("year");
-        // String f = req.getParameter("roklubb");
+        String f = req.getParameter("roklubb");
         System.out.println(a + b + c + d + e);
         if (a.equals("") && b.equals("") && c.equals("Periode") && d.equals("Gender") && e.equals("Year")/** && f.equals("")**/) {
             System.out.println("IFIF");
