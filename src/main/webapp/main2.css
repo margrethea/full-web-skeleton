@@ -44,11 +44,11 @@
 
 }
 .topnav a:hover {
-    color: #21418f;
+    color: #005e6d;
     text-decoration: underline;
 }
 .topnav a.active {
-    color: #21418f;
+    color: #005e6d;
     text-decoration: underline;
 
 }
