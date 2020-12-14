@@ -1,10 +1,7 @@
 package servlets.søking.juniorC;
 
-
-import models.Query.QuerysC;
 import servlets.søking.Tabell;
 import servlets.tryms.AbstractAppServlet;
-import tools.DbTool;
 import tools.repository.SearchRepoC;
 
 import javax.servlet.ServletException;
@@ -13,19 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-@WebServlet(name = "HentBrukerC", urlPatterns = "/HentBrukerC")
-public class HentBrukerC extends AbstractAppServlet {
-
+@WebServlet(name = "HentKlubb_C", urlPatterns = "/HentKlubb_C")
+public class HentKlubb_C extends AbstractAppServlet {
+    /**
+     * Skriver ut tabell på nettsiden
+     * Henter fra databasen via en annen klasse.
+     * @param req
+     * @param out
+     */
     @Override
-    protected void writeBody(HttpServletRequest req, PrintWriter out){
-
+    protected void writeBody(HttpServletRequest req, PrintWriter out) {
         Tabell.skrivTabellC(out);
-        SearchRepoC.søkAlleResultatC(out);
+        String roklubb = req.getParameter("roklubb");
+        SearchRepoC.søkKlubbC(kjønn, out);
 
     }
 
@@ -34,7 +32,5 @@ public class HentBrukerC extends AbstractAppServlet {
             throws ServletException, IOException {
         writeResponse(request, response, "Hello!");
     }
-
-
 
 }
