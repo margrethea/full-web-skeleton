@@ -78,7 +78,7 @@ public class QuerysA {
      * @return
      */
     public static String søkÅr(String query){
-        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, a_resultat.år, a_resultat.periode, a_resultat.60w, a_resultat.bevegelighet, a_resultat.5000w, a_resultat.5000t, a_resultat.2000w, a_resultat.2000t, a_resultat.ligg_ro_kg, a_resultat.ligg_ro_p, a_resultat.sargeant, a_resultat.toppscore FROM ro.bruker, ro.roklubb, ro.a_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND a_resultat.bruker_id=bruker.bruker_id AND s_resultat.år = ? ORDER BY a_resultat.år;");
+        query = ("select roklubb.klubbnavn, bruker.fornavn, bruker.etternavn, a_resultat.år, a_resultat.periode, a_resultat.60w, a_resultat.bevegelighet, a_resultat.5000w, a_resultat.5000t, a_resultat.2000w, a_resultat.2000t, a_resultat.ligg_ro_kg, a_resultat.ligg_ro_p, a_resultat.sargeant, a_resultat.toppscore FROM ro.bruker, ro.roklubb, ro.a_resultat WHERE bruker.roklubb_id = roklubb.roklubb_id AND a_resultat.bruker_id=bruker.bruker_id AND a_resultat.år = ? ORDER BY a_resultat.år;");
         return query;
     }
 

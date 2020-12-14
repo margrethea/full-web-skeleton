@@ -12,6 +12,11 @@ import java.sql.SQLException;
 import java.text.DecimalFormat;
 
 public class ToppScoreRepo {
+    /**
+     *
+     * @param p
+     * @return
+     */
 
     public static String VisToppScoreMenn(PrintWriter p){
         String toReturn = null;
@@ -42,8 +47,6 @@ public class ToppScoreRepo {
 
             int i = 1;
 
-
-
             while (rs.next()) {
 
                 double ts =  rs.getDouble("toppscore");
@@ -53,6 +56,8 @@ public class ToppScoreRepo {
                 p.println("<td>" + df.format(ts)+ "</td>");
                 p.println("</tr>");
                 i = i + 1;
+
+
             }
             rs.close();
         }

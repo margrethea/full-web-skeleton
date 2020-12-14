@@ -32,13 +32,16 @@
             <p class="klubb">Klubb</p> -->
         </div></div><br>
 
-        <form action="HentToppScore" method="post">
+        <form action="HentToppScore" class="" method="post">
             <input type="submit" name="action" value="Nasjonalt">
         </form>
 
         <form action="HentTopp" method="post">
             <input type="submit" name="action" value="Klubb">
         </form>
+
+        <a href="resultatsøk-senior.jsp"><button class="button button1">Senior</button></a>
+        <a href="resultatsøk-juniorA.jsp"><button class="button button1">Junior A</button></a>
 
 
 
