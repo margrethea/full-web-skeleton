@@ -81,7 +81,7 @@
 .center h2 {
     color: white;
     font-size: 70px;
-    font-weight: 300px;
+    font-weight: lighter;
     width: 885px;
     margin-top: 10px;
     text-align: center;
@@ -97,7 +97,7 @@
     height: 100px;
     width: 250px;
     font-size: 22px;
-    font-weight: 300px;;
+    font-weight: lighter;;
     color: #005e6d;
     background: white;
     border: #dcdcdc 1px solid ;
